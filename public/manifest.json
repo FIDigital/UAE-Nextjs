@@ -1,0 +1,26 @@
+{
+    "name": "FI Digital UAE",
+    "short_name": "FI Digital",
+    "description": "Zoho Partner UAE – Digital Synergy Ventures Group",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f0f4ff",
+    "theme_color": "#1D4ED8",
+    "icons": [
+        {
+            "src": "/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ]
+}
