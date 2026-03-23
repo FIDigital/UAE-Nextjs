@@ -55,7 +55,8 @@ export default function Logo({ variant = "theme", width = "160px", height = "48p
         :global([data-theme='dark']) .variant-theme .light-theme-logo {
           opacity: 0;
         }
-      `}</style>
+      `}</style> 
+      
     </div>
   );
 }
