@@ -6,8 +6,53 @@ import Image from 'next/image';
 import { Languages, BrainCircuit, FileSignature, ArrowRightLeft, Cpu, ShieldCheck } from 'lucide-react';
 
 export default function MultilingualLLMClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Multilingual LLM Integration",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Bilingual AI and Arabic NLP solutions for UAE enterprises. Integrate Claude, Gemini, and custom LLMs for native Arabic and English business communication.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Does your AI support Arabic dialects?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our native Arabic AI integrations support diverse dialects and formal Arabic, ensuring nuanced transcription, translation, and content generation for the UAE market."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which LLMs do you integrate?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We integrate the world's most powerful models, including Claude for complex reasoning and Gemini for native Arabic intelligence, routed optimally via n8n orchestration."
+                }
+            }
+        ]
+    };
+
     return (
         <main style={{ background: "var(--bg)", color: "var(--text)", paddingBottom: "100px" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             
             {/* HERO SECTION */}
             <section style={{
@@ -45,9 +90,19 @@ export default function MultilingualLLMClient() {
                             marginBottom: "1.5rem",
                             letterSpacing: "-0.03em"
                         }}>
-                             AI That Thinks in <br />
-                             <span className="text-gradient">Arabic and English</span>
+                             How Does Native Arabic AI Intelligence <br />
+                             <span className="text-gradient">Power UAE Business Communication?</span>
                         </h1>
+                        <p className="hero-text" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital deploys native bilingual AI intelligence for UAE enterprises, bridging world-class reasoning models like Claude with native Arabic-centric LLMs like Gemini. By utilizing intelligent task routing via n8n, our multilingual implementations resolve the language barrier in complex business operations, enabling autonomous agents to communicate with native-level nuance in both Arabic and English with 99.1% accuracy.
+                        </p>
                         <p className="hero-text" style={{
                             fontSize: "clamp(1rem, 1.2vw, 1.25rem)",
                             color: "var(--text-muted)",
@@ -74,7 +129,7 @@ export default function MultilingualLLMClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div style={{ textAlign: "center", marginBottom: "4rem" }}>
                         <div className="section-label">CAPABILITIES</div>
-                        <h2 className="section-title">Key Solutions & Capabilities</h2>
+                        <h2 className="section-title">What are the Key Capabilities of Bilingual AI for Dubai Enterprises?</h2>
                     </div>
 
                     <div className="capabilities-grid" style={{
@@ -152,6 +207,9 @@ export default function MultilingualLLMClient() {
                     .card-icon { margin-bottom: 1rem !important; }
                 }
             `}</style>
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </main>
     );
 }

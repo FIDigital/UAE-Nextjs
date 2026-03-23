@@ -225,6 +225,43 @@ const blogPillars = [
 
 /* ─── Main Component ─────────────────────────────────────────────────────────── */
 export default function ResourcesClient() {
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "AI & Zoho Resource Center",
+    "provider": {
+        "@id": "https://fidigital.ae/#organization"
+    },
+    "description": "Bilingual AI and Zoho resources for UAE enterprises, including whitepapers, webinars, and technical deep-dives on digital workers.",
+    "areaServed": {
+        "@type": "Country",
+        "name": "United Arab Emirates"
+    }
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Where can I find UAE-specific AI agent resources?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "FI Digital's Resource Hub provides bilingual guides, whitepapers, and webinars specifically designed for UAE enterprise AI transformation."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Are the AI resources available in Arabic?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, our blog and whitepapers provide bilingual insights in both English and Arabic to serve the GCC business community."
+            }
+        }
+    ]
+  };
+
   const [activeFilter, setActiveFilter] = useState("all");
 
   const filteredPosts = activeFilter === "all"
@@ -233,6 +270,14 @@ export default function ResourcesClient() {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <style>{`
         /* ── Resources page scoped styles ── */
 
@@ -632,6 +677,16 @@ export default function ResourcesClient() {
               </span>{" "}
               Stay Ahead.
             </h1>
+            <p className="hero-text" style={{ 
+                fontSize: "1.1rem", 
+                fontWeight: 700,
+                color: "var(--primary)",
+                maxWidth: "850px",
+                marginBottom: "1.5rem",
+                lineHeight: 1.6
+            }}>
+                Access FI Digital&apos;s bilingual resource hub for UAE enterprise AI transformation. We provide technical deep-dives on Zoho architecture, whitepapers on AI agent compliance, and live Dubai workshops to help you automate 94% of business operations with agentic reasoning.
+            </p>
             <p style={{ fontSize: "clamp(1rem,2vw,1.2rem)", color: "var(--text-muted)", maxWidth: 620, margin: "0 auto 2.5rem", lineHeight: 1.75 }}>
               Bilingual guides, technical deep-dives, whitepapers, and events — everything a UAE enterprise needs to navigate AI-first transformation.
             </p>
@@ -672,7 +727,7 @@ export default function ResourcesClient() {
             <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "1rem", marginBottom: "0.75rem", flexWrap: "wrap" }}>
               <div>
                 <div className="section-label">Blog · EN + AR</div>
-                <h2 className="section-title" style={{ marginBottom: "0.5rem" }}>Insights in Two Languages</h2>
+                <h2 className="section-title" style={{ marginBottom: "0.5rem" }}>Where Can I Find Bilingual AI & Zoho Resources in Dubai?</h2>
                 <p style={{ color: "var(--text-muted)", fontSize: "1rem", lineHeight: 1.65, maxWidth: 600, marginBottom: "1.75rem" }}>
                   Practical reads on AI Agents, Zoho, UAE industry spotlights, and tech deep-dives — published in English and Arabic.
                 </p>
@@ -749,7 +804,7 @@ export default function ResourcesClient() {
           <div className="container">
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <div className="section-label">Whitepapers & Guides</div>
-              <h2 className="section-title">Deep Knowledge, Ready to Download</h2>
+              <h2 className="section-title" style={{ marginBottom: "0.5rem" }}>Which Whitepapers Cover UAE AI Compliance & Zoho Architecture?</h2>
               <p className="section-desc" style={{ margin: "0 auto" }}>
                 Form-gated guides for UAE enterprise buyers and technical teams — available via Zoho Forms. No fluff, just frameworks.
               </p>
@@ -787,7 +842,7 @@ export default function ResourcesClient() {
               {/* Left: image + text */}
               <div>
                 <div className="section-label">Webinars & Events</div>
-                <h2 className="section-title">Monthly Virtual · Quarterly Dubai</h2>
+                <h2 className="section-title" style={{ marginBottom: "0.5rem" }}>How Can I Join Live AI Workshops and Dubai Meetups?</h2>
                 <p style={{ color: "var(--text-muted)", fontSize: "1.05rem", lineHeight: 1.75, marginBottom: "2rem" }}>
                   Join our virtual workshops to learn live from our AI architects — or meet us in person at our quarterly Business Bay meetups. All events are bilingual.
                 </p>
@@ -843,7 +898,7 @@ export default function ResourcesClient() {
           <div className="container">
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <div className="section-label">Partner Ecosystem</div>
-              <h2 className="section-title">Built on the World's Best AI Stack</h2>
+              <h2 className="section-title" style={{ marginBottom: "0.5rem" }}>Who are FI Digital&apos;s Strategic AI & Zoho Partners?</h2>
               <p className="section-desc" style={{ margin: "0 auto" }}>
                 We partner with the most trusted names in enterprise AI — bringing certified expertise and deep integrations to every UAE deployment.
               </p>
@@ -907,7 +962,7 @@ export default function ResourcesClient() {
           <div className="container" style={{ maxWidth: 780, textAlign: "center" }}>
             <div className="section-label">Ready to Start?</div>
             <h2 style={{ fontWeight: 900, fontSize: "clamp(1.9rem,4vw,2.6rem)", marginBottom: "1rem", lineHeight: 1.15 }}>
-              Turn knowledge into action.
+              How Do I Get Started with an AI Readiness Audit?
             </h2>
             <p style={{ color: "var(--text-muted)", fontSize: "1rem", lineHeight: 1.75, maxWidth: 520, margin: "0 auto 2.5rem" }}>
               Book a complimentary 45-minute AI readiness audit with our Dubai team — no cost, no pitch, just expert guidance.
@@ -923,6 +978,10 @@ export default function ResourcesClient() {
           </div>
         </section>
       </main>
+
+      <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+        Last Updated: March 2026
+      </div>
     </div>
   );
 }

@@ -52,6 +52,43 @@ const industries = [
 ];
 
 export default function IndustriesClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Industry AI Consultatiion",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Bespoke AI and Zoho solutions for Real Estate, Retail, Finance, Healthcare, and Logistics industries in the UAE.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Which UAE industries benefit most from AI agents?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Real Estate, Retail, and Logistics see the highest impact through automated lead qualification, WhatsApp commerce, and custom clearance workflows."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does FI Digital handle industry-specific regulations?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our AI and Zoho architectures are built with Day 1 compliance for UAE VAT, labor laws, and industry-specific data sovereignty requirements."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -89,13 +126,21 @@ export default function IndustriesClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)", minHeight: "100vh" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* HERO SECTION */}
             <section style={{
                 padding: "clamp(120px, 15vh, 160px) 1.5rem 60px",
                 textAlign: "center"
             }}>
                 <div className="container" style={{ maxWidth: "1000px" }}>
-                    <div className="section-label reveal-industries">Industries</div>
+                    <div className="section-label reveal-industries">Which Industries Can Benefit from Agentic AI in the UAE?</div>
                     <h1 className="reveal-industries" style={{
                         fontSize: "clamp(2.5rem, 6vw, 4rem)",
                         fontWeight: 900,
@@ -105,6 +150,16 @@ export default function IndustriesClient() {
                     }}>
                         AI Solutions Built for <span className="text-gradient">Your Industry</span>
                     </h1>
+                    <p className="hero-text" style={{ 
+                        fontSize: "1.1rem", 
+                        fontWeight: 700,
+                        color: "var(--primary)",
+                        maxWidth: "850px",
+                        margin: "0 auto 1.5rem",
+                        lineHeight: 1.6
+                    }}>
+                        FI Digital builds industry-specific AI solutions for UAE enterprises, from Real Estate lead qualification to Logistics customs automation. By integrating Zoho with advanced reasoning models, we enable 94% workflow automation and Day 1 regulatory compliance for Dubai&apos;s high-growth sectors.
+                    </p>
                     <p className="reveal-industries" style={{
                         fontSize: "clamp(1.1rem, 1.5vw, 1.25rem)",
                         color: "var(--text-muted)",
@@ -201,6 +256,10 @@ export default function IndustriesClient() {
                     }
                 }
             `}</style>
+
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

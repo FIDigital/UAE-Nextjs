@@ -59,6 +59,43 @@ const capabilities = [
 ];
 
 export default function CustomSaaSClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Custom SaaS Development",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Cloud-native Custom SaaS development in Dubai. We build multi-tenant architectures, API-first designs, and responsive interfaces integrated with Zoho and AI ecosystems.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is custom SaaS development?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Custom SaaS development involves building cloud-native, multi-tenant software tailored to your specific business logic, allowing for complete ownership and scalability without subscription lock-ins."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does FI Digital integrate AI into SaaS?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We integrate LLMs and autonomous agents directly into the SaaS architecture to automate reasoning, data processing, and user interactions."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -100,6 +137,14 @@ export default function CustomSaaSClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* Page Header / Hero */}
             <section className="hero-section" style={{
                 position: "relative",
@@ -150,9 +195,19 @@ export default function CustomSaaSClient() {
                         maxWidth: "900px",
                         letterSpacing: "-0.03em"
                     }}>
-                        Your Business Deserves <br />
-                        <span style={{ color: "var(--primary)" }}>Software Built for It</span>
+                        How Does Custom SaaS Development <br />
+                        <span style={{ color: "var(--primary)" }}>Drive Scaling for UAE Businesses?</span>
                     </h1>
+                    <p className="hero-text" style={{ 
+                        fontSize: "1.1rem", 
+                        fontWeight: 700,
+                        color: "var(--primary)",
+                        maxWidth: "850px",
+                        marginBottom: "1.5rem",
+                        lineHeight: 1.6
+                    }}>
+                        FI Digital builds cloud-native, multi-tenant SaaS applications for the UAE market, designed to bridge complex business logic with scalable AI-first architectures. By utilizing API-first design and native Zoho integrations, our custom software solutions resolve the limitations of off-the-shelf platforms, enabling Dubai firms to own their intellectual property and automate enterprise-wide operations with 99.1% reliability.
+                    </p>
                     <p className="reveal-saas" style={{
                         fontSize: "clamp(1rem, 1.2vw, 1.2rem)",
                         color: "var(--text-muted)",
@@ -173,7 +228,7 @@ export default function CustomSaaSClient() {
                 <div className="container">
                     <div style={{ marginBottom: "60px" }} className="reveal-saas">
                         <div className="section-label">Solutions</div>
-                        <h2 className="section-title" style={{ textAlign: "left" }}>Key Solutions & Capabilities</h2>
+                        <h2 className="section-title" style={{ textAlign: "left" }}>What are the Essential Features of Modern Custom SaaS in the UAE?</h2>
                     </div>
 
                     <div className="caps-grid" style={{
@@ -254,7 +309,7 @@ export default function CustomSaaSClient() {
                 <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "4rem", alignItems: "center" }}>
                     <div className="reveal-saas">
                         <div className="section-label">Engineering Excellence</div>
-                        <h2 className="section-title" style={{ textAlign: "left" }}>Built for Performance & Scale</h2>
+                        <h2 className="section-title" style={{ textAlign: "left" }}>What is the Best Architecture for High-Performance UAE SaaS Platforms?</h2>
                         <div style={{ display: "flex", flexDirection: "column", gap: "2rem", marginTop: "2.5rem" }}>
                             {[
                                 { icon: <Database />, title: "Isolated Data Architecture", desc: "Enterprise-grade multi-tenancy ensures complete data separation for every client." },
@@ -327,7 +382,7 @@ export default function CustomSaaSClient() {
                         overflow: "hidden"
                     }}>
                         <div style={{ position: "absolute", top: "-50px", right: "-50px", width: "200px", height: "200px", background: "rgba(255,255,255,0.1)", borderRadius: "50%", filter: "blur(40px)" }} />
-                        <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, marginBottom: "1.5rem" }}>Ready to build your SaaS?</h2>
+                        <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, marginBottom: "1.5rem" }}>How Can I Start My Custom SaaS Journey in Dubai Today?</h2>
                         <p style={{ fontSize: "1.1rem", opacity: 0.9, marginBottom: "2.5rem", maxWidth: "600px", margin: "0 auto 2.5rem" }}>
                             Join forward-thinking companies in the UAE who have scaled their operations with our custom solutions.
                         </p>
@@ -390,6 +445,9 @@ export default function CustomSaaSClient() {
                     p { font-size: 1rem !important; margin-left: auto; margin-right: auto; }
                 }
             `}</style>
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

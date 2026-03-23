@@ -152,6 +152,48 @@ const AutomationBlock = ({ title, description, result, color = "var(--primary)",
 };
 
 export default function FinanceProcurementAgentsClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "AI Finance & Procurement Agent",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "AI-powered finance automation for UAE businesses. Handles AP/AR, bank reconciliation, and VAT compliance with Zoho Books integration.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        },
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "AED",
+            "priceRange": "AED 25,000 - 1,000,000"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Can AI handle UAE VAT compliance?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our AI agents are programmed with UAE-specific VAT rules, including non-recoverable tax on fuel, import duty treatments, and Free Zone specific regulations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does month-end close take with AI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our AI finance agents reduce month-end close time from an average of 10 days down to just 3 days by automating reconciliation and posting."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useEffect(() => {
@@ -210,6 +252,14 @@ export default function FinanceProcurementAgentsClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* HERO SECTION */}
             <section style={{ 
                 minHeight: "90vh", 
@@ -273,6 +323,16 @@ export default function FinanceProcurementAgentsClient() {
                                 backgroundClip: "text",
                             }}>94% Automation</span>
                         </h1>
+                        <p className="reveal" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital&apos;s AI Finance & Procurement Agents are autonomous workers designed for UAE financial operations. They handle AP/AR, bank reconciliation, and VAT compliance with 99.7%+ accuracy. Our agents reduce month-end close time from 10 days to just 3 days using Zoho Books native integration.
+                        </p>
                         <p style={{ fontSize: "1.15rem", color: "var(--text-muted)", maxWidth: "850px", marginBottom: "3.5rem", lineHeight: 1.8 }}>
                             Month-end close in the UAE is traditionally painful. Finance teams work 10+ days combining data from 
                             multiple systems, reconciling accounts, and ensuring VAT compliance. Our AI-powered finance and 
@@ -311,7 +371,7 @@ export default function FinanceProcurementAgentsClient() {
             {/* WHAT GETS AUTOMATED SECTION */}
             <section style={{ padding: "clamp(60px, 10vw, 120px) 1.5rem" }}>
                 <div className="container" style={{ maxWidth: "1400px" }}>
-                    <SectionHeader title="The Full Finance Stack" label="What Gets Automated:" />
+                    <SectionHeader title="What Does FI Digital&apos;s Full AI Finance Stack Include?" label="What Gets Automated:" />
                     
                     <div style={{ 
                         display: "grid", 
@@ -376,7 +436,7 @@ export default function FinanceProcurementAgentsClient() {
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 400px), 1fr))", gap: "5rem", alignItems: "center" }}>
                         <div className="reveal">
                             <div className="section-label" style={{ color: "var(--primary-light)" }}>INTELLIGENT PIPELINE</div>
-                            <h2 className="section-title" style={{ color: "#fff" }}>Finance Agent Architecture</h2>
+                            <h2 className="section-title" style={{ color: "#fff" }}>How Does the AI Finance Agent Architecture Work?</h2>
                             <p style={{ fontSize: "1.1rem", lineHeight: 1.8, color: "rgba(255,255,255,0.7)", marginBottom: "2rem" }}>
                                 The agent lives between <strong>Zoho Books</strong> (your financial data), <strong>n8n</strong> (orchestration), and <strong>Claude</strong> (reasoning).
                             </p>
@@ -416,7 +476,7 @@ export default function FinanceProcurementAgentsClient() {
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 350px), 1fr))", gap: "4rem", alignItems: "center" }}>
                         <div className="reveal" style={{ order: 2 }}>
                             <div className="section-label">UAE-SPECIFIC</div>
-                            <h2 className="section-title">VAT & FTA Compliance Automation</h2>
+                            <h2 className="section-title">How Does AI Automate UAE VAT and FTA Compliance?</h2>
                             <div style={{ fontSize: "1.05rem", lineHeight: 1.8, color: "var(--text-muted)" }}>
                                 <p style={{ marginBottom: "1.5rem" }}>
                                     UAE VAT is more complex because: 1) Fuel input tax is never recoverable. 2) Import duties are separate from VAT. 3) Free Zone goods (Jebel Ali, RAK, Fujairah) have different treatments. 4) Reverse charges apply to intra-GCC services.
@@ -464,7 +524,7 @@ export default function FinanceProcurementAgentsClient() {
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 450px), 1fr))", gap: "5rem", alignItems: "center" }}>
                         <div className="reveal">
                             <div className="section-label">REAL-WORLD NUMBERS</div>
-                            <h2 className="section-title">Business Case: Jebel Ali Manufacturer</h2>
+                            <h2 className="section-title">What is the Business Case for AI Finance Automation in the UAE?</h2>
                             <p style={{ fontSize: "1.1rem", lineHeight: 1.8, color: "var(--text-muted)", marginBottom: "2rem" }}>
                                 A manufacturer in Jebel Ali (AED 400M revenue, 200 employees, complex multi-entity structure):
                             </p>
@@ -535,7 +595,7 @@ export default function FinanceProcurementAgentsClient() {
                 <div className="container" style={{ maxWidth: "1200px" }}>
                     <div style={{ textAlign: "center", marginBottom: "3rem" }}>
                         <div className="section-label">USER ROLES</div>
-                        <h2 className="section-title" style={{ fontSize: "2rem" }}>Who Benefits Most</h2>
+                        <h2 className="section-title" style={{ fontSize: "2rem" }}>Who Benefits from AI Finance and Procurement Automation?</h2>
                     </div>
                     <div style={{ 
                         display: "grid", 
@@ -577,7 +637,7 @@ export default function FinanceProcurementAgentsClient() {
             {/* IMPLEMENTATION SECTION */}
             <section style={{ padding: "120px 1.5rem", background: "var(--bg-secondary)" }}>
                 <div className="container" style={{ maxWidth: "1200px" }}>
-                    <SectionHeader title="3 Phases to Full Automation" label="IMPLEMENTATION PATH" />
+                    <SectionHeader title="How Long is the Implementation for AI Finance Automation?" label="IMPLEMENTATION PATH" />
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "2.5rem" }}>
                         {[
                             {
@@ -618,7 +678,7 @@ export default function FinanceProcurementAgentsClient() {
             {/* FAQ SECTION */}
             <section style={{ padding: "100px 1.5rem" }}>
                 <div className="container" style={{ maxWidth: "800px" }}>
-                    <SectionHeader title="Frequently Asked Questions" label="DEEP DIVE" />
+                    <SectionHeader title="Common Questions About AI Finance Agents for UAE Businesses" label="DEEP DIVE" />
                     <div className="reveal">
                         {faqs.map((faq, i) => (
                             <FAQItem key={i} {...faq} />
@@ -630,7 +690,7 @@ export default function FinanceProcurementAgentsClient() {
             {/* NEXT STEPS SECTION */}
             <section style={{ padding: "120px 1.5rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
                 <div className="container" style={{ maxWidth: "850px" }}>
-                    <SectionHeader title="Next Steps" label="READY TO CONVERT?" />
+                    <SectionHeader title="How Do I Start Automating My Finance Operations with AI?" label="READY TO CONVERT?" />
                     <p className="reveal" style={{ fontSize: "1.2rem", lineHeight: 1.8, color: "var(--text-muted)", marginBottom: "3rem" }}>
                         If your month-end close is 10+ days, if your finance team is drowning in invoices, if you're worried about 
                         VAT compliance or audit readiness, this is for you. Book a 30-minute call. We'll walk through your current 
@@ -647,6 +707,10 @@ export default function FinanceProcurementAgentsClient() {
                     </div>
                 </div>
             </section>
+
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

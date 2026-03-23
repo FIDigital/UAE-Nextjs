@@ -5,10 +5,13 @@ export const metadata = {
   openGraph: {
     title: "Zoho + AI Integration | Enterprise Platform Architecture",
     description: "Deep-dive into how we elevate Zoho from a CRM into an AI-driven enterprise platform.",
-    url: "https://www.fidigital.ae/platform/zoho-agentic-ai",
+    url: "https://fidigital.ae/platform/zoho-agentic-ai",
     siteName: "FI Digital UAE",
     images: [{ url: "/images/platform/zoho/central_hub.png", width: 1200, height: 630, alt: "Zoho Agentic AI Hub" }],
     locale: "en_AE",
     type: "website",
   },
+  alternates: {
+    canonical: "https://fidigital.ae/platform/zoho-agentic-ai",
+  }
 };

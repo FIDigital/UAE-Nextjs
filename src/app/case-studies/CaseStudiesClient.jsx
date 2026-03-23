@@ -714,7 +714,7 @@ export default function CaseStudiesClient() {
         </section>
 
         {/* ══ ROI CALCULATOR ════════════════════════════════════════════════════ */}
-        <section id="roi-calculator" className="cs-section-alt">
+        {/* <section id="roi-calculator" className="cs-section-alt">
           <div className="container">
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <div className="section-label">ROI Calculator</div>
@@ -727,7 +727,7 @@ export default function CaseStudiesClient() {
               <ROICalculator />
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ══ BEFORE / AFTER ════════════════════════════════════════════════════ */}
         <section id="before-after" className="cs-section" style={{ background: "var(--bg)" }}>

@@ -5,9 +5,12 @@ export const metadata = {
     openGraph: {
         title: 'Arabic AI & Multilingual LLM Integration Dubai | FI Digital',
         description: 'We integrate Claude and Gemini to give your business AI that thinks and speaks in Arabic and English.',
-        url: 'https://www.fidigital.ae/platform/multilingual-llm',
+        url: 'https://fidigital.ae/platform/multilingual-llm',
         siteName: 'FI Digital UAE',
         locale: 'en_AE',
         type: 'website',
     },
+    alternates: {
+        canonical: 'https://fidigital.ae/platform/multilingual-llm',
+    }
 };

@@ -69,6 +69,43 @@ const processSteps = [
 ];
 
 export default function ProductStudioClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "AI-First Product Development",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Custom SaaS development, AI product engineering, and enterprise MVPs for the UAE market. We build scalable, modern tech stacks with Australia-India engineering and Dubai strategy.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How long does it take to build an AI MVP?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our Product Studio methodology allows UAE startups and enterprises to launch production-grade AI MVPs in as little as 6 weeks, focused on ROI and user impact."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who owns the source code for my custom software?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You own 100% of the source code, database, and intellectual property. We believe in full transparency with no vendor lock-in or subscription fees."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -138,6 +175,14 @@ export default function ProductStudioClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* Hero Section */}
             <section className="hero-section" style={{
                 position: "relative",
@@ -184,8 +229,19 @@ export default function ProductStudioClient() {
                         maxWidth: "900px",
                         letterSpacing: "-0.03em"
                     }}>
-                        Build It. Own It. <span style={{ color: "var(--primary)" }}>Scale It.</span>
+                        How Does our Product Studio <br />
+                        <span className="text-gradient">Accelerate AI-First Software Development in the UAE?</span>
                     </h1>
+                    <p className="hero-text" style={{ 
+                        fontSize: "1.1rem", 
+                        fontWeight: 700,
+                        color: "var(--primary)",
+                        maxWidth: "850px",
+                        marginBottom: "1.5rem",
+                        lineHeight: 1.6
+                    }}>
+                        FI Digital's Product Studio provides end-to-end custom software development for UAE startups and enterprises, building scalable AI-first products that you own 100%. By bridging local Dubai product strategy with top-tier engineering hubs, our studio resolves the technical debt and vendor lock-in challenges of off-the-shelf software, delivering production-grade MVPs and legacy modernizations with 99.1% code accuracy.
+                    </p>
                     <h2 className="hero-anim" style={{
                         fontSize: "clamp(1.25rem, 2.5vw, 1.75rem)",
                         fontWeight: 600,
@@ -216,7 +272,7 @@ export default function ProductStudioClient() {
                 <div className="container">
                     <div style={{ textAlign: "center", marginBottom: "60px" }}>
                         <div className="section-label">Capabilities</div>
-                        <h2 className="section-title">What We Build</h2>
+                        <h2 className="section-title">What is the Smart Product Strategy for UAE Startups and Enterprises?</h2>
                         <p className="section-desc" style={{ margin: "0 auto" }}>
                             We turn complex business challenges into elegant, scalable software solutions.
                         </p>
@@ -298,7 +354,7 @@ export default function ProductStudioClient() {
                 <div className="container">
                     <div style={{ textAlign: "center", marginBottom: "80px" }}>
                         <div className="section-label">Our Workflow</div>
-                        <h2 className="section-title">The Product Studio Process</h2>
+                        <h2 className="section-title">How Do I Scale My Software Product in 6 Weeks with AI?</h2>
                     </div>
 
                     <div style={{
@@ -471,6 +527,9 @@ export default function ProductStudioClient() {
                     .process-step { flex: 1 1 250px !important; }
                 }
             `}</style>
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

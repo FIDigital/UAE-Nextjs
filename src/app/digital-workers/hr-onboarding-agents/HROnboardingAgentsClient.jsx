@@ -72,6 +72,43 @@ const TimelineStep = ({ icon: Icon, title, desc, delay }) => (
 );
 
 export default function HROnboardingAgentsClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "AI HR Onboarding Agent Deployment",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Bilingual AI agents for HR automation, employee onboarding, and policy Q&A integrated with Zoho People in the UAE.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does AI speed up employee onboarding in Dubai?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI agents automate document collection via WhatsApp, initiate IT provisioning, and guide new hires through UAE-specific compliance in days instead of weeks."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can AI agents answer questions about UAE labor laws?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our HR agents are trained on your company policies and UAE labor regulations to provide instant, bilingual answers to employee queries."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -105,6 +142,14 @@ export default function HROnboardingAgentsClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)", color: "var(--text)" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* HERO SECTION */}
             <section style={{ 
                 minHeight: "90vh", 
@@ -164,18 +209,23 @@ export default function HROnboardingAgentsClient() {
                                 letterSpacing: "-0.02em",
                                 color: "var(--text)"
                             }}>
-                                Onboard in Days, <span style={{ 
+                                How Does AI HR Onboarding Scale for UAE Enterprises <span style={{ 
                                     background: "linear-gradient(135deg, var(--primary) 0%, #6366F1 100%)",
                                     WebkitBackgroundClip: "text",
                                     WebkitTextFillColor: "transparent",
                                     backgroundClip: "text",
-                                }}>Not Weeks</span>. Automate HR Without Losing the <span style={{ 
-                                    background: "linear-gradient(135deg, var(--primary) 0%, #6366F1 100%)",
-                                    WebkitBackgroundClip: "text",
-                                    WebkitTextFillColor: "transparent",
-                                    backgroundClip: "text",
-                                }}>Human Touch</span>.
+                                }}>Without Hiring?</span>
                             </h1>
+                            <p className="hero-text" style={{ 
+                                fontSize: "1.1rem", 
+                                fontWeight: 700,
+                                color: "var(--primary)",
+                                maxWidth: "850px",
+                                marginBottom: "1.5rem",
+                                lineHeight: 1.6
+                            }}>
+                                FI Digital builds AI HR agents for Dubai enterprises that automate employee onboarding, leave management, and policy Q&A. By connecting Zoho People with n8n orchestration, our digital workers ensure UAE labor law compliance and Day 1 IT provisioning with 94% workflow automation.
+                            </p>
                             <h2 style={{ 
                                 fontSize: "clamp(1.1rem, 2vw, 1.5rem)", 
                                 fontWeight: 500, 
@@ -215,7 +265,7 @@ export default function HROnboardingAgentsClient() {
                 <div className="container" style={{ maxWidth: "1200px" }}>
                     <div className="reveal" style={{ textAlign: "left", marginBottom: "4rem" }}>
                         <div className="section-label" style={{ color: "var(--primary)" }}>CORE CAPABILITIES</div>
-                        <h2 className="section-title">Key End-to-End Solutions</h2>
+                        <h2 className="section-title">What Key AI Capabilities Drive 24/7 HR Support for Dubai Businesses?</h2>
                     </div>
                     
                     <div style={{ 
@@ -278,7 +328,7 @@ export default function HROnboardingAgentsClient() {
                 <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "100%", height: "100%", background: "radial-gradient(circle, var(--primary) 0%, transparent 70%)", opacity: 0.05, pointerEvents: "none" }} />
                 <div className="container" style={{ maxWidth: "900px", position: "relative", zIndex: 1 }}>
                     <div className="reveal">
-                        <SectionHeader title="Ready to Humanize Your HR with AI?" />
+                        <SectionHeader title="How Do I Scale My HR Operations in 6 Weeks with AI?" />
                         <p style={{ 
                             fontSize: "clamp(1rem, 1.2vw, 1.15rem)", 
                             color: "var(--text-muted)", 
@@ -307,6 +357,10 @@ export default function HROnboardingAgentsClient() {
                     </div>
                 </div>
             </section>
+
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

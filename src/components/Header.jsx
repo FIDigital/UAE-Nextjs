@@ -54,7 +54,7 @@ const navLinks = [
         ]
     },
     { href: "/case-studies", label: "Case Studies" },
-    { href: "/resources", label: "Resources" },
+    // { href: "/resources", label: "Resources" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
 ];

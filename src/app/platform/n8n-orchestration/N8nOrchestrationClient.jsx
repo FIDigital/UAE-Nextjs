@@ -6,8 +6,53 @@ import Image from 'next/image';
 import { Workflow, CheckCircle2, Repeat, Server, ShieldCheck, Zap } from 'lucide-react';
 
 export default function N8nOrchestrationClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Enterprise Workflow Orchestration",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Enterprise-grade workflow orchestration with n8n for UAE businesses. Connect 400+ apps and build intelligent AI-driven workflows.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is n8n orchestration used for in AI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "n8n serves as the nervous system for AI agents, connecting them to 400+ applications, CRMs, and databases to automate complex multi-step business processes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does FI Digital use n8n for UAE clients?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We use n8n as the backbone for every AI solution, enabling intelligent routing, data synchronization, and event-driven automation across the enterprise ecosystem."
+                }
+            }
+        ]
+    };
+
     return (
         <main style={{ background: "var(--bg)", color: "var(--text)", paddingBottom: "100px" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             
             {/* HERO SECTION */}
             <section style={{
@@ -45,9 +90,19 @@ export default function N8nOrchestrationClient() {
                             marginBottom: "1.5rem",
                             letterSpacing: "-0.03em"
                         }}>
-                             Connect Everything. <br />
-                             <span className="text-gradient">Automate Anything.</span>
+                             How Does n8n Orchestration <br />
+                             <span className="text-gradient">Power AI Workflows in the UAE?</span>
                         </h1>
+                        <p className="hero-text" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital leverages n8n as the enterprise-grade orchestration layer for UAE businesses, connecting 400+ applications into intelligent AI-driven workflows. By bridging diverse LLMs with Zoho CRM, WhatsApp, and legacy databases, our n8n implementations provide the nervous system required for autonomous agents to execute complex, multi-step operations with 99.1% accuracy.
+                        </p>
                         <p className="hero-text" style={{
                             fontSize: "clamp(1rem, 1.2vw, 1.25rem)",
                             color: "var(--text-muted)",
@@ -74,7 +129,7 @@ export default function N8nOrchestrationClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div style={{ textAlign: "center", marginBottom: "4rem" }}>
                         <div className="section-label">CAPABILITIES</div>
-                        <h2 className="section-title">Key Solutions & Capabilities</h2>
+                        <h2 className="section-title">What are the Benefits of n8n for UAE Agentic AI Workflows?</h2>
                     </div>
 
                     <div className="capabilities-grid" style={{
@@ -153,6 +208,9 @@ export default function N8nOrchestrationClient() {
                     .card-icon { margin-bottom: 1rem !important; }
                 }
             `}</style>
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </main>
     );
 }

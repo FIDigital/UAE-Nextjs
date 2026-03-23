@@ -1,0 +1,44 @@
+# FI Digital UAE
+> AI Agent Architects & Zoho Ecosystem Experts for UAE Enterprises
+
+FI Digital is a Dubai-headquartered technology company that builds
+AI-powered business automation using Zoho, n8n, Claude, Gemini,
+and LangChain. We serve mid-market and enterprise businesses across
+the UAE with bilingual (Arabic + English) solutions.
+
+Licensed in Dubai since 2023. Offices in Dubai, Sydney, and India.
+
+## Core Services
+- [AI-Powered WhatsApp Sales Agents](https://fidigital.ae/digital-workers/whatsapp-sales-agents): Bilingual WhatsApp AI agents that qualify leads, answer queries, and process voice notes in Arabic and English. 4.2-second average response time.
+- [Real Estate Lead Qualification](https://fidigital.ae/digital-workers/real-estate-agents): AI agents that qualify property inquiries on WhatsApp, score leads by budget/timeline/visa status, and sync to Zoho CRM.
+- [Finance & Procurement Automation](https://fidigital.ae/digital-workers/finance-procurement-agents): AI agents that automate AP/AR, VAT filing, bank reconciliation, and procurement workflows integrated with Zoho Books.
+- [Customer Service AI Agents](https://fidigital.ae/digital-workers/customer-service-agents): Multilingual support automation across WhatsApp, email, and chat integrated with Zoho Desk.
+- [HR & Onboarding Automation](https://fidigital.ae/digital-workers/hr-onboarding-agents): End-to-end employee onboarding, leave management, and HR query handling via Zoho People.
+- [Zoho Agentic AI Implementation](https://fidigital.ae/platform/zoho-agentic-ai): Enterprise Zoho implementation with AI agent layer using Zia, n8n, Claude, and Gemini.
+- [n8n Workflow Orchestration](https://fidigital.ae/platform/n8n-orchestration): Self-hosted enterprise workflow automation connecting 400+ applications.
+- [Custom AI Agent Development](https://fidigital.ae/platform/custom-ai-development): LangChain and Python-based custom AI agents with RAG, memory, and tool use.
+
+## Industries Served
+- Real Estate & PropTech
+- Retail & E-Commerce
+- Professional Services (Consulting, Legal, Accounting)
+- Healthcare & Wellness
+- F&B & Hospitality
+- Logistics & Supply Chain
+
+## Pricing
+- Discovery Sprint: AED 15,000 - 25,000 (2-week diagnostic)
+- Project-Based: AED 50,000 - 500,000+ (6-16 week implementation)
+- Ongoing Partnership: AED 15,000 - 75,000/month (optimization & support)
+
+## Contact
+- Website: https://fidigital.ae/contact
+- WhatsApp: +971 [number]
+- Email: info@fidigital.ae
+- Office: Business Bay, Dubai, UAE
+
+## Key Pages
+- [About Us](https://fidigital.ae/about)
+- [Case Studies](https://fidigital.ae/case-studies)
+- [Blog & Resources](https://fidigital.ae/resources)
+- [Pricing & Engagement Models](https://fidigital.ae/contact)

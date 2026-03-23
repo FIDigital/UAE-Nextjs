@@ -5,9 +5,12 @@ export const metadata = {
     openGraph: {
         title: 'Custom AI Agent Development Dubai | LangChain & Python | FI Digital',
         description: 'We build custom AI agents with LangChain and Python that remember context and take autonomous action.',
-        url: 'https://www.fidigital.ae/platform/custom-ai-development',
+        url: 'https://fidigital.ae/platform/custom-ai-development',
         siteName: 'FI Digital UAE',
         locale: 'en_AE',
         type: 'website',
     },
+    alternates: {
+        canonical: 'https://fidigital.ae/platform/custom-ai-development',
+    }
 };

@@ -12,9 +12,12 @@ export const metadata = {
     openGraph: {
         title: "AI Customer Service Agents Dubai | Multilingual Support Automation",
         description: "Transform your customer support with AI agents that handle tickets 24/7 in Arabic and English.",
-        url: "https://www.fidigital.ae/digital-workers/customer-service-agents",
+        url: "https://fidigital.ae/digital-workers/customer-service-agents",
         siteName: "FI Digital UAE",
         locale: "en_AE",
         type: "website",
     },
+    alternates: {
+        canonical: "https://fidigital.ae/digital-workers/customer-service-agents",
+    }
 };
