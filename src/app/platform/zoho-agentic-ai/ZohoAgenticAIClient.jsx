@@ -222,6 +222,48 @@ const CollapsibleText = ({ children, maxHeight = 100, fadeColor = "var(--bg-seco
 
 
 export default function ZohoAgenticAIClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Zoho AI Integration",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Enterprise-grade Zoho AI integration. Elevating Zoho CRM, Books, and People with Claude and Gemini for autonomous business operations.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        },
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "AED",
+            "priceRange": "AED 80,000 - 500,000"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is Zoho enterprise-ready for AI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, Zoho's clean data structure and API-first architecture make it the ideal spine for agentic AI reasoning using models like Claude and Gemini."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does FI Digital optimize Zoho costs?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We optimize licensing by role and module, often saving enterprises 20-30% on Zoho recurring costs while adding AI capabilities."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -251,7 +293,14 @@ export default function ZohoAgenticAIClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)", color: "var(--text)", overflow: "hidden" }}>
-
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* HERO SECTION */}
             <section style={{
                 position: "relative",
@@ -292,6 +341,16 @@ export default function ZohoAgenticAIClient() {
                             Elevating Your Enterprise Platform, <br />
                             <span style={{ color: "var(--primary)" }}>Not Replacing It</span>
                         </h1>
+                        <p className="hero-text" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital specializes in elevating Zoho from a standard CRM into an AI-driven enterprise platform. By integrating Zoho CRM, Books, and People with advanced reasoning models like Claude and Gemini via n8n, we create autonomous workflows that handle qualification, VAT, and HR policy with 94% automation.
+                        </p>
                         <div className="hero-text" style={{ maxWidth: "950px", position: "relative" }}>
                             <CollapsibleText maxHeight={120}>
                                 <p style={{
@@ -331,7 +390,7 @@ export default function ZohoAgenticAIClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div className="reveal-item" style={{ textAlign: "center", marginBottom: "5rem" }}>
                         <div className="section-label">THE DIFFERENCE</div>
-                        <h2 className="section-title">What We Do That Others Cannot</h2>
+                        <h2 className="section-title">How Does FI Digital&apos;s Zoho AI Architecture Differ from Standard CRM?</h2>
                         <p style={{ fontSize: "1.15rem", color: "var(--text-muted)", maxWidth: "850px", margin: "0 auto" }}>
                             Most Zoho implementations are point and click configurations. We engineer Zoho
                             implementations into scalable, intelligent enterprise platforms.
@@ -386,7 +445,7 @@ export default function ZohoAgenticAIClient() {
                     <div className="reveal-item solution-row row-reverse" style={{ display: "flex", alignItems: "center", gap: "clamp(2rem, 5vw, 6rem)" }}>
                         <div className="content-side" style={{ flex: "1 1 450px" }}>
                             <div className="section-label" style={{ color: "var(--primary)" }}>TECHNICAL FLOW</div>
-                            <h2 style={{ fontSize: "clamp(2rem, 4vw, 2.5rem)", fontWeight: 900, marginBottom: "1.5rem" }}>Zoho + Claude/Gemini via n8n & LangChain</h2>
+                            <h2 style={{ fontSize: "clamp(2rem, 4vw, 2.5rem)", fontWeight: 900, marginBottom: "1.5rem" }}>How Does the Zoho Reasoning Layer Work with Claude and Gemini?</h2>
                             <CollapsibleText maxHeight={120}>
                                 <p style={{ fontSize: "1.1rem", lineHeight: 1.7, color: "var(--text-muted)", marginBottom: "2rem" }}>
                                     Here's how it works technically. When a sales opportunity comes in, n8n detects it (via Zoho webhook).
@@ -435,7 +494,7 @@ export default function ZohoAgenticAIClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div className="reveal-item" style={{ textAlign: "center", marginBottom: "5rem" }}>
                         <div className="section-label">MODULAR INTELLIGENCE</div>
-                        <h2 className="section-title">Full Zoho Stack, AI-Enhanced</h2>
+                        <h2 className="section-title">Which Zoho Modules Can Be Enhanced with Agentic AI?</h2>
                         <p style={{ fontSize: "1.15rem", color: "var(--text-muted)", maxWidth: "850px", margin: "0 auto" }}>
                             Zoho is modular: CRM for sales, Books for finance, Desk for support, People for HR, Creator for custom
                             apps, Analytics for reporting, Flow for automation. Most implementations use 2-3 modules. We architect
@@ -568,7 +627,7 @@ export default function ZohoAgenticAIClient() {
                         <div className="content-side" style={{ flex: 1 }}>
                             <div className="section-label">INTELLIGENT WORKFLOWS</div>
                             <h2 className="left-align-desktop" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, marginBottom: "2rem", lineHeight: 1.1 }}>
-                                Zoho Flow + <span className="text-gradient">AI-Driven Automation</span>
+                                How Does Zoho Flow Work with AI-Driven Orchestration?
                             </h2>
                             <p className="left-align-desktop" style={{ fontSize: "1.15rem", color: "var(--text-muted)", lineHeight: 1.8, marginBottom: "2rem" }}>
                                 Flow is Zoho's native automation (like Zapier, but inside Zoho). Flow lets you build workflows: if X happening, do Y. AI enhances this: instead of if-then-else, you have intelligent conditionals (if opportunity is high-value and customer is enterprise, route to VP; if opportunity is mid-market and sales rep has capacity, route to rep). Most Flow implementations are simple. We architect complex, conditional workflows with AI decision-making.
@@ -606,7 +665,7 @@ export default function ZohoAgenticAIClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div className="reveal-item" style={{ textAlign: "center", marginBottom: "5rem" }}>
                         <div className="section-label">TECHNICAL STACK</div>
-                        <h2 className="section-title">Zoho + AI Architecture (Technical)</h2>
+                        <h2 className="section-title">What is the Technical Architecture of an AI-Powered Zoho Platform?</h2>
                         <p style={{ fontSize: "1.15rem", color: "var(--text-muted)", maxWidth: "850px", margin: "0 auto" }}>
                             This is different from a typical 'Zoho + Zapier' architecture, which is just moving data around. 
                             This architecture adds intelligence through a multi-layered reasoning framework.
@@ -724,7 +783,7 @@ export default function ZohoAgenticAIClient() {
                     }}>
                         <div>
                             <div className="section-label" style={{ color: "var(--primary)" }}>REGIONAL EXPERTISE</div>
-                            <h2 style={{ fontSize: "2.5rem", fontWeight: 900, marginBottom: "1.5rem" }}>UAE-Specific Configuration</h2>
+                            <h2 style={{ fontSize: "2.5rem", fontWeight: 900, marginBottom: "1.5rem" }}>How is Zoho Configured for UAE Regulatory Compliance?</h2>
                             <p style={{ color: "var(--text-muted)", lineHeight: 1.7, fontSize: "1.1rem" }}>
                                 We don't just translate labels. We deeply configure Zoho for the UAE's unique regulatory
                                 and business environment from Day 1.
@@ -752,7 +811,7 @@ export default function ZohoAgenticAIClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div className="reveal-item" style={{ textAlign: "center", marginBottom: "5rem" }}>
                         <div className="section-label">STRATEGIC OVERSIGHT</div>
-                        <h2 className="section-title">Why Most Implementations Fail</h2>
+                        <h2 className="section-title">What are the Most Common Reasons Zoho Implementations Fail in the UAE?</h2>
                         <p style={{ color: "var(--text-muted)", fontSize: "1.15rem", maxWidth: "800px", margin: "0 auto" }}>
                             Avoid the pitfalls of over-customization and chaotic governance. Our approach builds a platform, not just a system.
                         </p>
@@ -823,7 +882,7 @@ export default function ZohoAgenticAIClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div className="reveal-item" style={{ textAlign: "center", marginBottom: "5rem" }}>
                         <div className="section-label">THE PROCESS</div>
-                        <h2 className="section-title">Implementation Methodology</h2>
+                        <h2 className="section-title">What is the Step-by-Step Implementation Methodology for Zoho AI?</h2>
                         <p style={{ color: "var(--text-muted)", fontSize: "1.15rem", margin: "0 auto" }}>
                             A structured approach from discovery to steady-state operations.
                         </p>
@@ -914,7 +973,7 @@ export default function ZohoAgenticAIClient() {
                         <div style={{ position: "absolute", top: 0, right: 0, width: "300px", height: "300px", background: "radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
                         
                         <div className="section-label" style={{ color: "var(--primary)" }}>ECONOMICS</div>
-                        <h2 style={{ fontSize: "2.2rem", fontWeight: 900, marginBottom: "2rem" }}>Licensing & Cost Optimization</h2>
+                        <h2 style={{ fontSize: "2.2rem", fontWeight: 900, marginBottom: "2rem" }}>How Can I Optimize Zoho Licensing Costs for My Enterprise?</h2>
                         
                         <div style={{ color: "var(--text-muted)", fontSize: "1.1rem", lineHeight: 1.8 }}>
                             <p style={{ marginBottom: "1.5rem" }}>
@@ -949,7 +1008,7 @@ export default function ZohoAgenticAIClient() {
                         <div style={{ position: "absolute", top: 0, right: 0, width: "300px", height: "300px", background: "radial-gradient(circle, rgba(59, 130, 246, 0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
                         
                         <div className="section-label" style={{ color: "var(--primary)" }}>TRANSITION</div>
-                        <h2 style={{ fontSize: "2.2rem", fontWeight: 900, marginBottom: "2rem" }}>Migration From Other Platforms</h2>
+                        <h2 style={{ fontSize: "2.2rem", fontWeight: 900, marginBottom: "2rem" }}>How Do I Migrate from Salesforce or HubSpot to an AI-Ready Zoho?</h2>
                         
                         <div style={{ color: "var(--text-muted)", fontSize: "1.1rem", lineHeight: 1.8 }}>
                             <p style={{ marginBottom: "1.5rem" }}>
@@ -989,7 +1048,7 @@ export default function ZohoAgenticAIClient() {
                 <div className="container" style={{ maxWidth: "800px" }}>
                     <div className="reveal-item" style={{ textAlign: "center", marginBottom: "4rem" }}>
                         <div className="section-label">COMMON QUESTIONS</div>
-                        <h2 className="section-title">Zoho Agentic AI FAQ</h2>
+                        <h2 className="section-title">Common Questions About Zoho AI Integration for Dubai Enterprises</h2>
                     </div>
                     <div className="reveal-item">
                         <FAQItem 
@@ -1040,7 +1099,7 @@ export default function ZohoAgenticAIClient() {
                         zIndex: 1
                     }}>
                         <div className="section-label" style={{ color: "var(--primary)", marginBottom: "1rem" }}>NEXT STEPS</div>
-                        <h2 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 900, marginBottom: "1.5rem" }}>Ready to Elevate Your Platform?</h2>
+                        <h2 style={{ fontSize: "clamp(2rem, 5vw, 3rem)", fontWeight: 900, marginBottom: "1.5rem" }}>How Do I Get Started with an AI-Elevated Zoho Platform?</h2>
                         <p style={{ fontSize: "1.15rem", color: "var(--text-muted)", marginBottom: "3rem", maxWidth: "850px", margin: "0 auto", lineHeight: 1.7 }}>
                             If you're considering Zoho for the first time, if you're struggling with your current Zoho implementation, 
                             or if you want to elevate your Zoho with AI, let's talk. We offer a Zoho Readiness Audit (AED 18K, 20-page 

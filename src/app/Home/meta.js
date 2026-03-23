@@ -11,10 +11,14 @@ export const metadata = {
     "Digital Transformation UAE",
     "AI Business Solutions Dubai"
   ],
+  metadataBase: new URL('https://fidigital.ae'),
+  alternates: {
+      canonical: 'https://fidigital.ae',
+  },
   openGraph: {
-    title: "FI Digital UAE | AI Agent Architects & Zoho Experts in Dubai",
-    description: "Leading Australian Zoho partner in Dubai. We architect intelligent AI agents and automated enterprise workflows.",
-    url: "https://fristine-uae.com",
+    title: 'FI Digital UAE | Enterprise Agentic AI & Zoho CRM Implementation',
+    description: 'Dubai\'s leading AI implementation partner. Custom Agentic AI, autonomous WhatsApp agents, and enterprise Zoho CRM solutions for UAE businesses.',
+    url: 'https://fidigital.ae',
     siteName: "FI Digital UAE",
     images: [
       {

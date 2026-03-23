@@ -24,12 +24,49 @@ if (typeof window !== "undefined") {
 }
 
 export default function SolutionsClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Enterprise AI Solutions",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Comprehensive AI agent architectures, Zoho governance, and enterprise automation solutions for UAE businesses.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does AI Agent Architecture benefit UAE enterprises?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It provides governance-first, transparent AI reasoning for lead qualification and finance, ensuring compliance with UAE regulations while automating up to 94% of workflows."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why is Zoho governance important for AI readiness?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Clean, scalable Zoho architectures ensure a single source of truth, which is essential for AI agents to reason accurately and maintain data sovereignty."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     const pillars = [
         {
             id: "pillar-1",
-            title: "Pillar 1: AI Agent Architecture",
+            title: "How Does AI Agent Architecture Automate Enterprise Logic?",
             subtitle: "Transparent, Governance-First AI",
             icon: <Bot className="text-primary" />,
             content: "Artificial intelligence in the enterprise is too often black-box and risky. We architect transparent, governance-first AI agents that reason through business logic, manage approvals, and integrate seamlessly with your existing Zoho instance.",
@@ -43,7 +80,7 @@ export default function SolutionsClient() {
         },
         {
             id: "pillar-2",
-            title: "Pillar 2: Zoho Architecture & Governance",
+            title: "How is Zoho Architected for Enterprise Governance and AI?",
             subtitle: "Clean, Scalable, AI-Ready Instances",
             icon: <Shield className="text-success" />,
             content: "Zoho implementations fail most often from customization chaos, not tool limitations. We architect clean, governed Zoho instances designed for scale and AI integration.",
@@ -57,7 +94,7 @@ export default function SolutionsClient() {
         },
         {
             id: "pillar-3",
-            title: "Pillar 3: Enterprise Automation",
+            title: "What is the Role of n8n in Enterprise Automation Workflows?",
             subtitle: "Engineering Discipline for Workflow",
             icon: <Settings className="text-secondary" />,
             content: "Automation in the enterprise means engineering discipline. We architect multi-process automation using n8n as the orchestration spine.",
@@ -105,11 +142,29 @@ export default function SolutionsClient() {
 
     return (
         <div ref={containerRef}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             <main style={{ padding: '40px 1.5rem 60px' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
                         <div className="section-label reveal-item">Our Solutions</div>
                         <h1 className="section-title reveal-item" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>Enterprise AI & Zoho Ecosystem</h1>
+                        <p className="hero-text" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            margin: "0 auto 1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital provides enterprise-grade AI agents and Zoho ecosystem architectures for Dubai businesses. By combining Claude-powered reasoning with n8n orchestration, we deploy digital workers that automate 94% of lead qualification and finance workflows with Day 1 VAT compliance.
+                        </p>
                         <p className="section-desc reveal-item" style={{ margin: '0 auto', maxWidth: '800px' }}>
                             We bridge advanced AI reasoning with operational Zoho reliability to create a seamless agent mesh for your business.
                         </p>
@@ -147,7 +202,7 @@ export default function SolutionsClient() {
 
                     <div style={{ marginTop: '6rem' }}>
                         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-                            <h2 className="section-title reveal-item">Industry Specialized Solutions</h2>
+                            <h2 className="section-title reveal-item">What are the Most Effective AI Solutions for UAE Industries?</h2>
                         </div>
                         <div className="card-grid reveal-item">
                             {industries.map(ind => (
@@ -161,6 +216,10 @@ export default function SolutionsClient() {
                     </div>
                 </div>
             </main>
+
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

@@ -139,6 +139,43 @@ const ClinicEfficiencyCalculator = () => {
 };
 
 export default function HealthcareClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Healthcare AI Automation",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Bilingual AI agents for patient management, appointment scheduling, and insurance verification for UAE healthcare providers.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does AI help UAE clinics with patient management?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI agents automate patient intake, multilingual WhatsApp scheduling, and insurance verification, reducing administrative burden and no-show rates by 40%."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the healthcare AI compliant with DHA regulations?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our solution includes DHA compliance workflows for AI-driven logging and document management."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -154,6 +191,14 @@ export default function HealthcareClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* HERO SECTION */}
             <section style={{
                 position: "relative",
@@ -182,7 +227,7 @@ export default function HealthcareClient() {
 
                 <div className="container" style={{ position: "relative", zIndex: 1, maxWidth: "1250px" }}>
                     <div style={{ maxWidth: "800px" }}>
-                        <div className="section-label reveal-hc">Healthcare & Wellness</div>
+                        <div className="section-label reveal-hc">What are the Key AI Capabilities Driving 24/7 Patient Support in Dubai?</div>
                         <h1 className="reveal-hc" style={{
                             fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
                             fontWeight: 900,
@@ -190,9 +235,19 @@ export default function HealthcareClient() {
                             marginBottom: "1.5rem",
                             letterSpacing: "-0.03em"
                         }}>
-                             Better Patient Experience. <br />
-                             <span className="text-gradient">Less Admin Burden.</span>
+                             How Does AI Modernize <br />
+                             <span className="text-gradient">Healthcare Operations in the UAE?</span>
                         </h1>
+                        <p className="hero-text" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital deploys specialized AI agents for Dubai healthcare providers that automate patient intake, insurance verification, and multilingual WhatsApp scheduling. By bridging DHA-compliant workflows with 24/7 autonomous support, we help clinics reduce no-shows by 40% and resolve 90% of administrative queries in Arabic and English.
+                        </p>
                         <p className="reveal-hc" style={{
                             fontSize: "clamp(1rem, 1.2vw, 1.25rem)",
                             color: "var(--text-muted)",
@@ -237,7 +292,7 @@ export default function HealthcareClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div style={{ marginBottom: "60px", textAlign: "center" }} className="reveal-hc">
                         <div className="section-label">Solutions</div>
-                        <h2 className="section-title">Patient-First AI Automation</h2>
+                        <h2 className="section-title">What is the Patient-First AI Strategy for UAE Clinics?</h2>
                     </div>
 
                     <div className="solutions-grid" style={{
@@ -302,7 +357,7 @@ export default function HealthcareClient() {
                         background: "var(--primary)", borderRadius: "40px", color: "white"
                     }}>
                         <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, marginBottom: "1.5rem" }}>
-                            Lead the Future of UAE Healthcare
+                            How Do I Scale My Healthcare Operations in 6 Weeks with AI?
                         </h2>
                         <p style={{ fontSize: "1.1rem", opacity: 0.9, marginBottom: "2.5rem", maxWidth: "600px", margin: "0 auto 2.5rem" }}>
                             Join forward-thinking medical groups in Dubai using AI to deliver superior patient care.

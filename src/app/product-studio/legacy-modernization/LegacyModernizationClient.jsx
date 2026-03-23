@@ -59,6 +59,43 @@ const solutions = [
 ];
 
 export default function LegacyModernizationClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Legacy System Modernization",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Enterprise legacy modernization in Dubai. We incrementally migrate legacy systems to cloud landscapes, wrap them in modern APIs, and implement AI overlays with zero downtime.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Can you modernize legacy systems without downtime?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our risk-free evolution approach utilizes modern API wrapping and incremental cloud shifts to ensure zero-downtime migrations even for 15-year-old core systems."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is AI applied to legacy data?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We implement AI overlays that connect LangChain agents to historical legacy data through n8n, transforming static databases into dynamic knowledge bases."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -97,6 +134,14 @@ export default function LegacyModernizationClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* Hero Section */}
             <section className="hero-section" style={{
                 position: "relative",
@@ -149,9 +194,19 @@ export default function LegacyModernizationClient() {
                         maxWidth: "900px",
                         letterSpacing: "-0.03em"
                     }}>
-                        Modernize Without Disruption. <br />
-                        <span style={{ color: "var(--primary)" }}>Add AI to What Already Works.</span>
+                        How Does Legacy Modernization Strategy <br />
+                        <span style={{ color: "var(--primary)" }}>Enable AI Integration in the UAE?</span>
                     </h1>
+                    <p className="hero-text" style={{ 
+                        fontSize: "1.1rem", 
+                        fontWeight: 700,
+                        color: "var(--primary)",
+                        maxWidth: "850px",
+                        marginBottom: "1.5rem",
+                        lineHeight: 1.6
+                    }}>
+                        FI Digital provides risk-free legacy system modernization for UAE enterprises, bridging outdated infrastructure with modern AI capabilities through high-performance API wrapping and incremental cloud migration. By utilizing n8n orchestration and LangChain overlays, our modernization approach resolves the technical debt and data silo challenges of older platforms, enabling Dubai-based firms to evolve their core systems without operational disruption or downtime.
+                    </p>
                     <p className="reveal-legacy" style={{
                         fontSize: "clamp(1rem, 1.2vw, 1.2rem)",
                         color: "var(--text-muted)",
@@ -172,7 +227,7 @@ export default function LegacyModernizationClient() {
                 <div className="container">
                     <div style={{ marginBottom: "60px" }} className="reveal-legacy">
                         <div className="section-label">Capabilities</div>
-                        <h2 className="section-title" style={{ textAlign: "left" }}>Key Solutions & Capabilities</h2>
+                        <h2 className="section-title" style={{ textAlign: "left" }}>What are the Most Effective Methods for Legacy System Modernization in Dubai?</h2>
                     </div>
 
                     <div className="sol-grid" style={{
@@ -253,7 +308,7 @@ export default function LegacyModernizationClient() {
                 <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "4rem", alignItems: "center" }}>
                     <div className="reveal-legacy">
                         <div className="section-label">Our Approach</div>
-                        <h2 className="section-title" style={{ textAlign: "left" }}>Risk-Free Evolution</h2>
+                        <h2 className="section-title" style={{ textAlign: "left" }}>What is the Best Strategy for Risk-Free Cloud Migration in the UAE?</h2>
                         <ul style={{ listStyle: "none", padding: 0, marginTop: "2rem", display: "flex", flexDirection: "column", gap: "2rem" }}>
                             {[
                                 { title: "Incremental Value", desc: "No multi-year wait times. We deploy functional components every 2-4 weeks." },
@@ -311,7 +366,7 @@ export default function LegacyModernizationClient() {
             {/* Bottom Links */}
             <section style={{ padding: "80px 0", borderTop: "1px solid var(--border)" }}>
                 <div className="container" style={{ textAlign: "center" }}>
-                    <h2 className="reveal-legacy" style={{ fontSize: "2.5rem", fontWeight: 900, marginBottom: "2.5rem" }}>Ready to Modernize?</h2>
+                    <h2 className="reveal-legacy" style={{ fontSize: "2.5rem", fontWeight: 900, marginBottom: "2.5rem" }}>How Can I Start My Legacy System Modernization in Dubai Today?</h2>
                     <div className="reveal-legacy" style={{ display: "flex", justifyContent: "center", gap: "3rem", flexWrap: "wrap" }}>
                         <Link href="/product-studio" style={{ color: "var(--text-muted)", textDecoration: "none", fontWeight: 700 }}>Product Studio</Link>
                         <Link href="/platform" style={{ color: "var(--text-muted)", textDecoration: "none", fontWeight: 700 }}>Our Platform</Link>
@@ -365,6 +420,9 @@ export default function LegacyModernizationClient() {
                     p { font-size: 1rem !important; margin-left: auto; margin-right: auto; }
                 }
             `}</style>
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

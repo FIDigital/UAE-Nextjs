@@ -138,6 +138,43 @@ const RetailCalculator = () => {
 };
 
 export default function RetailEcommerceClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Retail & E-commerce AI Automation",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Bilingual AI agents for WhatsApp commerce, inventory forecasting, and automated customer re-engagement for UAE retail brands.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does AI help UAE retail brands scale?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI agents automate customer engagement on WhatsApp, identify personalized shopping patterns, and optimize inventory via Zoho, increasing conversion rates by up to 48%."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can customers shop directly on WhatsApp?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our AI agents allow customers to browse, order, and pay directly via WhatsApp in both Arabic and English."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -153,6 +190,14 @@ export default function RetailEcommerceClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* HERO SECTION */}
             <section style={{
                 position: "relative",
@@ -181,7 +226,7 @@ export default function RetailEcommerceClient() {
 
                 <div className="container" style={{ position: "relative", zIndex: 1, maxWidth: "1250px" }}>
                     <div style={{ maxWidth: "800px" }}>
-                        <div className="section-label reveal-retail">Retail & E-Commerce</div>
+                        <div className="section-label reveal-retail">What are the Key AI Capabilities Driving 24/7 Shopping Support in Dubai?</div>
                         <h1 className="reveal-retail" style={{
                             fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
                             fontWeight: 900,
@@ -189,9 +234,19 @@ export default function RetailEcommerceClient() {
                             marginBottom: "1.5rem",
                             letterSpacing: "-0.03em"
                         }}>
-                             Turn Every Interaction <br />
-                             <span className="text-gradient">Into Revenue</span>
+                             How Does AI Modernize <br />
+                             <span className="text-gradient">Retail & E-commerce Operations in the UAE?</span>
                         </h1>
+                        <p className="hero-text" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital deploys specialized AI agents for UAE retail brands that automate WhatsApp commerce, inventory forecasting, and personalized customer re-engagement. By bridging real-time demand signals with Zoho Inventory and CRM, our digital workers recover 15% of abandoned carts while resolving 90% of shopping inquiries in Arabic and English autonomously.
+                        </p>
                         <p className="reveal-retail" style={{
                             fontSize: "clamp(1rem, 1.2vw, 1.25rem)",
                             color: "var(--text-muted)",
@@ -236,7 +291,7 @@ export default function RetailEcommerceClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div style={{ marginBottom: "60px", textAlign: "center" }} className="reveal-retail">
                         <div className="section-label">Solutions</div>
-                        <h2 className="section-title">Key Capabilities for Modern Retail</h2>
+                        <h2 className="section-title">What is the Smart Retail Strategy for UAE E-commerce Brands?</h2>
                     </div>
 
                     <div className="solutions-grid" style={{
@@ -301,7 +356,7 @@ export default function RetailEcommerceClient() {
                         background: "var(--primary)", borderRadius: "40px", color: "white"
                     }}>
                         <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, marginBottom: "1.5rem" }}>
-                            Own the UAE Retail Frontier
+                            How Do I Scale My E-commerce Operations in 6 Weeks with AI?
                         </h2>
                         <p style={{ fontSize: "1.1rem", opacity: 0.9, marginBottom: "2.5rem", maxWidth: "600px", margin: "0 auto 2.5rem" }}>
                             Transform your retail brand into an AI-powered commerce engine.

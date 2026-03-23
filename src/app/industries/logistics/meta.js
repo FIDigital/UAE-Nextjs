@@ -5,10 +5,13 @@ export const metadata = {
     openGraph: {
         title: 'AI for Logistics & Supply Chain Dubai | FI Digital',
         description: 'Optimize routes, automate tracking, and streamline warehouse operations for UAE logistics.',
-        url: 'https://www.fidigital.ae/industries/logistics',
+        url: 'https://fidigital.ae/industries/logistics',
         siteName: 'FI Digital UAE',
         images: [{ url: '/images/industries/logistics-hero.png', width: 1200, height: 630, alt: 'AI for Logistics Dubai' }],
         locale: 'en_AE',
         type: 'website',
     },
+    alternates: {
+        canonical: 'https://fidigital.ae/industries/logistics',
+    }
 };

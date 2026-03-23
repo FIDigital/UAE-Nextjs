@@ -59,6 +59,43 @@ const capabilities = [
 ];
 
 export default function ScalingMaintenanceClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Product Scaling & Maintenance",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Enterprise software scaling and maintenance in Dubai. We provide dedicated engineering hours, proactive monitoring, and performance optimization for AI-first products.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What does your software maintenance include?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our maintenance retainers include guaranteed monthly engineering hours, 24/7 uptime monitoring, performance optimization, and continuous security patching."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do you handle product scaling?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We implement elastic infrastructure and perform regular technical debt audits to ensure your product scales seamlessly as your user base and data requirements grow."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -97,6 +134,14 @@ export default function ScalingMaintenanceClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* Hero Section */}
             <section className="hero-section" style={{
                 position: "relative",
@@ -149,9 +194,19 @@ export default function ScalingMaintenanceClient() {
                         maxWidth: "900px",
                         letterSpacing: "-0.03em"
                     }}>
-                        Build Once. <span style={{ color: "var(--primary)" }}>Scale Forever.</span> <br />
-                        We Keep It Running.
+                        How Does our Product Scaling & <br />
+                        <span style={{ color: "var(--primary)" }}>Maintenance Strategy Secure UAE Business Growth?</span>
                     </h1>
+                    <p className="hero-text" style={{ 
+                        fontSize: "1.1rem", 
+                        fontWeight: 700,
+                        color: "var(--primary)",
+                        maxWidth: "850px",
+                        marginBottom: "1.5rem",
+                        lineHeight: 1.6
+                    }}>
+                        FI Digital provides dedicated product scaling and proactive maintenance for Dubai-based startups and enterprises, ensuring high-availability performance for AI-first software ecosystems. By integrating 24/7 uptime monitoring with elastic infrastructure management and recursive security patching, our maintenance protocols resolve the stability and performance bottlenecks of growing platforms, delivering 99.98% system uptime for UAE business critical applications.
+                    </p>
                     <p className="reveal-scaling" style={{
                         fontSize: "clamp(1rem, 1.2vw, 1.2rem)",
                         color: "var(--text-muted)",
@@ -173,7 +228,7 @@ export default function ScalingMaintenanceClient() {
                 <div className="container">
                     <div style={{ marginBottom: "60px" }} className="reveal-scaling">
                         <div className="section-label">Our Solutions</div>
-                        <h2 className="section-title" style={{ textAlign: "left" }}>Everything Your Product Needs to Thrive</h2>
+                        <h2 className="section-title" style={{ textAlign: "left" }}>What are the Components of a Full-Service Product Maintenance Retainer in Dubai?</h2>
                     </div>
 
                     <div className="cap-grid" style={{
@@ -254,7 +309,7 @@ export default function ScalingMaintenanceClient() {
                 <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "4rem", alignItems: "center" }}>
                     <div className="reveal-scaling">
                         <div className="section-label">Beyond Basic Support</div>
-                        <h2 className="section-title" style={{ textAlign: "left" }}>Engineered for Reliability</h2>
+                        <h2 className="section-title" style={{ textAlign: "left" }}>What is the Best Approach for Scaling Enterprise AI Applications in the UAE?</h2>
                         <p style={{ color: "var(--text-muted)", marginBottom: "2.5rem", lineHeight: 1.8 }}>
                             Maintenance isn't just about fixing what's broken; it's about optimizing for the future. We provide active engineering that evolves your product as your user base grows.
                         </p>
@@ -308,7 +363,7 @@ export default function ScalingMaintenanceClient() {
             <section style={{ padding: "100px 0", borderTop: "1px solid var(--border)" }}>
                 <div className="container" style={{ textAlign: "center" }}>
                     <div className="reveal-scaling" style={{ maxWidth: "800px", margin: "0 auto" }}>
-                        <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, marginBottom: "1.5rem" }}>Never Worry About Servers Again.</h2>
+                        <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, marginBottom: "1.5rem" }}>How Can I Secure Custom Software Maintenance in Dubai Today?</h2>
                         <p style={{ color: "var(--text-muted)", marginBottom: "3rem", fontSize: "1.2rem" }}>
                             Focus on your business. We'll handle the scaling, the security, and the engineering.
                         </p>
@@ -365,6 +420,9 @@ export default function ScalingMaintenanceClient() {
                     p { font-size: 1rem !important; margin-left: auto; margin-right: auto; }
                 }
             `}</style>
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

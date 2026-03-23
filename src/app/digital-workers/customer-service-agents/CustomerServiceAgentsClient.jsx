@@ -38,6 +38,43 @@ const SectionHeader = ({ title, label, color = "var(--primary)" }) => (
 
 
 export default function CustomerServiceAgentsClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "AI Customer Service Agent Deployment",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Bilingual AI agents for customer support automation, ticket triage, and multi-channel resolution integrated with Zoho Desk in the UAE.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How many support tickets can an AI agent resolve autonomously?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our AI agents typically resolve 90% of common support inquiries (order status, billing, general FAQs) without human intervention."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the AI support Arabic for UAE customers?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our agents are built with bilingual intelligence supporting Gulf, Levantine, and Egyptian dialects for seamless Arabic-English support."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -60,6 +97,14 @@ export default function CustomerServiceAgentsClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)", color: "var(--text)", overflowX: "hidden" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* HERO SECTION */}
             <section style={{ 
                 minHeight: "90vh", 
@@ -118,13 +163,23 @@ export default function CustomerServiceAgentsClient() {
                             letterSpacing: "-0.02em",
                             color: "var(--text)"
                         }}>
-                            Customer Service That Scales <span style={{ 
+                            How Does AI Customer Service Scale for UAE Enterprises <span style={{ 
                                 background: "linear-gradient(135deg, var(--primary) 0%, #6366F1 100%)",
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
                                 backgroundClip: "text",
-                            }}>Without Hiring</span>
+                            }}>Without Hiring?</span>
                         </h1>
+                        <p className="hero-text" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital deploys AI customer service agents for Dubai businesses that resolve 90% of support tickets autonomously. By integrating Zoho Desk with bilingual LLMs (Claude/Gemini), our digital workers provide 24/7 multi-channel support in Arabic and English with sub-4 minute response times and Day 1 VAT compliance.
+                        </p>
                         <h2 style={{ 
                             fontSize: "clamp(1.1rem, 2.5vw, 1.7rem)", 
                             fontWeight: 500, 
@@ -162,7 +217,7 @@ export default function CustomerServiceAgentsClient() {
             {/* KEY SOLUTIONS SECTION */}
             <section style={{ padding: "100px 1.5rem", background: "rgba(255,255,255,0.01)" }}>
                 <div className="container" style={{ maxWidth: "1200px" }}>
-                    <SectionHeader title="Key Solutions / Capabilities" label="CORE FEATURES" />
+                    <SectionHeader title="What Key AI Capabilities Drive 24/7 Support for Dubai Businesses?" label="CORE FEATURES" />
                     <div style={{ 
                         display: "grid", 
                         gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))", 
@@ -216,7 +271,7 @@ export default function CustomerServiceAgentsClient() {
                 
                 <div className="container" style={{ maxWidth: "900px", position: "relative", zIndex: 1 }}>
                     <div className="reveal">
-                        <SectionHeader title="Ready to Scale Your Support?" label="DEPLOY IN 6 WEEKS" />
+                        <SectionHeader title="How Do I Scale My Support Operations in 6 Weeks?" label="DEPLOY IN 6 WEEKS" />
                         <p style={{ 
                             fontSize: "clamp(1rem, 1.2vw, 1.2rem)", 
                             lineHeight: 1.8, 
@@ -241,6 +296,10 @@ export default function CustomerServiceAgentsClient() {
                     </div>
                 </div>
             </section>
+
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

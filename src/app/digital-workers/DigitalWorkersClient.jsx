@@ -228,6 +228,43 @@ const AgentVisual = ({ agent }) => {
 };
 
 export default function DigitalWorkersClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "AI Digital Worker Solutions",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Specialized AI agents for sales, real estate, finance, customer service, and HR automation in Dubai and the UAE.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What industries can benefit from AI digital workers in Dubai?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Real Estate, Finance, Retail, and HR departments see significant ROI through automated lead qualification and document processing."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How accurate are autonomous AI agents?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our digital workers achieve up to 99.1% automation accuracy by leveraging advanced LLMs and deep Zoho integration."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -250,6 +287,14 @@ export default function DigitalWorkersClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* Hero Section */}
             <section style={{
                 position: "relative",
@@ -308,16 +353,25 @@ export default function DigitalWorkersClient() {
                             textWrap: "balance",
                             color: "var(--text)",
                         }}>
-                            Digital Workers That Never Sleep,{" "}
-                            <span style={{
+                            Which Digital Workers Can Automate My <span style={{
                                 background: "linear-gradient(135deg, var(--primary) 0%, #6366F1 100%)",
                                 WebkitBackgroundClip: "text",
                                 WebkitTextFillColor: "transparent",
                                 backgroundClip: "text",
                             }}>
-                                Never Forget
+                                Business Ops in the UAE?
                             </span>
                         </h1>
+                        <p className="hero-text" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital provides a suite of specialized digital workers for Dubai enterprises, from WhatsApp Sales Agents to Finance & Procurement bots. By connecting Zoho ecosystem data with advanced reasoning models, our AI agents automate 94% of business operations with sub-2 minute response times and Day 1 UAE compliance.
+                        </p>
 
                         <p style={{
                             fontSize: "clamp(1rem, 1.8vw, 1.15rem)",
@@ -368,8 +422,8 @@ export default function DigitalWorkersClient() {
             <section style={{ padding: "clamp(60px, 10vh, 100px) 0", background: "var(--bg-secondary)" }}>
                 <div className="container">
                     <div style={{ textAlign: "center", marginBottom: "clamp(4rem, 8vh, 8rem)" }}>
-                        <div className="section-label">Solution Portfolio</div>
-                        <h2 className="section-title">Specialized Autonomous Agents</h2>
+                        <div className="section-label">What is the Digital Worker Ecosystem for Zoho & AI?</div>
+                        <h2 className="section-title">Which Autonomous AI Agents Provide the Highest ROI?</h2>
                         <p className="section-desc" style={{ margin: "0 auto", fontSize: "clamp(1rem, 1.8vw, 1.15rem)" }}>
                             Our digital workers are deployed as functional units within your existing teams, taking over high-volume high-complexity tasks.
                         </p>

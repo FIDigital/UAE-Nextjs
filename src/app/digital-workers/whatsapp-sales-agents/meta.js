@@ -12,12 +12,12 @@ export const metadata = {
     openGraph: {
         title: "WhatsApp Sales & Concierge Agents | AI-Powered Lead Qualification",
         description: "Scale your sales and customer engagement with AI-powered WhatsApp agents. Multilingual, real-time, and perfectly integrated with Zoho CRM.",
-        url: "https://www.fidigital.ae/digital-workers/whatsapp-sales-agents",
+        url: "https://fidigital.ae/digital-workers/whatsapp-sales-agents",
         siteName: "FI Digital",
         locale: "en_AE",
         type: "website",
     },
     alternates: {
-        canonical: "https://www.fidigital.ae/digital-workers/whatsapp-sales-agents",
+        canonical: "https://fidigital.ae/digital-workers/whatsapp-sales-agents",
     }
 };

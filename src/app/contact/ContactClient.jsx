@@ -229,6 +229,49 @@ const contactMethods = [
 
 /* ─── Component ─────────────────────────────────────────────────────────────── */
 export default function ContactClient() {
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Zoho AI & ERP Consultation",
+    "provider": {
+        "@id": "https://fidigital.ae/#organization"
+    },
+    "description": "Professional consultation and pricing for Zoho AI agents, ERP implementation, and digital worker deployment in Dubai and UAE.",
+    "areaServed": {
+        "@type": "Country",
+        "name": "United Arab Emirates"
+    },
+    "offers": {
+        "@type": "Offer",
+        "priceCurrency": "AED",
+        "price": "0",
+        "description": "Complimentary AI & Zoho Readiness Audit"
+    }
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is the typical cost for a Zoho AI implementation in Dubai?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Implementation costs range from AED 50,000 for light setups to over AED 500,000 for full enterprise stack deployment with 5+ AI agents."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How long does it take to get a proposal?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "FI Digital provides a concrete, fixed-price proposal within 48 hours of your initial contact."
+            }
+        }
+    ]
+  };
+
   const containerRef = useRef(null);
   const [activeTab, setActiveTab] = useState(0);
   const [openFaq, setOpenFaq] = useState(null);
@@ -263,6 +306,14 @@ export default function ContactClient() {
 
   return (
     <div ref={containerRef}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <style>{`
         /* ── Contact page — full responsive system ── */
 
@@ -362,6 +413,16 @@ export default function ContactClient() {
                 Three Ways to Engage
               </span>
             </h1>
+            <p className="hero-text" style={{ 
+                fontSize: "1.1rem", 
+                fontWeight: 700,
+                color: "var(--primary)",
+                maxWidth: "850px",
+                marginBottom: "1.5rem",
+                lineHeight: 1.6
+            }}>
+                FI Digital provides transparent, fixed-fee pricing for Zoho AI implementations in Dubai. From a free 45-minute readiness audit to full-scale enterprise AI agent deployment (AED 200K+), we provide clear roadmaps and 48-hour proposal turnaround for UAE businesses seeking autonomous operations.
+            </p>
             <p className="ch-desc" style={{ fontSize: "1.1rem", color: "var(--text-muted)", lineHeight: 1.75, maxWidth: "680px", margin: "0 0 2rem 0" }}>
               No surprise costs, no hidden overruns. You&apos;ll know exactly what you&apos;re paying and what you&apos;re getting. We&apos;re honest about fit — and we&apos;ll tell you if you should wait.
             </p>
@@ -407,7 +468,7 @@ export default function ContactClient() {
           <div className="container">
             <div className="rv" style={{ textAlign: "center", marginBottom: "2.5rem" }}>
               <div className="section-label">Three Engagement Options</div>
-              <h2 className="section-title">Pick Whatever Feels Right</h2>
+              <h2 className="section-title">How Can I Engage with FI Digital for AI & Zoho?</h2>
               <p className="section-desc" style={{ margin: "0 auto" }}>A complimentary readiness audit if you&apos;re exploring, a strategy session if you&apos;re serious, or a WhatsApp quick connect if you want to kick tires.</p>
             </div>
 
@@ -470,7 +531,7 @@ export default function ContactClient() {
           <div className="container">
             <div className="rv" style={{ textAlign: "center", marginBottom: "3rem" }}>
               <div className="section-label">Engagement Models & Pricing</div>
-              <h2 className="section-title">Transparent Pricing</h2>
+              <h2 className="section-title">What is the Cost of Zoho AI Implementation in the UAE?</h2>
               <p className="section-desc" style={{ margin: "0 auto" }}>Fixed price per phase. No hidden change orders. You know total cost upfront.</p>
             </div>
             <div className="card-grid">
@@ -514,7 +575,7 @@ export default function ContactClient() {
           <div className="container">
             <div className="rv" style={{ textAlign: "center", marginBottom: "3rem" }}>
               <div className="section-label">What Determines Your Investment</div>
-              <h2 className="section-title">Size, Scope & Complexity</h2>
+              <h2 className="section-title">What Factors Determine the Total Investment for AI & Zoho?</h2>
             </div>
             <div className="cc-factors-grid">
 
@@ -594,7 +655,7 @@ export default function ContactClient() {
           <div className="container">
             <div className="rv" style={{ textAlign: "center", marginBottom: "3rem" }}>
               <div className="section-label">Pricing Comparison</div>
-              <h2 className="section-title">Why FI Digital?</h2>
+              <h2 className="section-title">How Does FI Digital Compare to Big Consulting and Cheap Outsourcers?</h2>
               <p className="section-desc" style={{ margin: "0 auto" }}>Same scenario: 120-person mid-market company, Zoho CRM + Books + WhatsApp + finance agents. Year-one total cost.</p>
             </div>
 
@@ -688,7 +749,7 @@ export default function ContactClient() {
             <div className="cc-process-grid">
               <div className="rv">
                 <div className="section-label">Next 48 Hours</div>
-                <h2 className="section-title">From First Touch to Proposal</h2>
+                <h2 className="section-title">What is the 48-Hour Onboarding Process for New AI Projects?</h2>
                 <p style={{ color: "var(--text-muted)", lineHeight: 1.75, fontSize: "1rem" }}>Once you reach out, here&apos;s exactly what happens next. Total time: 48 hours from first contact to a concrete proposal in your inbox.</p>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 0 }}>
@@ -716,13 +777,13 @@ export default function ContactClient() {
           <div className="container" style={{ maxWidth: 1000 }}>
             <div className="rv" style={{ textAlign: "center", marginBottom: "3rem" }}>
               <div className="section-label">Frequently Asked Questions</div>
-              <h2 className="section-title">Questions We Hear Often</h2>
+              <h2 className="section-title">Common Questions About AI Agents and Zoho Pricing in Dubai</h2>
             </div>
             
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "3rem", alignItems: "start" }}>
               {/* General FAQs Column */}
               <div>
-                <h3 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "1.5rem", color: "var(--text)" }}>General Questions</h3>
+                <h3 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "1.5rem", color: "var(--text)" }}>General AI & Zoho Implementation Questions</h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                   {generalFaqs.map((faq, i) => (
                     <FAQItem
@@ -738,7 +799,7 @@ export default function ContactClient() {
 
               {/* Pricing FAQs Column */}
               <div>
-                <h3 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "1.5rem", color: "var(--text)" }}>Pricing & Engagement</h3>
+                <h3 style={{ fontSize: "1.1rem", fontWeight: 800, marginBottom: "1.5rem", color: "var(--text)" }}>Pricing & Engagement FAQ for UAE Enterprises</h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                   {pricingFaqs.map((faq, i) => (
                     <FAQItem
@@ -796,7 +857,7 @@ export default function ContactClient() {
           <div className="container" style={{ maxWidth: "1000px" }}>
             <div className="reveal-item" style={{ textAlign: "center", marginBottom: "3rem" }}>
               <div className="section-label">READY TO START?</div>
-              <h2 className="section-title">Request a Free Readiness Audit</h2>
+              <h2 className="section-title">How Do I Book a Free AI Readiness Audit for My Company?</h2>
               <p className="section-desc" style={{ margin: "0 auto" }}>AED 0 · 45-minute session · 1-week report turnaround</p>
             </div>
             
@@ -863,6 +924,9 @@ export default function ContactClient() {
           </div>
         </section>
 
+        <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+          Last Updated: March 2026
+        </div>
       </main>
     </div>
   );

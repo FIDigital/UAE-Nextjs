@@ -138,6 +138,43 @@ const LogisticsEfficiencyCalculator = () => {
 };
 
 export default function LogisticsClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Logistics & Supply Chain AI Automation",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Bilingual AI agents for route optimization, warehouse automation, and customs documentation for UAE logistics providers.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does AI help UAE logistics companies?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI optimizes routes for Dubai traffic, automates customs documentation, and provides predictive maintenance for fleets, reducing fuel costs by up to 15%."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can AI automate customs clearance documents?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our AI agents can generate and verify customs declarations and shipping documents, speeding up cross-border movement by up to 50%."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -153,6 +190,14 @@ export default function LogisticsClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* HERO SECTION */}
             <section style={{
                 position: "relative",
@@ -181,7 +226,7 @@ export default function LogisticsClient() {
 
                 <div className="container" style={{ position: "relative", zIndex: 1, maxWidth: "1250px" }}>
                     <div style={{ maxWidth: "800px" }}>
-                        <div className="section-label reveal-log">Logistics & Supply Chain</div>
+                        <div className="section-label reveal-log">What are the Key AI Capabilities Driving 24/7 Supply Chain Support in Dubai?</div>
                         <h1 className="reveal-log" style={{
                             fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
                             fontWeight: 900,
@@ -189,9 +234,19 @@ export default function LogisticsClient() {
                             marginBottom: "1.5rem",
                             letterSpacing: "-0.03em"
                         }}>
-                             Move Faster. Track Everything. <br />
-                             <span className="text-gradient">Waste Nothing.</span>
+                             How Does AI Modernize <br />
+                             <span className="text-gradient">Logistics & Supply Chain Operations in the UAE?</span>
                         </h1>
+                        <p className="hero-text" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital deploys specialized AI agents for UAE logistics providers that automate route optimization, customs documentation, and 24/7 shipment tracking. By integrating predictive reasoning with Zoho Inventory and fleet data, we help Dubai-based supply chain operations reduce fuel costs by 15% and achieve 98% ETA accuracy across the GCC.
+                        </p>
                         <p className="reveal-log" style={{
                             fontSize: "clamp(1rem, 1.2vw, 1.25rem)",
                             color: "var(--text-muted)",
@@ -235,7 +290,7 @@ export default function LogisticsClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div style={{ marginBottom: "60px", textAlign: "center" }} className="reveal-log">
                         <div className="section-label">Solutions</div>
-                        <h2 className="section-title">Supply Chain Intelligence</h2>
+                        <h2 className="section-title">What is the Smart Supply Chain Strategy for Dubai Logistics Providers?</h2>
                     </div>
 
                     <div className="solutions-grid" style={{
@@ -300,7 +355,7 @@ export default function LogisticsClient() {
                         background: "var(--primary)", borderRadius: "40px", color: "white"
                     }}>
                         <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, marginBottom: "1.5rem" }}>
-                            Optimize for the Global Hub
+                            How Do I Scale My Logistics Operations in 6 Weeks with AI?
                         </h2>
                         <p style={{ fontSize: "1.1rem", opacity: 0.9, marginBottom: "2.5rem", maxWidth: "600px", margin: "0 auto 2.5rem" }}>
                             Join the UAE's leading logistics operators using AI to outpace the competition.
@@ -359,6 +414,9 @@ export default function LogisticsClient() {
                     .calc-results-grid { grid-template-columns: 1fr !important; }
                 }
             `}</style>
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

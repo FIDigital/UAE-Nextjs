@@ -149,6 +149,48 @@ const CollapsibleText = ({ children, maxHeight = 100, fadeColor = "var(--bg)" })
 
 
 export default function RealEstateAgentsClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "AI Real Estate Agent",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "AI-powered real estate lead qualification for Dubai luxury properties. Arabic-fluent WhatsApp agents integrated with Zoho CRM.",
+        "areaServed": {
+            "@type": "City",
+            "name": "Dubai"
+        },
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "AED",
+            "priceRange": "AED 20,000 - 500,000"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does AI qualify real estate leads?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our AI agent asks a series of contextual questions via WhatsApp regarding budget, location preference, financing (cash vs mortgage), and visa status to score leads before they reach your human team."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the AI RERA compliant?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our systems ensure full audit trails and data sovereignty by storing all interactions within UAE-based Zoho data centers, supporting RERA's documentation requirements."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -177,6 +219,14 @@ export default function RealEstateAgentsClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)", color: "var(--text)", overflowX: "hidden" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* HERO SECTION */}
             <section style={{ 
                 minHeight: "90vh", 
@@ -244,6 +294,16 @@ export default function RealEstateAgentsClient() {
                             }}>From Drowning to Converting</span>
                         </h1>
                         <p className="reveal" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital&apos;s AI Real Estate Agents are specialized digital workers that handle property inquiries via WhatsApp 24/7. They qualify prospective buyers in Arabic and English, verify financing with RERA-inspired logic, and sync data instantly to Zoho CRM.
+                        </p>
+                        <p className="reveal" style={{ 
                             fontSize: "1.15rem", 
                             lineHeight: 1.8, 
                             color: "var(--text-muted)",
@@ -269,8 +329,8 @@ export default function RealEstateAgentsClient() {
                 <div className="container" style={{ maxWidth: "1200px" }}>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: "4rem", alignItems: "center" }}>
                         <div className="reveal">
-                            <div className="section-label">MARKET REALITY</div>
-                            <h2 className="section-title" style={{ textAlign: "left", marginBottom: "2rem" }}>The Real Estate Lead Qualification Problem</h2>
+                             <div className="section-label">MARKETING REALITY</div>
+                            <h2 className="section-title" style={{ textAlign: "left", marginBottom: "2rem" }}>What is the Real Estate Lead Qualification Problem in Dubai?</h2>
                             <CollapsibleText maxHeight={200} fadeColor="var(--bg-secondary)">
                                 <p style={{ fontSize: "1.1rem", lineHeight: 1.8, color: "var(--text-muted)" }}>
                                     Your agents manually handle WhatsApp inquiry qualification. A message comes in: 'هل عندكم فيلات في جيميز؟' (Do you have villas in Jumeirah?). Your agent needs to ask: budget, location preference, property type, timeline, occupancy status (renting now, own elsewhere, first-time buyer), visa status, nationality, financing approach. That's 7-8 sequential messages, each requiring a response. The inquiry started at 9am; by the time you've asked all questions, it's 10:30am and the prospect has already called a competitor. Even if your agent is diligent, the process is exhausting. Each inquiry takes 45 minutes of human time. 80% of inquiries are unqualified (low budget, no visa, no real urgency). You're spending 36 hours/week on qualification to close 15-20 deals/month. A competitor with faster response and better qualification closes 25-30 deals/month with the same team size. That competitor uses AI.
@@ -311,7 +371,7 @@ export default function RealEstateAgentsClient() {
             {/* CAPABILITIES SECTION */}
             <section style={{ padding: "100px 1.5rem", background: "var(--bg-secondary)" }}>
                 <div className="container" style={{ maxWidth: "1200px" }}>
-                    <SectionHeader title="What Our AI Lead Qualification Agent Does" label="CORE CAPABILITIES" />
+                    <SectionHeader title="What Does FI Digital&apos;s AI Real Estate Agent Actually Do?" label="CORE CAPABILITIES" />
                     
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: "4rem", alignItems: "center" }}>
                         <div className="reveal">
@@ -379,7 +439,7 @@ export default function RealEstateAgentsClient() {
             {/* REAL SCENARIO WALKTHROUGH */}
             <section style={{ padding: "120px 1.5rem" }}>
                 <div className="container" style={{ maxWidth: "1000px" }}>
-                    <SectionHeader title="Lead Qualification Flow: Step-by-Step" label="A REAL SCENARIO" />
+                    <SectionHeader title="How Does an AI Real Estate Lead Qualification Flow Work?" label="A REAL SCENARIO" />
                     <div style={{ display: "grid", gap: "2rem" }}>
                         <div className="reveal" style={{ padding: "3rem", background: "var(--card-bg)", borderRadius: "40px", border: "1px solid var(--border)" }}>
                             <div style={{ display: "flex", gap: "1rem", marginBottom: "2rem", alignItems: "center" }}>
@@ -443,7 +503,7 @@ export default function RealEstateAgentsClient() {
             {/* COMMON SCENARIOS SECTION */}
             <section style={{ padding: "100px 1.5rem", background: "var(--bg-secondary)" }}>
                 <div className="container" style={{ maxWidth: "1200px" }}>
-                    <SectionHeader title="Common Real Estate Scenarios" label="VERSATILE WORKFLOWS" />
+                    <SectionHeader title="What are the Most Common AI Real Estate Automation Scenarios?" label="VERSATILE WORKFLOWS" />
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "1.5rem" }}>
                         {[
                             { 
@@ -498,7 +558,7 @@ export default function RealEstateAgentsClient() {
                 <div className="container" style={{ maxWidth: "1200px" }}>
                     <div style={{ textAlign: "center", marginBottom: "4rem" }} className="reveal">
                         <div className="section-label">THE INTEGRATION GAP</div>
-                        <h2 className="section-title">Why Traditional CRM Fails at Real Estate</h2>
+                        <h2 className="section-title">Why Does Traditional CRM Often Fail in the UAE Real Estate Market?</h2>
                         <p style={{ maxWidth: "800px", margin: "0 auto", color: "var(--text-muted)", fontSize: "1.1rem" }}>
                             Zoho CRM is designed for sales pipelines, but real estate qualification is WhatsApp-first and mobile-first. Your agents live on WhatsApp, not in Zoho.
                         </p>
@@ -574,7 +634,7 @@ export default function RealEstateAgentsClient() {
                 <div className="container" style={{ maxWidth: "1200px" }}>
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: "4rem", alignItems: "center" }}>
                         <div className="reveal">
-                            <SectionHeader title="Integration Architecture" label="SYSTEMS ON AUTOPILOT" />
+                             <SectionHeader title="How Does the AI Real Estate Agent Integrate with Zoho CRM?" label="SYSTEMS ON AUTOPILOT" />
                             <CollapsibleText maxHeight={250} fadeColor="var(--bg-secondary)">
                                 <p style={{ fontSize: "1.05rem", lineHeight: 1.8, color: "var(--text-muted)" }}>
                                     The agent lives at the boundary of WhatsApp, n8n, Zoho CRM, and property databases. When a WhatsApp comes in, n8n: receives the webhook from WhatsApp Business API, matches the phone number to a Zoho contact (or creates a new record), retrieves conversation history from Zoho, passes to Claude for reasoning. Claude: understands the inquiry, generates contextual questions, routes decision (which team member should see this). The response is sent back to WhatsApp. The interaction is logged in Zoho as an activity on the contact record. The lead record is created/updated with qualification data (location preference, budget, timeline, etc.). When the customer confirms a viewing, n8n triggers Zoho Calendar to book the appointment and notify the assigned agent. We also integrate with: Property Finder API (to check live listings and availability), Bayut API (alternative property data source), DLD (Dubai Land Department - for ownership verification, if needed). This architecture means: no manual data entry, full data consistency, automatic routing, and audit trail for compliance.
@@ -605,7 +665,7 @@ export default function RealEstateAgentsClient() {
                 <div className="container" style={{ maxWidth: "1200px" }}>
                     <div style={{ display: "flex", gap: "4rem", flexWrap: "wrap", alignItems: "center" }}>
                         <div style={{ flex: 1, minWidth: "350px" }} className="reveal">
-                            <SectionHeader title="Measurable Impact" label="RESULTS & ROI" />
+                             <SectionHeader title="What Results Can I Expect from AI Real Estate Automation?" label="RESULTS & ROI" />
                             <div style={{ spaceY: "2.5rem" }}>
                                 <p style={{ fontSize: "1.1rem", lineHeight: 1.8, color: "var(--text-muted)", marginBottom: "3rem" }}>
                                     We've deployed real estate AI agents at three brokerages. A 5-person sales team working with AI agents is operating like a 7-8 person team. Annual: AED 10.9M additional revenue from the same team and same market.
@@ -648,8 +708,8 @@ export default function RealEstateAgentsClient() {
             <section style={{ padding: "100px 1.5rem", background: "var(--bg-secondary)" }}>
                 <div className="container" style={{ maxWidth: "1000px" }}>
                     <div style={{ textAlign: "center", marginBottom: "4rem" }}>
-                        <div style={{ color: "var(--primary)", marginBottom: "1rem" }}><ShieldCheck size={48} strokeWidth={1.5} /></div>
-                        <h2 className="section-title">Data Sovereignty & RERA Compliance</h2>
+                         <div style={{ color: "var(--primary)", marginBottom: "1rem" }}><ShieldCheck size={48} strokeWidth={1.5} /></div>
+                        <h2 className="section-title">How Does FI Digital Ensure RERA Compliance and Data Sovereignty?</h2>
                     </div>
                     <div className="reveal">
                         <CollapsibleText maxHeight={150} fadeColor="var(--bg-secondary)">
@@ -663,8 +723,8 @@ export default function RealEstateAgentsClient() {
 
             {/* TIMELINE SECTION */}
             <section style={{ padding: "100px 1.5rem" }}>
-                <div className="container" style={{ maxWidth: "1100px" }}>
-                    <SectionHeader title="Implementation Timeline" />
+                 <div className="container" style={{ maxWidth: "1100px" }}>
+                    <SectionHeader title="How Long is the Implementation for a Real Estate AI Agent?" />
                     <div style={{ display: "grid", gap: "2rem" }}>
                         {[
                             { title: "Weeks 1-2: Discovery", text: "Provide sample WhatsApp inquiries (100+ messages), Zoho access, team interviews. We deliver AI specification and integration plan." },
@@ -687,7 +747,7 @@ export default function RealEstateAgentsClient() {
             {/* FAQ SECTION */}
             <section style={{ padding: "100px 1.5rem", background: "var(--bg-secondary)" }}>
                 <div className="container" style={{ maxWidth: "1100px" }}>
-                    <SectionHeader title="Frequently Asked Questions" />
+                    <SectionHeader title="Common Questions About AI for UAE Real Estate Brokers" />
                     <div style={{ display: "grid", gap: "1.5rem" }}>
                         {[
                             { q: "What if the AI qualifies a lead wrong?", a: "We build in safeguards. Critical decisions (confirming a viewing appointment) require human review. If the AI scores a lead as 'hot' but the agent disagrees, the agent changes the score and we learn from it. Over time, the AI gets better. Also, even with imperfect scoring, you're still ahead because leads are getting faster responses." },
@@ -708,7 +768,7 @@ export default function RealEstateAgentsClient() {
             {/* NEXT STEPS SECTION */}
             <section style={{ padding: "120px 1.5rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
                 <div className="container" style={{ maxWidth: "800px" }}>
-                    <SectionHeader title="Next Steps" label="READY TO CONVERT?" />
+                    <SectionHeader title="How Do I Start Automating Real Estate Leads with AI?" label="READY TO CONVERT?" />
                     <p className="reveal" style={{ 
                         fontSize: "1.2rem", 
                         lineHeight: 1.8, 
@@ -729,6 +789,10 @@ export default function RealEstateAgentsClient() {
                     </div>
                 </div>
             </section>
+
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

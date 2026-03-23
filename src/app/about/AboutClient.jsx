@@ -182,6 +182,35 @@ function ThreeContinents() {
 
 /* ─── Main Component ────────────────────────────────────────────────────────── */
 export default function AboutClient() {
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://fidigital.ae/#organization",
+    "name": "FI Digital UAE",
+    "url": "https://fidigital.ae",
+    "logo": "https://fidigital.ae/logo.png",
+    "description": "FI Digital is a Dubai-based AI implementation partner specializing in Agentic AI and Zoho enterprise solutions for the UAE and Middle East.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressRegion": "Business Bay",
+      "addressCountry": "AE"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/fidigital-uae"
+    ]
+  };
+
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Strategy & Implementation Consulting",
+    "provider": {
+      "@id": "https://fidigital.ae/#organization"
+    },
+    "description": "Bespoke AI consulting and implementation for Dubai enterprises. We bridge Australian engineering standards with Middle Eastern business needs."
+  };
+
   const containerRef = useRef(null);
 
   useGSAP(() => {
@@ -203,6 +232,14 @@ export default function AboutClient() {
 
   return (
     <div ref={containerRef}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <style>{`
         /* ── About page — full responsive system ── */
 
@@ -399,7 +436,17 @@ export default function AboutClient() {
                 <br />
                 Flawless Delivery.
               </h1>
-              <p className="ah-sub" style={{ marginTop: "1.25rem", fontSize: "clamp(1.05rem,2vw,1.15rem)", color: "var(--text-muted)", lineHeight: 1.75, maxWidth: 640 }}>
+              <p className="ah-sub" style={{ 
+                marginTop: "1.25rem", 
+                fontSize: "clamp(1.1rem, 2vw, 1.3rem)", 
+                color: "var(--primary)", 
+                fontWeight: 800,
+                lineHeight: 1.6, 
+                maxWidth: 640 
+              }}>
+                FI Digital is Dubai's premier AI architecture firm. We specialize in deploying Agentic AI workers and orchestrating Zoho enterprise ecosystems for UAE businesses with a focus on data sovereignty and 99%+ accuracy.
+              </p>
+              <p className="ah-sub" style={{ marginTop: "1rem", fontSize: "clamp(1rem,1.8vw,1.1rem)", color: "var(--text-muted)", lineHeight: 1.75, maxWidth: 640 }}>
                 Headquartered in Dubai with a strong presence in Riyadh, we are dedicated to driving AI innovation and enterprise automation across the Middle East.
               </p>
             </div>
@@ -429,7 +476,7 @@ export default function AboutClient() {
           <div className="container" style={{ maxWidth: 900 }}>
             <div className="rv" style={{ textAlign: "center", marginBottom: "4rem" }}>
               <div className="section-label">Our Story</div>
-              <h2 className="section-title">Driving Innovation in the Middle East</h2>
+              <h2 className="section-title">What is the FI Digital history in the UAE?</h2>
               <p className="section-desc" style={{ margin: "0 auto" }}>
                 We are builders. We write code, deploy agents, configure systems — and stay with our clients long after launch.
               </p>
@@ -467,7 +514,7 @@ export default function AboutClient() {
           <div className="container">
             <div className="rv" style={{ textAlign: "center", marginBottom: "3.5rem" }}>
               <div className="section-label">Regional Presence</div>
-              <h2 className="section-title">Dedicated to the Middle East.</h2>
+              <h2 className="section-title">Where does FI Digital operate?</h2>
               <p className="section-desc" style={{ margin: "0 auto" }}>
                 Dubai Headquarters · Riyadh Regional Hub<br />
                 <strong style={{ color: "var(--primary)" }}>Enterprise-grade engineering for the region&apos;s fastest-growing businesses.</strong>
@@ -622,6 +669,10 @@ export default function AboutClient() {
             </div>
           </div>
         </section>
+
+        <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+          Last Updated: March 2026
+        </div>
 
       </main>
     </div>

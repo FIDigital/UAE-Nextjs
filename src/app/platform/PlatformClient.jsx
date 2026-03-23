@@ -253,6 +253,43 @@ const ArchitectureDiagram = () => {
 };
 
 export default function PlatformClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "FI Digital Agentic AI Platform",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Unified Agentic AI architecture for UAE enterprises. Integrates Zoho CRM, n8n orchestration, and bilingual LLMs (Claude/Gemini) with localized Arabic processing.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is the FI Digital AI Platform?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The FI Digital AI Platform is a technical framework or 'Agent Mesh' that combines Zoho's data backbone, n8n orchestration, and frontier LLMs to create autonomous business agents. It is designed specifically for UAE data residency and Arabic-language requirements."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the platform support Arabic dialects?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Our platform uses a combination of Gemini 1.5 Pro and custom fine-tuning to understand and respond in Gulf, Levantine, and Egyptian dialects, ensuring seamless localized customer and employee interactions."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -284,6 +321,14 @@ export default function PlatformClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)", color: "var(--text)", overflow: "hidden" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             
             {/* HERO SECTION */}
             <section style={{ 
@@ -351,9 +396,19 @@ export default function PlatformClient() {
                             }}>Autonomous</span> Enterprise Operations
                         </h1>
                         <p className="hero-content" style={{ 
-                            fontSize: "clamp(1.1rem, 1.8vw, 1.25rem)", 
-                            color: "var(--text-muted)", 
+                            fontSize: "clamp(1.1rem, 1.8vw, 1.3rem)", 
+                            color: "var(--primary)", 
+                            fontWeight: 800,
                             lineHeight: 1.6, 
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem"
+                        }}>
+                            FI Digital's Agentic AI platform is a unified technical architecture that connects your Zoho data backbone with advanced reasoning layers to automate end-to-step business processes with 99.1% precision in both English and Arabic.
+                        </p>
+                        <p className="hero-content" style={{ 
+                            fontSize: "clamp(1rem, 1.5vw, 1.15rem)", 
+                            color: "var(--text-muted)", 
+                            lineHeight: 1.7, 
                             maxWidth: "750px",
                             marginBottom: "3rem"
                         }}>
@@ -370,7 +425,7 @@ export default function PlatformClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div style={{ textAlign: "center", marginBottom: "clamp(4rem, 8vh, 8rem)" }}>
                         <div className="section-label">Engineering Pillars</div>
-                        <h2 className="section-title">Core Technology Stack</h2>
+                        <h2 className="section-title">How does our AI technology stack drive ROI?</h2>
                         <p className="section-desc" style={{ margin: "0 auto", fontSize: "clamp(1rem, 1.8vw, 1.15rem)" }}>
                             We build on proven enterprise architecture, ensuring every agent is secure, scalable, and bilingual.
                         </p>
@@ -581,6 +636,9 @@ export default function PlatformClient() {
                 </div>
             </section>
 
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
             <style jsx>{`
                 .solutions-stack {
                     gap: 10rem;

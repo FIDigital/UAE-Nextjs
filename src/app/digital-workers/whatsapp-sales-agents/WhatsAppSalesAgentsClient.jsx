@@ -145,6 +145,56 @@ const CollapsibleText = ({ children, maxHeight = 100, fadeColor = "var(--bg)" })
 
 
 export default function WhatsAppSalesAgentsClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "WhatsApp AI Sales Agent",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Bilingual WhatsApp AI agents that qualify leads, answer queries, and process voice notes in Arabic and English for UAE enterprises.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        },
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "AED",
+            "priceRange": "AED 15,000 - 500,000"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How fast are FI Digital's WhatsApp AI agents?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our WhatsApp AI agents respond in 4.2 seconds on average. This includes processing voice notes and querying Zoho CRM for context."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does the AI handle Arabic dialects?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our agents are trained on Gulf, Levantine, and Egyptian Arabic dialects, handling both text and voice interactions."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is it integrated with Zoho?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our WhatsApp agents are natively integrated with Zoho CRM, Zoho Books, and Zoho Desk to ensure a single source of truth."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -173,6 +223,14 @@ export default function WhatsAppSalesAgentsClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)", color: "var(--text)", overflowX: "hidden" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* HERO SECTION */}
             <section style={{ 
                 minHeight: "90vh", 
@@ -241,6 +299,16 @@ export default function WhatsAppSalesAgentsClient() {
                             }}>Real-Time Customer Engagement</span>
                         </h1>
                         <p className="reveal" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital&apos;s WhatsApp Sales Agents are autonomous AI workers designed for UAE enterprises. They qualify leads in Arabic and English, process voice notes, and sync data directly to Zoho CRM. Our agents reduce response times from hours to 4.2 seconds on average.
+                        </p>
+                        <p className="reveal" style={{ 
                             fontSize: "1.15rem", 
                             lineHeight: 1.8, 
                             color: "var(--text-muted)",
@@ -266,7 +334,7 @@ export default function WhatsAppSalesAgentsClient() {
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))", gap: "4rem", alignItems: "center" }}>
                         <div className="reveal">
                             <div className="section-label">THE ENGINE</div>
-                            <h2 className="section-title" style={{ textAlign: "left", marginBottom: "2rem" }}>How It Actually Works: The Technical Architecture</h2>
+                            <h2 className="section-title" style={{ textAlign: "left", marginBottom: "2rem" }}>How Does FI Digital&apos;s WhatsApp AI Agent Architecture Work?</h2>
                             <CollapsibleText maxHeight={200} fadeColor="var(--bg-secondary)">
                                 <p style={{ fontSize: "1.1rem", lineHeight: 1.8, color: "var(--text-muted)" }}>
                                     When a customer texts your WhatsApp business number, here's what happens: the message arrives at 
@@ -302,7 +370,7 @@ export default function WhatsAppSalesAgentsClient() {
             {/* THE PROBLEM SECTION */}
             <section style={{ padding: "100px 1.5rem" }}>
                 <div className="container" style={{ maxWidth: "1200px" }}>
-                    <SectionHeader title="The Problem Your Business Faces" label="CURRENT CHALLENGES" />
+                    <SectionHeader title="What Problems do UAE Businesses Face with WhatsApp?" label="CURRENT CHALLENGES" />
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(clamp(300px, 45%, 600px), 1fr))", gap: "2rem" }}>
                         {[
                             { 
@@ -350,7 +418,7 @@ export default function WhatsAppSalesAgentsClient() {
             {/* WHAT THIS SOLUTION DOES SECTION */}
             <section style={{ padding: "100px 1.5rem", background: "var(--bg-secondary)" }}>
                 <div className="container" style={{ maxWidth: "1200px" }}>
-                    <SectionHeader title="What This Solution Actually Does" label="CORE CAPABILITIES" />
+                    <SectionHeader title="What are the Core Capabilities of FI Digital&apos;s WhatsApp AI Agents?" label="CORE CAPABILITIES" />
                     <div style={{ display: "grid", gap: "6rem" }}>
                         {[
                             {
@@ -413,7 +481,7 @@ export default function WhatsAppSalesAgentsClient() {
             {/* REAL WORLD USE CASES SECTION */}
             <section style={{ padding: "120px 1.5rem", borderTop: "1px solid var(--border)" }}>
                 <div className="container" style={{ maxWidth: "1200px" }}>
-                    <SectionHeader title="Real World Use Cases" label="PROVEN SECTORS" />
+                    <SectionHeader title="How Do UAE Enterprises Use WhatsApp AI Agents?" label="PROVEN SECTORS" />
                     <div style={{ display: "grid", gap: "6rem" }}>
                         {[
                             {
@@ -493,7 +561,11 @@ export default function WhatsAppSalesAgentsClient() {
                             <div key={i} className="reveal" style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
                                 <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
                                     <div style={{ color: "var(--primary)" }}>{info.icon && React.cloneElement(info.icon, { size: 40 })}</div>
-                                    <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.5rem)", fontWeight: 900 }}>{info.title}</h2>
+                                    <h2 style={{ fontSize: "clamp(1.8rem, 4vw, 2.5rem)", fontWeight: 900 }}>{
+                                        i === 0 ? "How Does the AI Handle UAE Arabic Dialects?" :
+                                        i === 1 ? "How Does Zoho Integration Ensure UAE Data Sovereignty?" :
+                                        "What is the Average Response Time for an AI WhatsApp Agent?"
+                                    }</h2>
                                 </div>
                                 <CollapsibleText maxHeight={150} fadeColor="var(--bg)">
                                     <p style={{ lineHeight: 1.8, color: "var(--text-muted)", fontSize: "1.2rem", maxWidth: "900px" }}>{info.text}</p>
@@ -509,7 +581,7 @@ export default function WhatsAppSalesAgentsClient() {
                 <div className="container" style={{ maxWidth: "1200px" }}>
                     <div style={{ display: "flex", gap: "4rem", alignItems: "center", flexWrap: "wrap" }}>
                         <div style={{ flex: 1, minWidth: "300px" }} className="reveal">
-                            <SectionHeader title="Results: The Numbers" label="DATA PROVEN" />
+                            <SectionHeader title="What Results Can I Expect from WhatsApp AI Automation?" label="DATA PROVEN" />
                             <div style={{ marginTop: "2rem" }}>
                                 <p style={{ fontSize: "1.2rem", lineHeight: 1.8, color: "var(--text-muted)", marginBottom: "2rem" }}>
                                     We've deployed WhatsApp agents at 12 organizations over 18 months. Here's what we're seeing: 
@@ -548,7 +620,7 @@ export default function WhatsAppSalesAgentsClient() {
             <section style={{ padding: "120px 1.5rem", background: "var(--bg)" }}>
                 <div className="container" style={{ maxWidth: "1200px" }}>
                     <div style={{ textAlign: "center", marginBottom: "5rem" }}>
-                        <h2 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 900 }}>Who Is This For? 6 Key Industries</h2>
+                        <h2 style={{ fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 900 }}>Which UAE Industries Benefit Most from WhatsApp AI Agents?</h2>
                     </div>
                     
                     <div className="industry-grid" style={{ 
@@ -596,7 +668,7 @@ export default function WhatsAppSalesAgentsClient() {
                 <div className="container" style={{ maxWidth: "1200px" }}>
                     <div style={{ textAlign: "center", marginBottom: "5rem" }}>
                         <div className="section-label">UNDER THE HOOD</div>
-                        <h2 style={{ fontSize: "3rem", fontWeight: 900 }}>The Production-Proven Tech Stack</h2>
+                        <h2 style={{ fontSize: "3rem", fontWeight: 900 }}>What Technology Powers FI Digital&apos;s AI Agents?</h2>
                     </div>
                     
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", marginBottom: "5rem" }}>
@@ -634,7 +706,7 @@ export default function WhatsAppSalesAgentsClient() {
             {/* IMPLEMENTATION TIMELINE SECTION */}
             <section style={{ padding: "100px 1.5rem" }}>
                 <div className="container" style={{ maxWidth: "1100px" }}>
-                    <SectionHeader title="Implementation Timeline & Process" />
+                    <SectionHeader title="How Long Does it Take to Deploy a WhatsApp AI Agent?" />
                     <div style={{ display: "grid", gap: "2.5rem" }}>
                         {[
                             { 
@@ -676,7 +748,7 @@ export default function WhatsAppSalesAgentsClient() {
             {/* FREQUENTLY ASKED QUESTIONS SECTION */}
             <section style={{ padding: "100px 1.5rem", background: "var(--bg-secondary)" }}>
                 <div className="container" style={{ maxWidth: "1100px" }}>
-                    <SectionHeader title="Frequently Asked Questions" />
+                    <SectionHeader title="Common Questions About WhatsApp AI Agents in the UAE" />
                     <div style={{ display: "grid", gap: "1.5rem" }}>
                         {[
                             { q: "Will customers know they're talking to an AI?", a: "Not necessarily. We don't deceive if a customer asks, we're truthful. But the default experience is: they WhatsApp, they get a response in 12 minutes, the response is accurate and helpful. They don't care if it's AI or human. Some customers prefer AI (faster, available 24/7, no judgment, consistent). Some prefer human (wants personal relationship, complex negotiation). Our system handles both: AI handles 90% of inquiries, humans handle 10% that need judgment. The customer's experience is seamless no difference whether they're talking to AI or human." },
@@ -698,7 +770,7 @@ export default function WhatsAppSalesAgentsClient() {
             {/* YOUR NEXT STEP SECTION */}
             <section style={{ padding: "120px 1.5rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
                 <div className="container" style={{ maxWidth: "800px" }}>
-                    <SectionHeader title="Your Next Step" />
+                    <SectionHeader title="How Do I Get Started with WhatsApp AI Automation?" />
                     <p className="reveal" style={{ 
                         fontSize: "1.2rem", 
                         lineHeight: 1.8, 
@@ -719,6 +791,10 @@ export default function WhatsAppSalesAgentsClient() {
                     </div>
                 </div>
             </section>
+
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
 
             <style jsx>{`
                 @media (max-width: 991px) {

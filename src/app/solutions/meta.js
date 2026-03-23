@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Solutions | AI Agent Architecture & Zoho Governance - FI Digital UAE",
     description: "Transform your business with our enterprise-grade solutions. Specialist in AI agent mesh, Zoho ecosystem architecture, and automated workflow governance.",
-    url: "https://fristine-uae.com/solutions",
+    url: "https://fidigital.ae/solutions",
     siteName: "FI Digital UAE",
     images: [
       {
@@ -18,4 +18,7 @@ export const metadata = {
     locale: "en_AE",
     type: "website",
   },
+  alternates: {
+    canonical: "https://fidigital.ae/solutions",
+  }
 };

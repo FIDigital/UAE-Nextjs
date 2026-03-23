@@ -5,7 +5,7 @@ export const metadata = {
     openGraph: {
         title: "AI HR & Employee Onboarding Automation Dubai | FI Digital",
         description: "Automate employee onboarding, leave management, and HR queries with AI agents connected to Zoho People. Built for UAE labor law compliance.",
-        url: "https://www.fidigital.ae/digital-workers/hr-onboarding-agents",
+        url: "https://fidigital.ae/digital-workers/hr-onboarding-agents",
         siteName: "FI Digital UAE",
         images: [
             {
@@ -17,6 +17,9 @@ export const metadata = {
         ],
         locale: "en_AE",
         type: "website",
+    },
+    alternates: {
+        canonical: "https://fidigital.ae/digital-workers/hr-onboarding-agents",
     },
     twitter: {
         card: "summary_large_image",

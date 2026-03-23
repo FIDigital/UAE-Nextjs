@@ -57,6 +57,43 @@ const timeline = [
 ];
 
 export default function AIMVPClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "AI Product MVP Builds",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Rapid AI MVP development for the UAE market. Launch functional AI products in 6 weeks using our pre-built library of LangChain agents and n8n orchestration.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How fast can you build an AI MVP?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our accelerated development cycle allows us to go from AI concept to working prototype in as little as 6 weeks, leveraging pre-built components for orchestration and data."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What tech stack do you use for AI products?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We utilize a robust stack including LangChain for agent logic, n8n for multi-step orchestration, and Zoho for a secure data layer."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -95,6 +132,14 @@ export default function AIMVPClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* Hero Section */}
             <section className="hero-section" style={{
                 position: "relative",
@@ -145,9 +190,19 @@ export default function AIMVPClient() {
                         maxWidth: "900px",
                         letterSpacing: "-0.03em"
                     }}>
-                        From AI Idea to Working <br />
-                        <span style={{ color: "var(--primary)" }}>Product in 6 Weeks</span>
+                        How Does our 6-Week AI MVP Build <br />
+                        <span style={{ color: "var(--primary)" }}>Process Solve UAE Business Needs?</span>
                     </h1>
+                    <p className="hero-text" style={{ 
+                        fontSize: "1.1rem", 
+                        fontWeight: 700,
+                        color: "var(--primary)",
+                        maxWidth: "850px",
+                        marginBottom: "1.5rem",
+                        lineHeight: 1.6
+                    }}>
+                        FI Digital provides an accelerated 6-week AI MVP development program for Dubai-based startups and enterprises, bridging raw concepts with production-grade reality through our proprietary component library. By integrating LangChain agents and n8n orchestration layers with Zoho data environments, our rapid builds resolve the high-cost and slow-time-to-market barriers for new AI products, delivering functional prototypes with 99.1% accuracy.
+                    </p>
                     <p className="reveal-mvp" style={{
                         fontSize: "clamp(1rem, 1.2vw, 1.2rem)",
                         color: "var(--text-muted)",
@@ -168,7 +223,7 @@ export default function AIMVPClient() {
                 <div className="container">
                     <div style={{ textAlign: "center", marginBottom: "80px" }} className="reveal-mvp">
                         <div className="section-label">The Journey</div>
-                        <h2 className="section-title">6-Week Development Cycle</h2>
+                        <h2 className="section-title">What is the Most Effective AI MVP Launch Strategy for Dubai Startups?</h2>
                         <p className="section-desc" style={{ margin: "0 auto" }}>
                             Our accelerated methodology focuses on the critical features that prove value and gather user feedback.
                         </p>
@@ -329,7 +384,7 @@ export default function AIMVPClient() {
             {/* Bottom Links */}
             <section style={{ padding: "80px 0", borderTop: "1px solid var(--border)" }}>
                 <div className="container" style={{ textAlign: "center" }}>
-                    <h2 className="reveal-mvp" style={{ fontSize: "2.5rem", fontWeight: 900, marginBottom: "2.5rem" }}>Ready to Build?</h2>
+                    <h2 className="reveal-mvp" style={{ fontSize: "2.5rem", fontWeight: 900, marginBottom: "2.5rem" }}>How Can I Launch my AI MVP in the UAE Within 6 Weeks?</h2>
                     <div className="reveal-mvp" style={{ display: "flex", justifyContent: "center", gap: "2rem", flexWrap: "wrap" }}>
                         <Link href="/product-studio" style={{ color: "var(--text-muted)", textDecoration: "none", fontWeight: 700 }}>Product Studio</Link>
                         <Link href="/platform" style={{ color: "var(--text-muted)", textDecoration: "none", fontWeight: 700 }}>Our Platform</Link>
@@ -382,6 +437,9 @@ export default function AIMVPClient() {
                     }
                 }
             `}</style>
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

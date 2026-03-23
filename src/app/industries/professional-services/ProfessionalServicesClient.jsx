@@ -137,6 +137,43 @@ const AdminRecoveryCalculator = () => {
 };
 
 export default function ProfessionalServicesClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Professional Services AI Automation",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Bilingual AI agents for proposal drafting, automated billing, and knowledge retrieval for UAE consultancies and law firms.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does AI help UAE consulting firms?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI agents automate non-billable admin like proposal drafting and billing, recovering up to 60% of partner time for client-focused work."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can AI help with knowledge retrieval in law firms?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our RAG-based AI search across internal documentation and legal precedents allows for split-second research using natural language."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -152,6 +189,14 @@ export default function ProfessionalServicesClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* HERO SECTION */}
             <section style={{
                 position: "relative",
@@ -180,7 +225,7 @@ export default function ProfessionalServicesClient() {
 
                 <div className="container" style={{ position: "relative", zIndex: 1, maxWidth: "1250px" }}>
                     <div style={{ maxWidth: "800px" }}>
-                        <div className="section-label reveal-ps">Professional Services</div>
+                        <div className="section-label reveal-ps">What are the Key AI Capabilities Driving 24/7 Client Support for Dubai Consultancies?</div>
                         <h1 className="reveal-ps" style={{
                             fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
                             fontWeight: 900,
@@ -188,9 +233,19 @@ export default function ProfessionalServicesClient() {
                             marginBottom: "1.5rem",
                             letterSpacing: "-0.03em"
                         }}>
-                             Deliver More Value with <br />
-                             <span className="text-gradient">Less Administrative Overhead</span>
+                             How Does AI Modernize <br />
+                             <span className="text-gradient">Professional Services & Consulting in the UAE?</span>
                         </h1>
+                        <p className="hero-text" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital deploys specialized AI agents for UAE professional service firms that automate proposal drafting, billing, and knowledge retrieval. By bridging proprietary data with advanced reasoning models, our digital workers recover 60% of non-billable hours for Dubai-based experts, allowing partners to scale client capacity without adding overhead.
+                        </p>
                         <p className="reveal-ps" style={{
                             fontSize: "clamp(1rem, 1.2vw, 1.25rem)",
                             color: "var(--text-muted)",
@@ -235,7 +290,7 @@ export default function ProfessionalServicesClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div style={{ marginBottom: "60px", textAlign: "center" }} className="reveal-ps">
                         <div className="section-label">Solutions</div>
-                        <h2 className="section-title">High-Impact AI for Experts</h2>
+                        <h2 className="section-title">What is the Smart Consulting Strategy for UAE Professional Service Firms?</h2>
                     </div>
 
                     <div className="solutions-grid" style={{
@@ -300,7 +355,7 @@ export default function ProfessionalServicesClient() {
                         background: "var(--primary)", borderRadius: "40px", color: "white"
                     }}>
                         <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, marginBottom: "1.5rem" }}>
-                            Future-Proof Your Firm
+                            How Do I Scale My Professional Services in 6 Weeks with AI?
                         </h2>
                         <p style={{ fontSize: "1.1rem", opacity: 0.9, marginBottom: "2.5rem", maxWidth: "600px", margin: "0 auto 2.5rem" }}>
                             Join the elite UAE firms turning administrative friction into a competitive advantage.
@@ -359,6 +414,9 @@ export default function ProfessionalServicesClient() {
                     .calc-results-grid { grid-template-columns: 1fr !important; }
                 }
             `}</style>
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

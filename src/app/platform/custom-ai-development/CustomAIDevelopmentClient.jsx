@@ -6,8 +6,53 @@ import Image from 'next/image';
 import { Database, Brain, MemoryStick, Cog, Terminal, Settings } from 'lucide-react';
 
 export default function CustomAIDevelopmentClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Custom AI Agent Development",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Tailored AI agent development using LangChain and Python for UAE businesses. Build autonomous agents with RAG, long-term memory, and multi-step reasoning.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What technologies do you use for custom AI agents?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We primarily use LangChain and Python, combined with advanced RAG (Retrieval-Augmented Generation) and long-term memory frameworks to build agents that solve complex business logic."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How are custom AI agents different from standard chatbots?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Unlike standard chatbots, our custom agents are autonomous, capable of multi-step reasoning, and integrated with internal APIs and databases to perform real business actions."
+                }
+            }
+        ]
+    };
+
     return (
         <main style={{ background: "var(--bg)", color: "var(--text)", paddingBottom: "100px" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             
             {/* HERO SECTION */}
             <section style={{
@@ -45,9 +90,19 @@ export default function CustomAIDevelopmentClient() {
                             marginBottom: "1.5rem",
                             letterSpacing: "-0.03em"
                         }}>
-                             Custom AI Agents Built for Your <br />
-                             <span className="text-gradient">Exact Business Logic</span>
+                             How Does Custom AI Development <br />
+                             <span className="text-gradient">Solve Complex UAE Business Challenges?</span>
                         </h1>
+                        <p className="hero-text" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital specializes in custom AI development for the UAE market, building autonomous agents that bridge advanced reasoning with proprietary business logic. By utilizing LangChain, Python, and sophisticated RAG architectures, our tailored digital workers resolve 90% of complex operational inquiries while maintaining deep contextual memory across multi-step enterprise workflows.
+                        </p>
                         <p className="hero-text" style={{
                             fontSize: "clamp(1rem, 1.2vw, 1.25rem)",
                             color: "var(--text-muted)",
@@ -73,7 +128,7 @@ export default function CustomAIDevelopmentClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div style={{ textAlign: "center", marginBottom: "4rem" }}>
                         <div className="section-label">CAPABILITIES</div>
-                        <h2 className="section-title">Key Solutions & Capabilities</h2>
+                        <h2 className="section-title">What is the Best Strategy for Custom AI Development in the UAE?</h2>
                     </div>
 
                     <div className="capabilities-grid" style={{
@@ -152,6 +207,9 @@ export default function CustomAIDevelopmentClient() {
                     .card-icon { margin-bottom: 1rem !important; }
                 }
             `}</style>
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </main>
     );
 }

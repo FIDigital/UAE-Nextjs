@@ -1,5 +1,5 @@
-export default function sitemap() {
-    const baseUrl = "https://fristine-uae.com";
+export default async function sitemap() {
+    const baseUrl = "https://fidigital.ae"; // Standardized to primary domain
     const lastModified = new Date();
 
     return [
@@ -32,6 +32,18 @@ export default function sitemap() {
             lastModified,
             changeFrequency: "yearly",
             priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/llms.txt`,
+            lastModified,
+            changeFrequency: "weekly",
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/llms-full.txt`,
+            lastModified,
+            changeFrequency: "weekly",
+            priority: 0.8,
         },
     ];
 }

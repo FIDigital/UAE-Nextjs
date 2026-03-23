@@ -117,8 +117,15 @@ function HomeHero() {
       </h1>
 
       <p
-        className="hero-description hero-reveal"
+        className="hero-reveal"
         style={{
+          fontSize: "clamp(1.1rem, 2vw, 1.3rem)",
+          color: "var(--primary)",
+          fontWeight: 800,
+          maxWidth: "800px",
+          marginBottom: "1.5rem",
+          lineHeight: 1.6,
+          opacity: 0,
           fontSize: "clamp(1rem, 1.8vw, 1.25rem)",
           color: "var(--text-muted)",
           maxWidth: "800px",
@@ -199,7 +206,7 @@ function EcosystemSection() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '3rem', alignItems: 'center' }}>
           <div>
             <div className="section-label">Our Technology Ecosystem</div>
-            <h2 className="section-title" style={{ marginBottom: '1.5rem' }}>The Foundation of Modern Transformation</h2>
+            <h2 className="section-title" style={{ marginBottom: '1.5rem' }}>What Technology Stack Does FI Digital Use?</h2>
             <p className="section-desc" style={{ marginBottom: '2rem', color: 'var(--text-muted)', lineHeight: 1.7 }}>
               The foundation of modern enterprise transformation is orchestration across best of breed tools. Zoho
               provides the operational backbone CRM, Finance, HR, Customer Support all GDPR and ISO certified.
@@ -389,7 +396,7 @@ function PillarsSection() {
       <div className="container" style={{ maxWidth: '1200px' }}>
         <div style={{ textAlign: 'center', marginBottom: '6rem' }}>
           <div className="section-label">Core Expertise</div>
-          <h2 className="section-title">Our Three Core Pillars</h2>
+          <h2 className="section-title">What are the Three Core Pillars of FI Digital&apos;s AI Architecture?</h2>
         </div>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '6rem' }}>
@@ -590,7 +597,7 @@ function IndustrySection() {
       <div className="container" style={{ maxWidth: '1100px' }}>
         <div style={{ textAlign: 'center', marginBottom: '6rem' }}>
           <div className="section-label">Industry Impact</div>
-          <h2 className="section-title">Vertical Excellence</h2>
+          <h2 className="section-title">Which UAE Industries Does FI Digital Serve?</h2>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           {industries.map((ind, idx) => (
@@ -667,7 +674,7 @@ function MethodologySection() {
       <div className="container" style={{ maxWidth: '1000px' }}>
         <div style={{ textAlign: 'center', marginBottom: '6rem' }}>
           <div className="section-label">Execution Strategy</div>
-          <h2 className="section-title">4-Phase Methodology</h2>
+          <h2 className="section-title">How Does FI Digital Deploy AI Agents in Dubai?</h2>
         </div>
 
         <div className="timeline-container" style={{ position: 'relative', paddingLeft: '3rem' }}>
@@ -951,7 +958,7 @@ function WhyDubaiSection() {
       <div className="container" style={{ maxWidth: '1100px' }}>
         <div style={{ textAlign: 'center', marginBottom: '6rem' }}>
           <div className="section-label">Why FI Digital?</div>
-          <h2 className="section-title">Why Dubai Businesses Choose FI Digital</h2>
+          <h2 className="section-title">Why Do UAE Enterprises Choose FI Digital?</h2>
         </div>
         <div style={{ display: 'flex', flexDirection: 'column' }}>
           {reasons.map((r, idx) => (
@@ -999,7 +1006,7 @@ function NextStepsSection() {
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <div className="section-label">Direct Access</div>
-          <h2 className="section-title">Your Next Steps</h2>
+          <h2 className="section-title">How Do I Get Started with FI Digital?</h2>
           <p style={{ maxWidth: '700px', margin: '1.5rem auto 0', color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: 1.6 }}>
             Choose whichever feels right. We don&apos;t believe in high-pressure sales—we believe in architecting the right decision once.
           </p>
@@ -1134,8 +1141,91 @@ function NextStepsSection() {
 // --- MAIN PAGE ---
 
 export default function HomeClient() {
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Enterprise AI & Zoho Implementation",
+    "provider": {
+      "@id": "https://fidigital.ae/#organization"
+    },
+    "description": "Enterprise-grade Agentic AI and Zoho CRM implementation services in Dubai and the UAE. Specializing in autonomous digital workers and bilingual AI orchestration.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Arab Emirates"
+    },
+    "offers": {
+      "@type": "Offer",
+      "description": "Complimentary AI & Zoho Readiness Audit",
+      "price": "0",
+      "priceCurrency": "AED"
+    }
+  };
+
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does FI Digital do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FI Digital is a Dubai-based AI automation company. We build bilingual AI agents and enterprise Zoho implementations for UAE businesses. Our solutions run on WhatsApp, email, and chat, and integrate with Zoho CRM, Zoho Books, and the full Zoho suite. We are a Zoho Authorized Partner with 50+ UAE implementations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does AI automation cost in the UAE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FI Digital's AI automation engagements start with a Discovery Sprint at AED 15,000–25,000, which is a 2-week diagnostic delivering a full implementation roadmap. Full project implementations typically range from AED 50,000 to AED 500,000+ depending on scope. Ongoing monthly optimization retainers start at AED 15,000/month. A complimentary AI & Zoho Readiness Audit (45-minute session + 15-20 page report) is available at no cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which industries does FI Digital serve in the UAE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FI Digital serves Real Estate & PropTech, Retail & E-Commerce, Professional Services (consulting, legal, accounting), Healthcare & Wellness, F&B & Hospitality, and Logistics & Supply Chain across the UAE."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is FI Digital located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FI Digital's UAE office is in Business Bay, Dubai. The company was founded in Sydney, Australia and expanded to Dubai in 2023 with a 3-year UAE trade license. Additional delivery offices are in India. All client-facing operations and project management are handled from Dubai."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the AI Agent Mesh that FI Digital uses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The AI Agent Mesh is FI Digital's proprietary architecture that connects Zoho (CRM, Books, Desk, People) as the enterprise data backbone with n8n as the workflow orchestration layer, Claude (Anthropic) for reasoning and natural language generation, Gemini (Google) for Arabic voice transcription and dialect-aware processing, and LangChain for RAG and multi-agent orchestration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started with FI Digital?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The first step is a complimentary AI & Zoho Readiness Audit — a 45-minute diagnostic session followed by a 15-20 page report identifying automation opportunities in your business. Contact FI Digital at info@fidigital.ae or via WhatsApp to book. Following the audit, we typically recommend a 2-week Discovery Sprint (AED 15,000–25,000) before any full implementation begins."
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <HomeHero />
       <EcosystemSection />
       <PillarsSection />
@@ -1143,6 +1233,9 @@ export default function HomeClient() {
       <MethodologySection />
       <WhyDubaiSection />
       <NextStepsSection />
+      <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+        Last Updated: March 2026
+      </div>
     </>
   );
 }

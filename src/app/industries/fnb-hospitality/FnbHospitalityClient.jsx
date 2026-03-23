@@ -137,6 +137,43 @@ const ExperienceRoiCalculator = () => {
 };
 
 export default function FnbHospitalityClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Hospitality & FnB AI Automation",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Bilingual AI agents for restaurant reservations, hotel concierge services, and procurement automation in the UAE.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does AI improve restaurant reservations in Dubai?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI agents handle multilingual bookings via WhatsApp 24/7, reducing missed reservations and increasing operational efficiency by handling special requests autonomously."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can AI help with hotel guest services?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our AI concierges provide instant answers to guest queries about amenities and local recommendations in both Arabic and English."
+                }
+            }
+        ]
+    };
+
     const containerRef = useRef(null);
 
     useGSAP(() => {
@@ -152,6 +189,14 @@ export default function FnbHospitalityClient() {
 
     return (
         <div ref={containerRef} style={{ background: "var(--bg)" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             {/* HERO SECTION */}
             <section style={{
                 position: "relative",
@@ -180,7 +225,7 @@ export default function FnbHospitalityClient() {
 
                 <div className="container" style={{ position: "relative", zIndex: 1, maxWidth: "1250px" }}>
                     <div style={{ maxWidth: "800px" }}>
-                        <div className="section-label reveal-fnb">F&B & Hospitality</div>
+                        <div className="section-label reveal-fnb">What are the Key AI Capabilities Driving 24/7 Guest Support in Dubai?</div>
                         <h1 className="reveal-fnb" style={{
                             fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
                             fontWeight: 900,
@@ -188,9 +233,19 @@ export default function FnbHospitalityClient() {
                             marginBottom: "1.5rem",
                             letterSpacing: "-0.03em"
                         }}>
-                             Elevate the Guest Experience <br />
-                             <span className="text-gradient">Automate the Operations</span>
+                             How Does AI Modernize <br />
+                             <span className="text-gradient">FnB & Hospitality Operations in the UAE?</span>
                         </h1>
+                        <p className="hero-text" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital deploys specialized AI agents for Dubai&apos;s hospitality sector that automate 24/7 WhatsApp reservations, guest concierge queries, and procurement workflows. By integrating bilingual reasoning with Zoho Booking and CRM, our digital workers resolve 90% of guest inquiries in Arabic and English while reducing food waste and operational overhead.
+                        </p>
                         <p className="reveal-fnb" style={{
                             fontSize: "clamp(1rem, 1.2vw, 1.25rem)",
                             color: "var(--text-muted)",
@@ -235,7 +290,7 @@ export default function FnbHospitalityClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div style={{ marginBottom: "60px", textAlign: "center" }} className="reveal-fnb">
                         <div className="section-label">Solutions</div>
-                        <h2 className="section-title">Superior Service Through Intelligence</h2>
+                        <h2 className="section-title">What is the Guest-First AI Strategy for UAE Restaurants & Hotels?</h2>
                     </div>
 
                     <div className="solutions-grid" style={{
@@ -300,7 +355,7 @@ export default function FnbHospitalityClient() {
                         background: "var(--primary)", borderRadius: "40px", color: "white"
                     }}>
                         <h2 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 900, marginBottom: "1.5rem" }}>
-                            Redefine Dubai Hospitality
+                            How Do I Scale My FnB Operations in 6 Weeks with AI?
                         </h2>
                         <p style={{ fontSize: "1.1rem", opacity: 0.9, marginBottom: "2.5rem", maxWidth: "600px", margin: "0 auto 2.5rem" }}>
                             Join the UAE's top hospitality groups using AI to deliver flawless service at scale.
@@ -359,6 +414,10 @@ export default function FnbHospitalityClient() {
                     .calc-results-grid { grid-template-columns: 1fr !important; }
                 }
             `}</style>
+
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </div>
     );
 }

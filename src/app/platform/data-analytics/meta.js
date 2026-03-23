@@ -5,9 +5,12 @@ export const metadata = {
     openGraph: {
         title: 'Data Analytics & BI Dubai | Zoho Analytics + AI | FI Digital',
         description: 'Transform business data into actionable insights with Zoho Analytics, custom dashboards, and AI-powered reporting.',
-        url: 'https://www.fidigital.ae/platform/data-analytics',
+        url: 'https://fidigital.ae/platform/data-analytics',
         siteName: 'FI Digital UAE',
         locale: 'en_AE',
         type: 'website',
     },
+    alternates: {
+        canonical: 'https://fidigital.ae/platform/data-analytics',
+    }
 };

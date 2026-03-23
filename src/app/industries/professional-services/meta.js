@@ -5,10 +5,13 @@ export const metadata = {
     openGraph: {
         title: 'AI for Professional Services Dubai | FI Digital',
         description: 'Automate proposals, billing, and knowledge management for consulting and law firms.',
-        url: 'https://www.fidigital.ae/industries/professional-services',
+        url: 'https://fidigital.ae/industries/professional-services',
         siteName: 'FI Digital UAE',
         images: [{ url: '/images/industries/professional-services-hero.png', width: 1200, height: 630, alt: 'AI for Professional Services Dubai' }],
         locale: 'en_AE',
         type: 'website',
     },
+    alternates: {
+        canonical: 'https://fidigital.ae/industries/professional-services',
+    }
 };

@@ -6,8 +6,53 @@ import Image from 'next/image';
 import { Database, TrendingUp, BellRing, LineChart, FileText } from 'lucide-react';
 
 export default function DataAnalyticsClient() {
+    const serviceJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "AI-Powered Data Analytics",
+        "provider": {
+            "@id": "https://fidigital.ae/#organization"
+        },
+        "description": "Enterprise data analytics and BI solutions for UAE businesses. Unify data sources, build intelligent dashboards, and implement AI-powered forecasting.",
+        "areaServed": {
+            "@type": "Country",
+            "name": "United Arab Emirates"
+        }
+    };
+
+    const faqJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does AI improve business data analytics?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI adds anomaly detection, predictive forecasting, and automated insight generation to traditional BI, allowing UAE firms to identify trends and risks before they impact the bottom line."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can you unify data from Zoho and other apps?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, we build unified data layers that integrate Zoho, e-commerce, marketing, and finance software into single source-of-truth executive dashboards."
+                }
+            }
+        ]
+    };
+
     return (
         <main style={{ background: "var(--bg)", color: "var(--text)", paddingBottom: "100px" }}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             
             {/* HERO SECTION */}
             <section style={{
@@ -45,9 +90,19 @@ export default function DataAnalyticsClient() {
                             marginBottom: "1.5rem",
                             letterSpacing: "-0.03em"
                         }}>
-                             See Your Business Clearly. <br />
-                             <span className="text-gradient">Decide Confidently.</span>
+                             How Does AI-Powered Data Analytics <br />
+                             <span className="text-gradient">Transform UAE Business Intelligence?</span>
                         </h1>
+                        <p className="hero-text" style={{ 
+                            fontSize: "1.1rem", 
+                            fontWeight: 700,
+                            color: "var(--primary)",
+                            maxWidth: "850px",
+                            marginBottom: "1.5rem",
+                            lineHeight: 1.6
+                        }}>
+                            FI Digital delivers AI-driven data analytics for the UAE market, unifying fragmented data silos into intelligent, predictive business intelligence ecosystems. By bridging real-time data ingestion with advanced anomaly detection and sales forecasting, our analytics solutions resolve the visibility gap for Dubai-based executives, enabling confident, data-backed decision-making with 99.1% reporting accuracy.
+                        </p>
                         <p className="hero-text" style={{
                             fontSize: "clamp(1rem, 1.2vw, 1.25rem)",
                             color: "var(--text-muted)",
@@ -73,7 +128,7 @@ export default function DataAnalyticsClient() {
                 <div className="container" style={{ maxWidth: "1250px" }}>
                     <div style={{ textAlign: "center", marginBottom: "4rem" }}>
                         <div className="section-label">CAPABILITIES</div>
-                        <h2 className="section-title">Key Solutions & Capabilities</h2>
+                        <h2 className="section-title">What are the Key Benefits of AI-Driven Data Analytics for Dubai Firms?</h2>
                     </div>
 
                     <div className="capabilities-grid" style={{
@@ -151,6 +206,9 @@ export default function DataAnalyticsClient() {
                     .card-icon { margin-bottom: 1rem !important; }
                 }
             `}</style>
+            <div style={{ textAlign: 'center', padding: '2rem', opacity: 0.5, fontSize: '0.8rem' }}>
+                Last Updated: March 2026
+            </div>
         </main>
     );
 }

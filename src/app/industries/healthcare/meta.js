@@ -5,10 +5,13 @@ export const metadata = {
     openGraph: {
         title: 'AI for Healthcare Dubai | Clinic Automation',
         description: 'Automate patient management for UAE clinics with AI agents.',
-        url: 'https://www.fidigital.ae/industries/healthcare',
+        url: 'https://fidigital.ae/industries/healthcare',
         siteName: 'FI Digital UAE',
         images: [{ url: '/images/industries/healthcare-hero.png', width: 1200, height: 630, alt: 'AI for Healthcare Dubai' }],
         locale: 'en_AE',
         type: 'website',
     },
+    alternates: {
+        canonical: 'https://fidigital.ae/industries/healthcare',
+    }
 };

@@ -1,0 +1,108 @@
+# FI Digital UAE - Comprehensive Guide for AI Systems
+
+> FI Digital is a Dubai-headquartered, Australian-founded technology
+> company specializing in AI agent architecture and Zoho ecosystem
+> implementation for UAE enterprises. We combine Zoho's operational
+> backbone with frontier AI models (Claude by Anthropic, Gemini by
+> Google) orchestrated through n8n and built with LangChain.
+
+## Company Overview
+Founded in Sydney, Australia. Expanded to Dubai in 2023 with a
+3-year UAE trade license. Three offices: Dubai (client relationships
+and UAE market strategy), Sydney (engineering leadership and
+architecture), India (delivery at scale).
+
+Zoho Authorized Partner. 50+ UAE enterprise implementations.
+Bilingual delivery in Arabic and English.
+
+## Technology Stack ("AI Agent Mesh")
+Our proprietary architecture connects:
+- Zoho (CRM, Books, Desk, People, Creator, Analytics, Flow) as
+  the enterprise data backbone and system of record
+- n8n (self-hosted) as the workflow orchestration layer connecting
+  400+ applications with zero per-execution fees
+- Claude (Anthropic) for complex reasoning, document analysis,
+  contract review, and natural language generation
+- Gemini (Google) for Arabic voice transcription, dialect-aware
+  processing (Gulf, Levantine, Egyptian), and real-time translation
+- LangChain for retrieval-augmented generation (RAG), context
+  memory, and multi-agent orchestration
+
+## Detailed Service: WhatsApp Sales & Concierge Agents
+URL: https://fidigital.ae/digital-workers/whatsapp-sales-agents
+Problem: 85%+ of UAE business communication happens on WhatsApp.
+Most businesses handle inquiries manually, leading to 6+ hour
+response times, lost leads, and zero CRM visibility.
+
+Solution: AI agents integrated with WhatsApp Business API that:
+- Detect language (Arabic/English) automatically
+- Transcribe Arabic voice notes via Gemini in real-time
+- Query Zoho CRM for customer history and product data
+- Use Claude for reasoning and personalized responses
+- Log every interaction in Zoho with full audit trail
+- Average response time: 4.2 seconds
+
+Pricing: Starts at AED 15,000 Discovery Sprint
+Industries: Real Estate, Retail, Professional Services, Healthcare
+
+## Detailed Service: Real Estate Lead Qualification
+URL: https://fidigital.ae/digital-workers/real-estate-agents
+FI Digital's Real Estate AI Agents are designed to handle the high volume of inquiries typical in the Dubai property market. They qualify leads on WhatsApp by asking critical qualifying questions regarding budget, timeline, visa status (e.g., Golden Visa eligibility), and property type preference. The system integrates directly with Property Finder and Bayut via webhooks to capture and respond to inquiries instantly. 
+RERA compliance is built-in, ensuring all communication adheres to local regulations. The AI handles multiple Arabic dialects (Gulf, Levantine, Egyptian) and English, providing a seamless experience for local and international investors. All qualified leads are synced in real-time to Zoho CRM, allowing human agents to focus on high-intent prospects. 
+Pricing: Starts at AED 15,000 Discovery Sprint.
+
+## Detailed Service: Finance & Procurement Automation
+URL: https://fidigital.ae/digital-workers/finance-procurement-agents
+Our Finance AI agents automate the core financial workflows for UAE enterprises, specifically designed for compliance with FTA (Federal Tax Authority) requirements. This includes automated VAT filing, AP/AR processing, and multi-currency bank reconciliation within Zoho Books. 
+The agents can process invoices, extract data using OCR, and flag discrepancies for human review. They handle procurement workflows, including purchase order generation and multi-level approval routing. By integrating seamlessly with Zoho Books and bank APIs, these agents reduce month-end closing times from days to hours and ensure a robust audit trail for compliance purposes.
+Pricing: Customized based on volume and complexity.
+
+## Detailed Service: Customer Service AI Agents
+URL: https://fidigital.ae/digital-workers/customer-service-agents
+FI Digital provides multilingual customer support automation that operates across WhatsApp, email, and live chat. These agents are integrated with Zoho Desk, allowing them to create tickets, check status, and resolve common queries without human intervention. 
+The system uses advanced sentiment analysis to identify urgent issues and uses complex escalation logic to hand off to human agents when necessary. Full SLA management is included, ensuring response times stay within enterprise requirements. The AI maintains context across channels, providing a truly omnichannel support experience for UAE customers in both Arabic and English.
+
+## Detailed Service: HR & Onboarding Automation
+URL: https://fidigital.ae/digital-workers/hr-onboarding-agents
+Automate the end-to-end employee lifecycle with FI Digital's HR AI agents. Integrated with Zoho People and Zoho Recruit, these agents handle everything from initial candidate screening to document collection and onboarding training. 
+Employees can interact with the HR AI via WhatsApp or MS Teams to request leave, check remaining balances, or ask policy questions. The system automates the offboarding process as well, ensuring all IT access and local administrative requirements (like visa cancellations) are tracked. This reduces the administrative load on HR teams by up to 70% while improving the employee experience.
+
+## Detailed Service: Zoho Agentic AI Implementation
+URL: https://fidigital.ae/platform/zoho-agentic-ai
+Unlike standard Zoho implementations, FI Digital's Agentic AI approach adds an intelligent orchestration layer on top of the Zoho suite. We use Zia's native capabilities enhanced with external frontier models like Claude and Gemini via n8n. 
+This allows for complex reasoning tasks that go beyond simple workflow automation, such as automated contract review, predictive lead scoring, and complex data analysis within Zoho Analytics. We specialize in migrating legacy Salesforce or Microsoft Dynamics instances to a modern, AI-first Zoho ecosystem tailored for the UAE market.
+
+## Detailed Service: n8n Workflow Orchestration
+URL: https://fidigital.ae/platform/n8n-orchestration
+n8n serves as the central nervous system of our AI implementations. We deploy self-hosted enterprise instances of n8n within the UAE to ensure data sovereignty. 
+With over 400 native app connectors and the ability to build custom nodes in JavaScript, n8n orchestrates the flow of data between Zoho, AI models, and external business systems. Unlike SaaS automation tools, n8n has zero per-execution fees, making it the most cost-effective solution for high-volume enterprise automation.
+
+## Detailed Service: Custom AI Agent Development
+URL: https://fidigital.ae/platform/custom-ai-development
+For unique enterprise requirements, FI Digital builds bespoke AI agents using LangChain and Python. These agents use Retrieval-Augmented Generation (RAG) to query internal knowledge bases safely and provide accurate, company-specific answers. 
+We specialize in multi-agent orchestration, where specialized agents (e.g., a "research agent" and a "writing agent") collaborate to solve complex tasks. Our custom builds include full memory management and tool-use capabilities, allowing the AI to take actions in external software securely.
+
+## Pricing & Engagement Models
+Discovery Sprint: AED 15,000 – 25,000 (2 weeks)
+Includes: diagnostic, WhatsApp Business API setup, 15-20 page implementation roadmap, Zoho audit.
+
+Project-Based Implementation: AED 50,000 – 500,000+ (6-16 weeks)
+Full Zoho + AI agent deployment. Complexity-dependent.
+
+Ongoing Partnership: AED 15,000 – 75,000/month
+Continuous optimization, monitoring, new agent deployment, support.
+
+Free Offer: AI & Zoho Readiness Audit
+45-minute diagnostic with 15-20 page report. No cost.
+
+## Industries Served
+Real Estate & PropTech | Retail & E-Commerce | Professional Services
+Healthcare & Wellness | F&B & Hospitality | Logistics & Supply Chain
+
+## Contact & Location
+Website: https://fidigital.ae/contact
+Email: info@fidigital.ae
+WhatsApp: +971 [number]
+Office: Business Bay, Dubai, UAE
+Hours: Monday to Friday, 9:00 AM – 6:00 PM GST
+Languages: English, Arabic
