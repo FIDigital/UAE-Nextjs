@@ -9,7 +9,7 @@ import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
     { href: "/", label: "Home" },
-    { 
+    {
         href: "/digital-workers", 
         label: "Digital Workers",
         subLinks: [
@@ -32,30 +32,46 @@ const navLinks = [
         ]
     },
     {
-        href: "/industries",
-        label: "Industries",
-        subLinks: [
-            { href: "/industries/real-estate", label: "Real Estate" },
-            { href: "/industries/retail-ecommerce", label: "Retail & E-commerce" },
-            { href: "/industries/professional-services", label: "Professional Services" },
-            { href: "/industries/healthcare", label: "Healthcare" },
-            { href: "/industries/fnb-hospitality", label: "F&B & Hospitality" },
-            { href: "/industries/logistics", label: "Logistics" },
-        ]
-    },
-    {
         href: "/product-studio",
         label: "Product Studio",
         subLinks: [
-            { href: "/product-studio/custom-saas", label: "Custom SaaS" },
-            { href: "/product-studio/ai-mvp", label: "AI MVP" },
+            { href: "/product-studio/ai-mvp", label: "AI MVP Development" },
+            { href: "/product-studio/custom-saas", label: "Custom SaaS Products" },
             { href: "/product-studio/legacy-modernization", label: "Legacy Modernization" },
             { href: "/product-studio/scaling-maintenance", label: "Scaling & Maintenance" },
         ]
     },
-    { href: "/case-studies", label: "Case Studies" },
-    // { href: "/resources", label: "Resources" },
+    {
+        href: "/industries",
+        label: "Industries",
+        subLinks: [
+            { href: "/industries/fnb-hospitality", label: "FNB & Hospitality" },
+            { href: "/industries/healthcare", label: "Healthcare" },
+            { href: "/industries/logistics", label: "Logistics" },
+            { href: "/industries/professional-services", label: "Professional Services" },
+            { href: "/industries/real-estate", label: "Real Estate" },
+            { href: "/industries/retail-ecommerce", label: "Retail & E-commerce" },
+        ]
+    },
+    { href: "/ai", label: "AI" },
+    {
+        href: "javascript:void(0)",
+        label: "Solutions",
+        subLinks: [
+            { href: "/marketing-automation", label: "Marketing" },
+            { href: "/sales", label: "Sales" },
+            { href: "/service", label: "Service" },
+        ]
+    },
+    { 
+        href: "/case-studies", 
+        label: "Case study",
+        subLinks: [
+            { href: "/casestudy/wallan-trading-co-digital-transformation-zoho", label: "Wallan Trading Co" }
+        ]
+    },
     { href: "/about", label: "About" },
+    
     { href: "/contact", label: "Contact" },
 ];
 

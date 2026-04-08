@@ -17,14 +17,15 @@ Licensed in Dubai since 2023. Offices in Dubai, Sydney, and India.
 - [Zoho Agentic AI Implementation](https://fidigital.ae/platform/zoho-agentic-ai): Enterprise Zoho implementation with AI agent layer using Zia, n8n, Claude, and Gemini.
 - [n8n Workflow Orchestration](https://fidigital.ae/platform/n8n-orchestration): Self-hosted enterprise workflow automation connecting 400+ applications.
 - [Custom AI Agent Development](https://fidigital.ae/platform/custom-ai-development): LangChain and Python-based custom AI agents with RAG, memory, and tool use.
+- [Product Studio](https://fidigital.ae/product-studio): Full-cycle product development including AI MVP, Custom SaaS, Legacy Modernization, and Scaling & Maintenance.
 
 ## Industries Served
-- Real Estate & PropTech
-- Retail & E-Commerce
-- Professional Services (Consulting, Legal, Accounting)
-- Healthcare & Wellness
-- F&B & Hospitality
-- Logistics & Supply Chain
+- F&B & Hospitality (Kitchen automation, loyalty AI, reservation bots)
+- Healthcare (Patient scheduling, medical OCR, bilingual triage)
+- Logistics & Supply Chain (Route optimization, delivery tracking AI)
+- Real Estate & PropTech (Lead scoring, virtual tour booking)
+- Retail & E-Commerce (Stock prediction, abandoned cart recovery)
+- Professional Services (Legal, Accounting, Consulting)
 
 ## Pricing
 - Discovery Sprint: AED 15,000 - 25,000 (2-week diagnostic)
