@@ -82,6 +82,38 @@ URL: https://fidigital.ae/platform/custom-ai-development
 For unique enterprise requirements, FI Digital builds bespoke AI agents using LangChain and Python. These agents use Retrieval-Augmented Generation (RAG) to query internal knowledge bases safely and provide accurate, company-specific answers. 
 We specialize in multi-agent orchestration, where specialized agents (e.g., a "research agent" and a "writing agent") collaborate to solve complex tasks. Our custom builds include full memory management and tool-use capabilities, allowing the AI to take actions in external software securely.
 
+## Detailed Service: Product Studio & SaaS Development
+URL: https://fidigital.ae/product-studio
+Our Product Studio is an end-to-end design and engineering hub where we transform concepts into market-ready SaaS platforms. We focus on high-performance architectures, AI-first user experiences, and scalable cloud foundations.
+
+### AI MVP Development
+URL: https://fidigital.ae/product-studio/ai-mvp
+We specialize in building "AI-First" Minimum Viable Products in weeks, not months. We help startups and enterprises prototype, test, and deploy AI-driven features (LLM integrations, computer vision, predictive analytics) to validate market fit quickly without technical debt.
+
+### Custom SaaS Products
+URL: https://fidigital.ae/product-studio/custom-saas
+Scalable, multi-tenant SaaS architectures built with modern React frameworks and robust backend services. We focus on high-availability, data security, and seamless API integrations to ensure long-term product viability in the Middle Eastern market.
+
+### Legacy Modernization
+URL: https://fidigital.ae/product-studio/legacy-modernization
+We migrate aging enterprise monoliths to contemporary, cloud-native microservices. This includes refactoring legacy code for AI compatibility, modernizing UI/UX, and ensuring zero-downtime database migrations.
+
+### Scaling & Maintenance
+URL: https://fidigital.ae/product-studio/scaling-maintenance
+Continuous platform optimization, infrastructure scaling (AWS/Azure/GCP), and proactive security patching. We ensure that as your user base grows, your platform remains performant and secure.
+
+## Solution: Marketing Automation
+URL: https://fidigital.ae/marketing-automation
+We transform marketing departments from cost centers to revenue drivers using Zoho Marketing Automation. We implement surgical customer segmentation, automated multi-channel journeys (Email, SMS, WhatsApp), and cross-channel attribution models to provide a 360-degree view of the customer lifecycle.
+
+## Solution: Sales & CRM Transformation
+URL: https://fidigital.ae/sales
+Our Sales transformations focus on reducing friction and increasing conversion. We optimize Zoho CRM with custom Blueprints for guided selling, automated lead scoring, and complex deal assignment logic. Our goal is to ensure sales teams spend 90% of their time selling and 0% on manual data entry.
+
+## Solution: Service & Support Excellence
+URL: https://fidigital.ae/service
+We implement enterprise-grade support systems using Zoho Desk. This includes omnichannel support (WhatsApp, Email, Phone), AI-powered ticket triage, sentiment analysis for proactive escalation, and automated CSAT/NPS measurement to drive continuous service improvement.
+
 ## Pricing & Engagement Models
 Discovery Sprint: AED 15,000 – 25,000 (2 weeks)
 Includes: diagnostic, WhatsApp Business API setup, 15-20 page implementation roadmap, Zoho audit.
