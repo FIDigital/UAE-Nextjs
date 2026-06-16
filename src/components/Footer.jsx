@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/siteData";
 import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
 import Logo from "./Logo";
@@ -75,6 +76,17 @@ export default function Footer() {
             <Link href="/" aria-label="FI Digital – Home" style={{ display: "flex", alignItems: "center", textDecoration: "none", marginBottom: "1.1rem" }}>
                 <Logo variant="white" width="180px" height="54px" />
             </Link>
+
+            {/* Zoho Partner badge */}
+            <div className="fi-footer-partner">
+              <Image
+                src="/Zoho-partner.png"
+                alt="Zoho Partner"
+                width={160}
+                height={48}
+                style={{ width: "auto", height: "48px", objectFit: "contain" }}
+              />
+            </div>
 
             <p className="fi-footer-tagline">
               Australian Zoho expertise meets Middle Eastern ambition. AI agent architects for enterprise transformation.
@@ -222,6 +234,10 @@ export default function Footer() {
         }
 
         /* ── Brand ── */
+        .fi-footer-partner {
+          margin-bottom: 1.25rem;
+        }
+
         .fi-footer-tagline {
           font-size: 0.85rem;
           line-height: 1.7;
