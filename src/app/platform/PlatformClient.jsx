@@ -21,6 +21,9 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import platformHeroProfessionalImg from "@/assets/images/platform_hero_professional.png";
+import securityInfrastructureImg from "@/assets/images/platform/security_infrastructure.png";
+import globalHubImg from "@/assets/images/platform/global_hub.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -353,7 +356,7 @@ export default function PlatformClient() {
                     }}
                 >
                     <Image
-                        src="/images/platform_hero_professional.png"
+                        src={platformHeroProfessionalImg}
                         alt=""
                         aria-hidden="true"
                         fill
@@ -552,7 +555,7 @@ export default function PlatformClient() {
                         }}>
                             <div style={{ width: "100%", height: "300px", overflow: "hidden" }}>
                                 <Image 
-                                    src="/images/platform/security_infrastructure.png" 
+                                    src={securityInfrastructureImg} 
                                     alt="UAE Security Infrastructure" 
                                     fill
                                     style={{ objectFit: "cover" }} 
@@ -583,7 +586,7 @@ export default function PlatformClient() {
                         }}>
                             <div style={{ width: "100%", height: "300px", overflow: "hidden" }}>
                                 <Image 
-                                    src="/images/platform/global_hub.png" 
+                                    src={globalHubImg} 
                                     alt="Dubai Global AI Hub" 
                                     fill
                                     style={{ objectFit: "cover" }} 

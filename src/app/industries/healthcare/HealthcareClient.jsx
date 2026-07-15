@@ -18,6 +18,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import healthcareHeroImg from "@/assets/images/industries/healthcare-hero.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -214,7 +215,7 @@ export default function HealthcareClient() {
                     zIndex: 0, opacity: 0.4, pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/industries/healthcare-hero.png" 
+                        src={healthcareHeroImg} 
                         alt="UAE Healthcare AI" 
                         fill
                         style={{ 

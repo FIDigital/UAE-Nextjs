@@ -18,6 +18,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import realEstateHeroImg from "@/assets/images/industries/real-estate-hero.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -291,7 +292,7 @@ export default function RealEstateClient() {
                     zIndex: 0, opacity: 0.4, pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/industries/real-estate-hero.png" 
+                        src={realEstateHeroImg} 
                         alt="Dubai Real Estate" 
                         fill
                         style={{ 

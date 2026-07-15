@@ -10,6 +10,8 @@ import {
   Building2, Settings2, MessageCircle, ListChecks,
   Newspaper, Handshake, FileDown, MapPin
 } from "lucide-react";
+import resourcesHeroImg from "@/assets/images/resources-hero.png";
+import webinarHeroImg from "@/assets/images/resources/webinar-hero.png";
 
 /* ─── Blog data ─────────────────────────────────────────────────────────────── */
 const blogPosts = [
@@ -646,7 +648,7 @@ export default function ResourcesClient() {
                 pointerEvents: "none"
             }}>
                 <Image 
-                    src="/images/resources-hero.png" 
+                    src={resourcesHeroImg}
                     alt="Background" 
                     fill
                     style={{ objectFit: "cover", maskImage: "radial-gradient(circle at right, black, transparent 80%)", WebkitMaskImage: "radial-gradient(circle at right, black, transparent 80%)" }}
@@ -848,7 +850,7 @@ export default function ResourcesClient() {
                 </p>
                 <div style={{ borderRadius: 20, overflow: "hidden", position: "relative" }}>
                   <Image
-                    src="/images/resources/webinar-hero.png"
+                    src={webinarHeroImg}
                     alt="FI Digital Webinars"
                     width={800}
                     height={400}

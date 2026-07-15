@@ -34,6 +34,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import carsImg from "@/assets/images/case-studies/cars.jpg";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -175,7 +176,7 @@ export default function WallanCaseStudyClient() {
                     pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/case-studies/cars.jpg" 
+                        src={carsImg}
                         alt="" 
                         fill
                         priority

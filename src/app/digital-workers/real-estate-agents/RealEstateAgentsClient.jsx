@@ -34,6 +34,9 @@ import FAQItem from "@/components/FAQItem";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import realEstateHeroImg from "@/assets/images/industries/real-estate-hero.png";
+import realEstateAgentFlowImg from "@/assets/images/real-estate-agent/real-estate-agent-flow-v2.png";
+import realEstateResultsDashboardImg from "@/assets/images/real-estate-agent/real-estate-results-dashboard.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -251,7 +254,7 @@ export default function RealEstateAgentsClient() {
                     }}
                 >
                     <Image
-                        src="/images/industries/real-estate-hero.png"
+                        src={realEstateHeroImg}
                         alt=""
                         aria-hidden="true"
                         fill
@@ -409,7 +412,7 @@ export default function RealEstateAgentsClient() {
                         <div className="reveal">
                             <div style={{ position: "relative" }}>
                                 <Image 
-                                    src="/images/real-estate-agent/real-estate-agent-flow-v2.png" 
+                                    src={realEstateAgentFlowImg}
                                     alt="Real Estate AI Agent Qualification Flow"
                                     width={800}
                                     height={600}
@@ -693,7 +696,7 @@ export default function RealEstateAgentsClient() {
                         </div>
                         <div style={{ flex: 1, minWidth: "350px" }} className="reveal">
                             <Image 
-                                src="/images/real-estate-agent/real-estate-results-dashboard.png" 
+                                src={realEstateResultsDashboardImg}
                                 alt="Measurable Impact Results Dashboard"
                                 width={800}
                                 height={600}

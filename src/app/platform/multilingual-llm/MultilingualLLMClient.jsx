@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Languages, BrainCircuit, FileSignature, ArrowRightLeft, Cpu, ShieldCheck } from 'lucide-react';
+import llmIntelligenceImg from "@/assets/images/platform/llm_intelligence.png";
 
 export default function MultilingualLLMClient() {
     const serviceJsonLd = {
@@ -69,7 +70,7 @@ export default function MultilingualLLMClient() {
                     zIndex: 0, opacity: 0.4, pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/platform/llm_intelligence.png" 
+                        src={llmIntelligenceImg} 
                         alt="Arabic AI & Multilingual LLM" 
                         fill
                         style={{ 

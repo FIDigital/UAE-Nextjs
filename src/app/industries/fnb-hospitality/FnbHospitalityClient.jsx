@@ -17,6 +17,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import fnbHeroImg from "@/assets/images/industries/fnb-hero.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -212,7 +213,7 @@ export default function FnbHospitalityClient() {
                     zIndex: 0, opacity: 0.4, pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/industries/fnb-hero.png" 
+                        src={fnbHeroImg} 
                         alt="Dubai F&B & Hospitality" 
                         fill
                         style={{ 

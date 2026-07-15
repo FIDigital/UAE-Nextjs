@@ -17,6 +17,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import retailHeroImg from "@/assets/images/industries/retail-hero.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -213,7 +214,7 @@ export default function RetailEcommerceClient() {
                     zIndex: 0, opacity: 0.4, pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/industries/retail-hero.png" 
+                        src={retailHeroImg} 
                         alt="Dubai Retail & E-Commerce" 
                         fill
                         style={{ 

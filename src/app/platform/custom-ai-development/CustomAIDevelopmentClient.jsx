@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Database, Brain, MemoryStick, Cog, Terminal, Settings } from 'lucide-react';
+import customDevelopmentImg from "@/assets/images/platform/custom_development.png";
 
 export default function CustomAIDevelopmentClient() {
     const serviceJsonLd = {
@@ -69,7 +70,7 @@ export default function CustomAIDevelopmentClient() {
                     zIndex: 0, opacity: 0.4, pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/platform/custom_development.png" 
+                        src={customDevelopmentImg} 
                         alt="Custom AI Agent Development" 
                         fill
                         style={{ 

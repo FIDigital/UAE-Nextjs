@@ -20,6 +20,8 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import productStudioHeroImg from "@/assets/images/product-studio-hero.png";
+import aiProductImg from "@/assets/images/ai-product.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -205,7 +207,7 @@ export default function ProductStudioClient() {
                     pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/product-studio-hero.png" 
+                        src={productStudioHeroImg} 
                         alt="Background" 
                         fill
                         style={{ objectFit: "cover", maskImage: "radial-gradient(circle at right, black, transparent 80%)", WebkitMaskImage: "radial-gradient(circle at right, black, transparent 80%)" }}
@@ -451,7 +453,7 @@ export default function ProductStudioClient() {
                             overflow: "hidden"
                         }}>
                              <Image 
-                                src="/images/ai-product.png" 
+                                src={aiProductImg} 
                                 alt="" 
                                 fill
                                 style={{ objectFit: "cover", opacity: 0.1, zIndex: -1 }}

@@ -20,6 +20,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import legacyModernizationHeroImg from "@/assets/images/legacy-modernization-hero.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -166,7 +167,7 @@ export default function LegacyModernizationClient() {
                     pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/legacy-modernization-hero.png" 
+                        src={legacyModernizationHeroImg} 
                         alt="Background" 
                         fill
                         style={{ 

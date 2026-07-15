@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import logoOnLight1Img from "@/assets/img/logo-on-light1.png";
+import logoOnDark1Img from "@/assets/img/logo-on-dark1.png";
 
 export default function Logo({ variant = "theme", width = "160px", height = "48px" }) {
   return (
@@ -10,7 +12,7 @@ export default function Logo({ variant = "theme", width = "160px", height = "48p
         {/* Logo for Light Theme (rendered on light backgrounds) */}
         <div className="logo-img light-theme-logo">
           <Image
-            src="/img/logo-on-light1.png"
+            src={logoOnLight1Img}
             alt="FI Digital Logo"
             fill
             style={{ objectFit: "contain" }}
@@ -21,7 +23,7 @@ export default function Logo({ variant = "theme", width = "160px", height = "48p
         {/* Logo for Dark Theme (rendered on dark backgrounds or white variant) */}
         <div className="logo-img dark-theme-logo">
           <Image
-            src="/img/logo-on-dark1.png"
+            src={logoOnDark1Img}
             alt="FI Digital Logo"
             fill
             style={{ objectFit: "contain" }}

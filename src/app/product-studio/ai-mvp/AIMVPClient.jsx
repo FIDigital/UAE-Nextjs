@@ -20,6 +20,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import aiMvpHeroImg from "@/assets/images/ai-mvp-hero.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -162,7 +163,7 @@ export default function AIMVPClient() {
                     pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/ai-mvp-hero.png" 
+                        src={aiMvpHeroImg} 
                         alt="Background" 
                         fill
                         style={{ 

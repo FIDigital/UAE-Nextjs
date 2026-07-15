@@ -30,6 +30,9 @@ import FAQItem from "@/components/FAQItem";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import platformHeroProfessionalImg from "@/assets/images/platform_hero_professional.png";
+import whatsappTechFlowImg from "@/assets/images/whatsapp-agent/tech-flow.png";
+import whatsappResultsImg from "@/assets/images/whatsapp-agent/whatsapp-results-v2.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -255,7 +258,7 @@ export default function WhatsAppSalesAgentsClient() {
                     }}
                 >
                     <Image
-                        src="/images/platform_hero_professional.png"
+                        src={platformHeroProfessionalImg}
                         alt=""
                         aria-hidden="true"
                         fill
@@ -355,7 +358,7 @@ export default function WhatsAppSalesAgentsClient() {
                         
                         <div className="reveal">
                             <Image 
-                                src="/images/whatsapp-agent/tech-flow.png" 
+                                src={whatsappTechFlowImg}
                                 alt="WhatsApp Agent Technical Flow Diagram"
                                 width={800}
                                 height={600}
@@ -605,7 +608,7 @@ export default function WhatsAppSalesAgentsClient() {
                         </div>
                         <div style={{ flex: 1, minWidth: "350px" }} className="reveal">
                             <Image 
-                                src="/images/whatsapp-agent/whatsapp-results-v2.png" 
+                                src={whatsappResultsImg}
                                 alt="WhatsApp Agent Performance Results"
                                 width={800}
                                 height={600}

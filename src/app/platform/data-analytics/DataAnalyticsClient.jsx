@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Database, TrendingUp, BellRing, LineChart, FileText } from 'lucide-react';
+import dataAnalyticsImg from "@/assets/images/platform/data_analytics.png";
 
 export default function DataAnalyticsClient() {
     const serviceJsonLd = {
@@ -69,7 +70,7 @@ export default function DataAnalyticsClient() {
                     zIndex: 0, opacity: 0.4, pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/platform/data_analytics.png" 
+                        src={dataAnalyticsImg} 
                         alt="Business Intelligence & Data Analytics" 
                         fill
                         style={{ 

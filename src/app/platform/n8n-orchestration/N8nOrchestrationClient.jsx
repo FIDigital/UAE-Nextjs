@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Workflow, CheckCircle2, Repeat, Server, ShieldCheck, Zap } from 'lucide-react';
+import n8nOrchestrationImg from "@/assets/images/platform/n8n_orchestration.png";
 
 export default function N8nOrchestrationClient() {
     const serviceJsonLd = {
@@ -69,7 +70,7 @@ export default function N8nOrchestrationClient() {
                     zIndex: 0, opacity: 0.4, pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/platform/n8n_orchestration.png" 
+                        src={n8nOrchestrationImg} 
                         alt="n8n Enterprise Workflow Automation" 
                         fill
                         style={{ 

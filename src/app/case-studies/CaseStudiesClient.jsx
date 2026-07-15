@@ -7,6 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import caseStudiesHeroImg from "@/assets/images/case-studies-hero.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -57,7 +58,7 @@ export default function CaseStudiesClient() {
                         pointerEvents: "none",
                     }}>
                         <Image
-                            src="/images/case-studies-hero.png"
+                            src={caseStudiesHeroImg}
                             alt=""
                             fill
                             style={{

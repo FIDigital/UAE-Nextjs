@@ -17,6 +17,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import digitalWorkerHeroImg from "@/assets/images/digital_worker_hero_v3.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -318,7 +319,7 @@ export default function DigitalWorkersClient() {
                     pointerEvents: "none",
                 }}>
                     <Image
-                        src="/images/digital_worker_hero_v3.png"
+                        src={digitalWorkerHeroImg}
                         alt=""
                         aria-hidden="true"
                         fill

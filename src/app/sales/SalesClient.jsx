@@ -24,6 +24,11 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import homeHeroProfessionalImg from "@/assets/images/home_hero_professional.png";
+import salesHeroImg from "@/assets/images/solutions/sales-hero.png";
+import salesConvertImg from "@/assets/images/solutions/sales-convert.png";
+import salesAutomateImg from "@/assets/images/solutions/sales-automate.png";
+import salesAnalyzeImg from "@/assets/images/solutions/sales-analyze.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -117,7 +122,7 @@ export default function SalesClient() {
                     pointerEvents: "none",
                 }}>
                     <Image
-                        src="/images/home_hero_professional.png"
+                        src={homeHeroProfessionalImg}
                         alt=""
                         aria-hidden="true"
                         fill
@@ -177,7 +182,7 @@ export default function SalesClient() {
                                 boxShadow: "0 40px 100px -20px rgba(0,0,0,0.15)"
                             }}>
                                 <Image 
-                                    src="/images/solutions/sales-hero.png" 
+                                    src={salesHeroImg} 
                                     alt="Zoho CRM Sales Pipeline" 
                                     width={800} 
                                     height={800}
@@ -256,7 +261,7 @@ export default function SalesClient() {
                                 backdropFilter: "blur(10px)"
                             }}>
                                 <Image 
-                                    src="/images/solutions/sales-convert.png" 
+                                    src={salesConvertImg} 
                                     alt="Sales Conversion Process" 
                                     width={700} height={500}
                                     style={{ borderRadius: "24px", width: "100%", height: "auto" }}
@@ -269,7 +274,7 @@ export default function SalesClient() {
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 350px), 1fr))", gap: "6rem", alignItems: "center", marginBottom: "clamp(120px, 18vh, 180px)" }}>
                         <div className="reveal-item" style={{ order: 2 }}>
                             <Image 
-                                src="/images/solutions/sales-automate.png" 
+                                src={salesAutomateImg} 
                                 alt="Automation Flow" 
                                 width={700} height={500}
                                 style={{ borderRadius: "40px", width: "100%", height: "auto", border: "1px solid var(--border)" }}
@@ -302,7 +307,7 @@ export default function SalesClient() {
                             <div style={{ position: "relative" }}>
                                 <div style={{ position: "absolute", inset: "-20px", background: "var(--primary)05", borderRadius: "50%", filter: "blur(60px)", zIndex: 0 }} />
                                 <Image 
-                                    src="/images/solutions/sales-analyze.png" 
+                                    src={salesAnalyzeImg} 
                                     alt="Insights & Reports" 
                                     width={700} height={500}
                                     style={{ borderRadius: "40px", position: "relative", zIndex: 1, width: "100%", height: "auto", border: "1px solid var(--border)" }}

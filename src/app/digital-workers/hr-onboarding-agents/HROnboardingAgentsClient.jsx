@@ -20,6 +20,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import hrOnboardingHeroImg from "@/assets/images/hr-onboarding-hero.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -174,7 +175,7 @@ export default function HROnboardingAgentsClient() {
                     }}
                 >
                     <Image
-                        src="/images/hr-onboarding-hero.png"
+                        src={hrOnboardingHeroImg}
                         alt=""
                         aria-hidden="true"
                         fill

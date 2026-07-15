@@ -23,6 +23,11 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import homeHeroProfessionalImg from "@/assets/images/home_hero_professional.png";
+import serviceHeroImg from "@/assets/images/solutions/service-hero.png";
+import serviceDispatchImg from "@/assets/images/solutions/service-dispatch.png";
+import serviceAutomateImg from "@/assets/images/solutions/service-automate.png";
+import serviceAnalyzeImg from "@/assets/images/solutions/service-analyze.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -116,7 +121,7 @@ export default function ServiceClient() {
                     pointerEvents: "none",
                 }}>
                     <Image
-                        src="/images/home_hero_professional.png"
+                        src={homeHeroProfessionalImg}
                         alt=""
                         aria-hidden="true"
                         fill
@@ -176,7 +181,7 @@ export default function ServiceClient() {
                                 boxShadow: "0 40px 100px -20px rgba(0,0,0,0.15)"
                             }}>
                                 <Image 
-                                    src="/images/solutions/service-hero.png" 
+                                    src={serviceHeroImg} 
                                     alt="Zoho Desk Customer Support Dashboard" 
                                     width={800} 
                                     height={800}
@@ -255,7 +260,7 @@ export default function ServiceClient() {
                                 backdropFilter: "blur(10px)"
                             }}>
                                 <Image 
-                                    src="/images/solutions/service-dispatch.png" 
+                                    src={serviceDispatchImg} 
                                     alt="Service Ticketing Interface" 
                                     width={700} height={500}
                                     style={{ borderRadius: "24px", width: "100%", height: "auto" }}
@@ -268,7 +273,7 @@ export default function ServiceClient() {
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 350px), 1fr))", gap: "6rem", alignItems: "center", marginBottom: "clamp(120px, 18vh, 180px)" }}>
                         <div className="reveal-item" style={{ order: 2 }}>
                             <Image 
-                                src="/images/solutions/service-automate.png" 
+                                src={serviceAutomateImg} 
                                 alt="Automation Architecture" 
                                 width={700} height={500}
                                 style={{ borderRadius: "40px", width: "100%", height: "auto", border: "1px solid var(--border)" }}
@@ -309,7 +314,7 @@ export default function ServiceClient() {
                             <div style={{ position: "relative" }}>
                                 <div style={{ position: "absolute", inset: "-30px", background: "var(--primary)05", borderRadius: "50%", filter: "blur(80px)", zIndex: 0 }} />
                                 <Image 
-                                    src="/images/solutions/service-analyze.png" 
+                                    src={serviceAnalyzeImg} 
                                     alt="Insights & Reports" 
                                     width={700} height={500}
                                     style={{ borderRadius: "40px", position: "relative", zIndex: 1, width: "100%", height: "auto", border: "1px solid var(--border)" }}

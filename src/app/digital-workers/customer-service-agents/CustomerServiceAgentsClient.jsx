@@ -24,6 +24,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import customerServiceHeroImg from "@/assets/images/customer_service_hero_v2.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -129,7 +130,7 @@ export default function CustomerServiceAgentsClient() {
                     }}
                 >
                     <Image
-                        src="/images/customer_service_hero_v2.png"
+                        src={customerServiceHeroImg}
                         alt=""
                         aria-hidden="true"
                         fill

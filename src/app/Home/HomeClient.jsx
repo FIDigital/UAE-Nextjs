@@ -22,6 +22,20 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
+import homeHeroProfessionalImg from "@/assets/images/home_hero_professional.png";
+import newZohoLogoImg from "@/assets/images/new-zoho-logo.png";
+import claudeImg from "@/assets/images/claude.png";
+import n8nImg from "@/assets/images/n8n.png";
+import ecosystemMockupImg from "@/assets/img/ecosystem_mockup.png";
+import pillarAiImg from "@/assets/img/pillar_ai.png";
+import pillarAutomationV2Img from "@/assets/img/pillar_automation_v2.png";
+import realEstateImg from "@/assets/img/real-estate.png";
+import retailImg from "@/assets/img/retail.png";
+import professionalServicesImg from "@/assets/img/professional-services.png";
+import financeImg from "@/assets/img/finance.png";
+import hospitalityImg from "@/assets/img/hospitality.png";
+import logisticsImg from "@/assets/img/logistics.png";
+
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -70,7 +84,7 @@ function HomeHero() {
     }}
   >
     <Image
-      src="/images/home_hero_professional.png"
+      src={homeHeroProfessionalImg}
       alt=""
       aria-hidden="true"
       fill
@@ -217,7 +231,7 @@ function EcosystemSection() {
               <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '130px', background: 'var(--bg-secondary)', border: '1px solid var(--border)', borderRadius: '20px', transition: 'all 0.3s ease' }}>
                 <div style={{ height: '44px', width: '100%', position: 'relative', marginBottom: '0.75rem' }}>
                   <Image
-                    src="/images/new-zoho-logo.png"
+                    src={newZohoLogoImg}
                     alt="Zoho Logo"
                     fill
                     style={{ objectFit: 'contain' }}
@@ -228,7 +242,7 @@ function EcosystemSection() {
               <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '130px', background: 'var(--bg-secondary)', border: '1px solid var(--border)', borderRadius: '20px', transition: 'all 0.3s ease' }}>
                 <div style={{ height: '44px', width: '100%', position: 'relative', marginBottom: '0.75rem' }}>
                   <Image
-                    src="/images/claude.png"
+                    src={claudeImg}
                     alt="Claude AI Logo"
                     fill
                     style={{ objectFit: 'contain' }}
@@ -239,7 +253,7 @@ function EcosystemSection() {
               <div className="card" style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '130px', background: 'var(--bg-secondary)', border: '1px solid var(--border)', borderRadius: '20px', transition: 'all 0.3s ease' }}>
                 <div style={{ height: '44px', width: '100%', position: 'relative', marginBottom: '0.75rem' }}>
                   <Image
-                    src="/images/n8n.png"
+                    src={n8nImg}
                     alt="n8n Logo"
                     fill
                     style={{ objectFit: 'contain' }}
@@ -262,7 +276,7 @@ function EcosystemSection() {
           </div>
           <div style={{ position: 'relative', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 20px 50px rgba(0,0,0,0.3)', border: '1px solid var(--border)' }}>
             <Image
-              src="/img/ecosystem_mockup.png"
+              src={ecosystemMockupImg}
               alt="Technology Ecosystem Mesh"
               width={800}
               height={800}
@@ -366,7 +380,7 @@ function PillarsSection() {
       content: "We architect transparent, governance first AI agents that reason through business logic, manage approvals, and integrate seamlessly with Zoho. No black box risks.",
       details: "Built on Claude for reasoning and Gemini for volume. Fully compliant with ISO and UAE regulations with explicit audit trails. Cycle time reduction from hours to minutes.",
       stats: ["40+ Deployed Workflows", "87% Qualification Accuracy", "Arabic Support: Gulf, Levantine, Egyptian"],
-      image: "/img/pillar_ai.png"
+      image: pillarAiImg
     },
     {
       id: "pillar-2",
@@ -376,7 +390,7 @@ function PillarsSection() {
       content: "Zoho implementations fail from customization chaos. We architect clean, governed instances designed for scale and AI integration.",
       details: "Handling VAT, labor law compliance, and data sovereignty in the architecture phase. Assistance across 80+ Zoho instances with a 94% retention rate.",
       stats: ["80+ Implementations", "Single Source of Truth", "VAT & Labor Law Built in"],
-      image: "/images/new-zoho-logo.png",
+      image: newZohoLogoImg,
       isLogo: true
     },
     {
@@ -387,7 +401,7 @@ function PillarsSection() {
       content: "Automation in the enterprise means engineering discipline: process mapping, transparent decision trees, and error handling.",
       details: "Using n8n as the orchestration spine. Organizations see payback in 3-4 months through freed capacity and reduced risk. Team of 6 operates like 8.5.",
       stats: ["200+ Hours/Month Saved", "n8n Orchestration Spine", "Payback in 3-4 Months"],
-      image: "/img/pillar_automation_v2.png"
+      image: pillarAutomationV2Img
     }
   ];
 
@@ -562,32 +576,32 @@ function IndustrySection() {
   const industries = [
     {
       title: "Real Estate & Property Management",
-      image: "/img/real-estate.png",
+      image: realEstateImg,
       desc: "Dubai real estate moves at WhatsApp speed. Agents drown in 50+ lead messages daily, many completely unqualified. We deploy AI agents that qualify in Arabic and English within 4 minutes, score by budget, timeline, nationality, and visa status, and sync qualified leads directly into Zoho CRM for automatic assignment. Response time improves from 6 hours (manual) to 12 minutes (agent assisted). Conversion rate improves 43% simply because responses are faster and better informed. We've implemented this across 12 real estate firms, managing 80,000+ inbound leads annually."
     },
     {
       title: "Retail & E-Commerce",
-      image: "/img/retail.png",
+      image: retailImg,
       desc: "Retail WhatsApp inquiry volume is staggering—inventory questions, returns, order tracking, all hitting personal phones. We automate inventory lookups, order status, return processing, and product recommendations. A luxury retail group automated 90% of order related inquiries, reducing customer service cost by 35% while improving satisfaction (faster, 24/7). An e-commerce firm used AI agents for cross sell recommendations, increasing average order value by 12%. We handle Arabic language nuance (understanding casual inquiries, colloquial product references) and multi currency pricing."
     },
     {
       title: "Professional Services & Consulting",
-      image: "/img/professional-services.png",
+      image: professionalServicesImg,
       desc: "Consulting firms live on proposal cycles and time tracking. We automate intake (capturing project requirements, scope, budget), proposal generation (templated but customized per client), and resource scheduling. A 40 person firm reduced proposal turnaround from 5 days to 2 days. An accounting practice automated 70% of initial client questionnaires, freeing senior staff for actual advisory work. These agents understand complex business logic not just form filling, but judgment calls about resource allocation and risk assessment."
     },
     {
       title: "Finance & Accounting",
-      image: "/img/finance.png",
+      image: financeImg,
       desc: "Month end close is universally painful. We automate reconciliation (bank rec, GL account reconciliation), accruals (revenue recognition, expense accrual), and reporting prep. A manufacturing firm reduced month end from 10 days to 3 days. A holding company automated multi entity consolidation. A fintech firm achieved zero revenue recognition errors across 200 clients. We handle UAE VAT specifics tracking, quarterly return preparation, audit trail maintenance. Multi currency operations (AED, USD, INR) are configured for automatic daily revaluation."
     },
     {
       title: "Hospitality & Food & Beverage",
-      image: "/img/hospitality.png",
+      image: hospitalityImg,
       desc: "Hospitality operates in service moments a guest needs something now, or the moment is lost. We deploy agents handling check in escalations, dining reservations, maintenance requests, and local recommendations. A 5 star hotel automated 60% of guest service requests, improving guest satisfaction while reducing front desk overhead. A restaurant group automated reservation management and special request handling across 8 locations. These agents understand service context and can escalate appropriately when human judgment is needed."
     },
     {
       title: "Logistics & Supply Chain",
-      image: "/img/logistics.png",
+      image: logisticsImg,
       desc: "Supply chain is exception driven. Normal orders process fine; exceptions (wrong delivery address, customs hold, damaged shipment) require immediate attention. We build agents that detect exceptions (using real time tracking data), initiate communications with customers and vendors, and coordinate resolution. A logistics provider reduced exception resolution time from 90 minutes to 2 minutes per shipment, improving on time delivery from 87% to 94%. We handle multi leg shipments, customs documentation, and Arabic communication with suppliers."
     }
   ];

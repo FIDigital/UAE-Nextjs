@@ -26,6 +26,11 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import homeHeroProfessionalImg from "@/assets/images/home_hero_professional.png";
+import marketingHeroImg from "@/assets/images/solutions/marketing-hero.png";
+import marketingEngageImg from "@/assets/images/solutions/marketing-engage.png";
+import marketingCampaignImg from "@/assets/images/solutions/marketing-campaign.png";
+import marketingSegmentImg from "@/assets/images/solutions/marketing-segment.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -121,7 +126,7 @@ export default function MarketingAutomationClient() {
                     pointerEvents: "none",
                 }}>
                     <Image
-                        src="/images/home_hero_professional.png"
+                        src={homeHeroProfessionalImg}
                         alt=""
                         aria-hidden="true"
                         fill
@@ -181,7 +186,7 @@ export default function MarketingAutomationClient() {
                                 boxShadow: "0 40px 100px -20px rgba(0,0,0,0.15)"
                             }}>
                                 <Image 
-                                    src="/images/solutions/marketing-hero.png" 
+                                    src={marketingHeroImg} 
                                     alt="Marketing Automation Dashboard" 
                                     width={800} 
                                     height={800}
@@ -247,7 +252,7 @@ export default function MarketingAutomationClient() {
                                 background: "var(--primary)05", borderRadius: "40px", transform: "rotate(-2deg)", zIndex: 0 
                             }} />
                             <Image 
-                                src="/images/solutions/marketing-engage.png" 
+                                src={marketingEngageImg} 
                                 alt="Lead Nurturing & Engagement" 
                                 width={600} height={450}
                                 style={{ borderRadius: "40px", position: "relative", zIndex: 1, width: "100%", height: "auto", border: "1px solid var(--border)" }}
@@ -277,7 +282,7 @@ export default function MarketingAutomationClient() {
                                 background: "#6366F105", borderRadius: "40px", transform: "rotate(2deg)", zIndex: 0 
                             }} />
                             <Image 
-                                src="/images/solutions/marketing-campaign.png" 
+                                src={marketingCampaignImg} 
                                 alt="Campaign Streamlining" 
                                 width={600} height={450}
                                 style={{ borderRadius: "40px", position: "relative", zIndex: 1, width: "100%", height: "auto", border: "1px solid var(--border)" }}
@@ -295,7 +300,7 @@ export default function MarketingAutomationClient() {
                     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 350px), 1fr))", gap: "5rem", alignItems: "center" }}>
                         <div className="reveal-item" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                             <Image 
-                                src="/images/solutions/marketing-segment.png" 
+                                src={marketingSegmentImg} 
                                 alt="Scale Reach" 
                                 width={600} height={450}
                                 style={{ borderRadius: "40px", width: "100%", height: "auto", border: "1px solid var(--border)" }}

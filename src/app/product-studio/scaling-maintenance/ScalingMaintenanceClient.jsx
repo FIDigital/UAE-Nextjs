@@ -20,6 +20,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import scalingMaintenanceHeroImg from "@/assets/images/scaling-maintenance-hero.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -166,7 +167,7 @@ export default function ScalingMaintenanceClient() {
                     pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/scaling-maintenance-hero.png" 
+                        src={scalingMaintenanceHeroImg} 
                         alt="Background" 
                         fill
                         style={{ 

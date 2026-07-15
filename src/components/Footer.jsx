@@ -3,6 +3,7 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/siteData";
 import { Instagram, Facebook, Twitter, Linkedin } from "lucide-react";
 import Logo from "./Logo";
+import zohoPartnerImg from "@/assets/images/Zoho-partner.png";
 
 const footerLinks = {
   "Digital Workers": [
@@ -80,7 +81,7 @@ export default function Footer() {
             {/* Zoho Partner badge */}
             <div className="fi-footer-partner">
               <Image
-                src="/Zoho-partner.png"
+                src={zohoPartnerImg}
                 alt="Zoho Partner"
                 width={160}
                 height={48}

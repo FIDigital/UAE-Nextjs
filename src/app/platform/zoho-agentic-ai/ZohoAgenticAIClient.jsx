@@ -31,6 +31,9 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import zohoIntegrationImg from "@/assets/images/platform/zoho_integration.png";
+import architectureFlowImg from "@/assets/images/platform/zoho/architecture_flow.png";
+import zohoFlowAutomationImg from "@/assets/images/platform/zoho/zoho_flow_automation.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -317,7 +320,7 @@ export default function ZohoAgenticAIClient() {
                     zIndex: 0, opacity: 0.3, pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/platform/zoho_integration.png" 
+                        src={zohoIntegrationImg} 
                         alt="Zoho Agentic AI Integration" 
                         fill
                         style={{ 
@@ -482,7 +485,7 @@ export default function ZohoAgenticAIClient() {
                                 border: "1px solid var(--border)",
                                 boxShadow: "0 20px 50px rgba(0,0,0,0.3)"
                             }}>
-                                <Image src="/images/platform/zoho/architecture_flow.png" alt="Zoho AI Architecture Flow" width={800} height={600} style={{ width: "100%", height: "auto" }} />
+                                <Image src={architectureFlowImg} alt="Zoho AI Architecture Flow" width={800} height={600} style={{ width: "100%", height: "auto" }} />
                             </div>
                         </div>
                     </div>
@@ -642,7 +645,7 @@ export default function ZohoAgenticAIClient() {
                                 border: "1px solid var(--border)"
                             }}>
                                 <Image 
-                                    src="/images/platform/zoho/zoho_flow_automation.png" 
+                                    src={zohoFlowAutomationImg} 
                                     alt="Zoho Flow AI Automation" 
                                     width={1000}
                                     height={600}

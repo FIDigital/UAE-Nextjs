@@ -26,6 +26,9 @@ import {
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import FAQItem from '@/components/FAQItem';
+import financeProcurementHeroImg from '@/assets/images/finance_procurement_hero_v2.png';
+import financeAgentWorkflowImg from '@/assets/images/finance-agent/finance-agent-workflow.png';
+import financeAgentImpactImg from '@/assets/images/finance-agent/finance-agent-impact.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -284,7 +287,7 @@ export default function FinanceProcurementAgentsClient() {
                     }}
                 >
                     <Image
-                        src="/images/finance_procurement_hero_v2.png"
+                        src={financeProcurementHeroImg}
                         alt=""
                         aria-hidden="true"
                         fill
@@ -458,7 +461,7 @@ export default function FinanceProcurementAgentsClient() {
                         <div className="reveal">
                             <div style={{ position: "relative" }}>
                                 <Image 
-                                    src="/images/finance-agent/finance-agent-workflow.png" 
+                                    src={financeAgentWorkflowImg}
                                     alt="Architecture Flowchart"
                                     width={800}
                                     height={600}
@@ -578,7 +581,7 @@ export default function FinanceProcurementAgentsClient() {
                             </div>
                             <div className="card" style={{ padding: "1rem", borderRadius: "32px", overflow: "hidden", border: "1px solid var(--border)", boxShadow: "0 20px 40px rgba(0,0,0,0.2)" }}>
                                 <Image 
-                                    src="/images/finance-agent/finance-agent-impact.png" 
+                                    src={financeAgentImpactImg}
                                     alt="Finance Agent Impact"
                                     width={800}
                                     height={500}

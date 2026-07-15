@@ -17,6 +17,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import professionalServicesHeroImg from "@/assets/images/industries/professional-services-hero.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -212,7 +213,7 @@ export default function ProfessionalServicesClient() {
                     zIndex: 0, opacity: 0.4, pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/industries/professional-services-hero.png" 
+                        src={professionalServicesHeroImg} 
                         alt="Professional Services Dubai" 
                         fill
                         style={{ 

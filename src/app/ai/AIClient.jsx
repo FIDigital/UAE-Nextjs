@@ -24,6 +24,12 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import homeHeroProfessionalImg from "@/assets/images/home_hero_professional.png";
+import aiStudioImg from "@/assets/images/Ai/Ai-studio.png";
+import ziaImg from "@/assets/images/Ai/Zia.png";
+import creatorImg from "@/assets/images/Ai/Creator.png";
+import catalystAiImg from "@/assets/images/Ai/Catalyst-ai.png";
+import ziaOpenaiImg from "@/assets/images/Ai/zia-openai.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -84,7 +90,7 @@ export default function AIClient() {
                     pointerEvents: "none",
                 }}>
                     <Image
-                        src="/images/home_hero_professional.png"
+                        src={homeHeroProfessionalImg}
                         alt=""
                         aria-hidden="true"
                         fill
@@ -154,7 +160,7 @@ export default function AIClient() {
                                 boxShadow: "0 40px 100px -20px rgba(0,0,0,0.15)"
                             }}>
                                 <Image
-                                    src="/images/Ai/Ai-studio.png"
+                                    src={aiStudioImg}
                                     alt="AI Studio on Zoho"
                                     width={700}
                                     height={500}
@@ -208,7 +214,7 @@ export default function AIClient() {
                                 alignItems: "center"
                             }}>
                                 <Image 
-                                    src="/images/Ai/Zia.png" 
+                                    src={ziaImg} 
                                     alt="Zia AI Powered Assistant" 
                                     width={600} height={450}
                                     style={{ borderRadius: "24px", width: "100%", height: "auto" }}
@@ -238,7 +244,7 @@ export default function AIClient() {
                                 alignItems: "center"
                             }}>
                                 <Image 
-                                    src="/images/Ai/Creator.png" 
+                                    src={creatorImg} 
                                     alt="Zoho Creator Modeling" 
                                     width={600} height={450}
                                     style={{ borderRadius: "24px", width: "100%", height: "auto" }}
@@ -299,7 +305,7 @@ export default function AIClient() {
                                 alignItems: "center"
                             }}>
                                 <Image 
-                                    src="/images/Ai/Catalyst-ai.png" 
+                                    src={catalystAiImg} 
                                     alt="Catalyst AI Capability" 
                                     width={600} height={450}
                                     style={{ borderRadius: "24px", width: "100%", height: "auto" }}
@@ -321,7 +327,7 @@ export default function AIClient() {
                                 alignItems: "center"
                             }}>
                                 <Image 
-                                    src="/images/Ai/zia-openai.png" 
+                                    src={ziaOpenaiImg} 
                                     alt="Zia Powered by OpenAI" 
                                     width={600} height={450}
                                     style={{ borderRadius: "24px", width: "100%", height: "auto" }}

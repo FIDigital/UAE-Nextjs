@@ -20,6 +20,8 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import customSaasHeroImg from "@/assets/images/custom-saas-hero-v2.png";
+import saasArchitectureImg from "@/assets/images/saas-architecture.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -167,7 +169,7 @@ export default function CustomSaaSClient() {
                     pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/custom-saas-hero-v2.png" 
+                        src={customSaasHeroImg} 
                         alt="Background" 
                         fill
                         style={{ 
@@ -335,7 +337,7 @@ export default function CustomSaaSClient() {
                         overflow: "hidden"
                     }}>
                         <Image 
-                            src="/images/saas-architecture.png" 
+                            src={saasArchitectureImg} 
                             alt="SaaS Architecture" 
                             fill
                             style={{ objectFit: "cover", opacity: 0.15, zIndex: 0 }}

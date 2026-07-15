@@ -10,6 +10,7 @@ import {
   Building2, Calendar, Phone, TrendingDown
 } from "lucide-react";
 import Image from "next/image";
+import aboutHeroImg from "@/assets/images/about-hero.png";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -411,7 +412,7 @@ export default function AboutClient() {
                 pointerEvents: "none"
             }}>
                 <Image 
-                    src="/images/about-hero.png" 
+                    src={aboutHeroImg}
                     alt="Background" 
                     fill
                     style={{ objectFit: "cover", maskImage: "radial-gradient(circle at right, black, transparent 80%)", WebkitMaskImage: "radial-gradient(circle at right, black, transparent 80%)" }}

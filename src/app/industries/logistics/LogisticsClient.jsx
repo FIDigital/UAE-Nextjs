@@ -17,6 +17,7 @@ import {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import logisticsHeroImg from "@/assets/images/industries/logistics-hero.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -213,7 +214,7 @@ export default function LogisticsClient() {
                     zIndex: 0, opacity: 0.4, pointerEvents: "none"
                 }}>
                     <Image 
-                        src="/images/industries/logistics-hero.png" 
+                        src={logisticsHeroImg} 
                         alt="Dubai Logistics & Supply Chain" 
                         fill
                         style={{ 
