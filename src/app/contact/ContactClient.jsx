@@ -12,6 +12,7 @@ import {
   RefreshCcw, Layers, AlertTriangle
 } from "lucide-react";
 import FAQItem from "@/components/FAQItem";
+import ZohoFormEmbed from "@/components/ZohoFormEmbed";
 import Image from "next/image";
 import contactHeroImg from "@/assets/images/contact-hero.png";
 
@@ -863,21 +864,7 @@ export default function ContactClient() {
             </div>
             
             <div className="card rv" style={{ padding: "clamp(1.5rem, 4vw, 3rem)" }}>
-              <style dangerouslySetInnerHTML={{__html: `
-                .zoho-iframe-container { width: 100%; min-height: 750px; overflow: hidden; }
-                .zoho-iframe-container iframe { width: 100%; height: 750px; border: none; }
-                @media (max-width: 650px) {
-                  .zoho-iframe-container { min-height: 1100px; }
-                  .zoho-iframe-container iframe { height: 1100px; }
-                }
-                @media (max-width: 480px) {
-                  .zoho-iframe-container { min-height: 1200px; }
-                  .zoho-iframe-container iframe { height: 1200px; }
-                }
-              `}} />
-              <div className="zoho-iframe-container">
-                <iframe src="/zoho-form.html" title="Contact Us Form" scrolling="no"></iframe>
-              </div>
+              <ZohoFormEmbed />
             </div>
           </div>
         </section>
