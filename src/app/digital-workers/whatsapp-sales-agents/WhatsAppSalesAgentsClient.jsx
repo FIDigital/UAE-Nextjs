@@ -33,6 +33,10 @@ import { useGSAP } from "@gsap/react";
 import platformHeroProfessionalImg from "@/assets/images/platform_hero_professional.png";
 import whatsappTechFlowImg from "@/assets/images/whatsapp-agent/tech-flow.png";
 import whatsappResultsImg from "@/assets/images/whatsapp-agent/whatsapp-results-v2.png";
+import whatsappUsecaseRetailImg from "@/assets/images/whatsapp-agent/usecase-retail.png";
+import whatsappUsecaseRecruitmentImg from "@/assets/images/whatsapp-agent/usecase-recruitment.png";
+import whatsappUsecaseRealEstateImg from "@/assets/images/whatsapp-agent/usecase-real-estate.png";
+import realEstateFlowV2Img from "@/assets/images/real-estate-agent/real-estate-agent-flow-v2.png";
 
 if (typeof window !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
@@ -426,27 +430,27 @@ export default function WhatsAppSalesAgentsClient() {
                         {[
                             {
                                 title: "Real-Time Inquiry Handling",
-                                image: "/images/whatsapp-agent/usecase-retail.png",
+                                image: whatsappUsecaseRetailImg,
                                 text: "A customer sends a WhatsApp: ' مليون؟3هل عندكم فيلا في جيميز بـ' (Do you have a villa in Jumeirah at AED 3 million?). The AI agent, within 12 seconds: looks up customer history (first time? returning?), queries your property database for villas in Jumeirah in the 2.8-3.2M range, retrieves current available properties with photos, understands context (the AED 3M is a budget ceiling, not a precise target), and responds: ' مليون. واحدة مع مسبح وحديقة كبيرة... متى تفضل موعد عرض؟3.1 إلى 2.95 فيلات متاحة في جميرة، من 3نعم عندنا ' (Yes, we have 3 villas available in Jumeirah, from 2.95 to 3.1M. One with pool and large garden... When would you prefer a viewing?). This is not templated text. This is Claude reasoning: understanding that the customer wants villas (not apartments), understanding budget as a range (not exact), prioritizing the property with the amenities that typically matter for this budget tier, and naturally inviting the next step (viewing). That's what we deliver."
                             },
                             {
                                 title: "Qualification & Lead Scoring",
-                                image: "/images/whatsapp-agent/whatsapp-results-v2.png",
+                                image: whatsappResultsImg,
                                 text: "For each inbound inquiry, the agent captures and scores: Budget (actual buying power, not stated budget—AED 3M might mean 'I was approved for 2.8M'), Timeline (immediate, 3 months, 6 months, 'someday'), Nationality & Visa (critical for UAE real estate—some nationals can buy, some can't, expats need 3+ years visa), Current Status (renting, own elsewhere, first-time buyer), Previous Interactions (if returning customer, what was their objection last time?). The score determines routing: hot leads (qualified, ready to buy, within 4 weeks) go to your top closer; warm leads (qualified, ready to buy, within 6 months) go to regular sales team; cool leads (early-stage, just exploring) go to nurture sequences. Your top closers spend 100% of their time on hot leads, not sorting inquiries. We've seen this improve conversion by 43% because friction is removed—your team works pre-qualified, pre-informed leads."
                             },
                             {
                                 title: "Multilingual Communication",
-                                image: "/images/whatsapp-agent/tech-flow.png",
+                                image: whatsappTechFlowImg,
                                 text: "A customer WhatsApps in Gulf Arabic. The agent responds in Gulf Arabic. A different customer sends voice note in Levantine. The agent transcribes and responds—understanding Levantine context. A third customer mixes English and Arabic in one message. The agent code-switches appropriately. We handle not just language, but dialect and register. When a customer is casual ('شنو أخبارك' - what's up), the agent responds casually. When a customer is formal ('أود السؤال عن' - I would like to inquire about), the agent matches that formality. Language quality directly impacts perceived quality—if your response sounds wrong (bad grammar, weird phrasing, formal when casual is expected), the customer thinks your company is unprofessional. We handle this by training Claude specifically on regional business Arabic, not generic Arabic. This matters more in UAE where language preference is strong."
                             },
                             {
                                 title: "Context & Memory",
-                                image: "/images/real-estate-agent/real-estate-agent-flow-v2.png",
+                                image: realEstateFlowV2Img,
                                 text: "A customer asks about a property on a Tuesday. Your team sends info. On Friday, they WhatsApp again with a follow-up question. A manual system shows: 'Customer asked about property X' with maybe a note. An AI system shows: customer mentioned AED 3M budget, interested in Jumeirah, asked about schools, you sent property photos, they asked about rental yield, you explained purchase vs. rental, they went silent for 3 days, now asking about maintenance costs. That's a customer considering a buy-to-rent strategy. You should respond with comparative yield data, not with another property photo. Our agents maintain conversation context across multiple interactions, across time. When the customer returns, the agent understands where the conversation left off."
                             },
                             {
                                 title: "Escalation with Intelligence",
-                                image: "/images/whatsapp-agent/usecase-recruitment.png",
+                                image: whatsappUsecaseRecruitmentImg,
                                 text: "Some inquiries can't be handled by an agent. A customer writes: 'I'm stuck in another country, can't get back to do property viewing. Can you arrange a virtual tour with AR?' This needs human judgment about what's possible, what process to follow, how to handle the unusual request. The agent detects this requires escalation. When you (human) pick it up, you see: customer is abroad, needs virtual tour, has legitimate reason (stuck due to visa/work), you previously helped a similar customer with Matterport tour. Here's the path: approve virtual tour (we have Matterport setup), schedule with photographer (2-day turnaround), provide customer with link Friday. That's an escalation with full context and suggested path. You can approve and execute in 30 seconds instead of re-questioning the customer, revisiting your process, and spending 15 minutes figuring out what's possible."
                             }
                         ].map((item, i) => (
@@ -491,21 +495,21 @@ export default function WhatsAppSalesAgentsClient() {
                                 label: "Use Case 1",
                                 title: "Real Estate Lead Qualification (Hyper-Competitive Market)",
                                 icon: <Building2 />,
-                                image: "/images/whatsapp-agent/usecase-real-estate.png",
+                                image: whatsappUsecaseRealEstateImg,
                                 text: "Dubai real estate has 50,000+ agents chasing the same deals. Speed and qualification matter enormously. We deployed WhatsApp agents at three brokerages. Agent receives inquiry on Monday 9am. Qualifies within 4 minutes: budget confirmed (AED 2.4M, not 'about 2.5'), location confirmed (Dubai Hills, ready to move in 6 weeks, yes to schools in the area), financing confirmed (cash down payment, bank mortgage), visa status confirmed (on company visa for 7 more years). Agent routes to the one agent in their team that specializes in Dubai Hills off-plan (because the AI knows their specialties). That agent picks up with full context. By Monday 5pm, the customer has been shown 3 properties, fallen in love with one, and is discussing terms. A competitor who responded at 10am Tuesday had already lost the deal. Our agents turned response time from 6 hours (next business day) to 12 minutes (same morning). Result: the brokerage improved close rate from 18% of qualified inquiries to 43%, and reduced days to close from 45 to 28. The ROI was 8x in year one."
                             },
                             {
                                 label: "Use Case 2",
                                 title: "Retail Product Information & Ordering",
                                 icon: <ShoppingBag />,
-                                image: "/images/whatsapp-agent/usecase-retail.png",
+                                image: whatsappUsecaseRetailImg,
                                 text: "A luxury retail group has 8 locations. They sell women's fashion, bags, accessories. Customers WhatsApp about sizes, colors, availability, styling questions, order status. Previously, each location manager had WhatsApp blowing up. They'd drop what they were doing to respond, often with incomplete info ('I'll check' then never follow up). We deployed a centralized WhatsApp agent. Customer at home browsing Instagram sees a bag, WhatsApps: 'هل الشنطة الزرقاء الموجودة في الصورة متاحة؟' (Is the blue bag in the photo available?). Agent looks up product from the Instagram post metadata, checks real-time inventory across all 8 locations, responds: ' فروع. الشارقة والتعليم سيتي والمنطقة الحرة. أي فرع أقرب لك؟3نعم الشنطة متاحة في ' (Available at 3 locations, here are the closest options). Customer says 'التعليم سيتي' (Education City), agent confirms, offers to hold for 2 hours, sends store location and operating hours. Customer arrives, purchases. That's a customer acquired through WhatsApp. The retail group handled 10x more inquiries with the same staff. Customer satisfaction (response speed, accuracy) went up. Staff stress (constant phone interruption) went down."
                             },
                             {
                                 label: "Use Case 3",
                                 title: "Professional Services Intake & Scheduling",
                                 icon: <Users />,
-                                image: "/images/whatsapp-agent/usecase-recruitment.png",
+                                image: whatsappUsecaseRecruitmentImg,
                                 text: "A recruitment firm gets inbound inquiries from job seekers and hiring managers. Job seeker WhatsApps: 'I'm looking for a software engineering role in Abu Dhabi, 5 years experience in fintech, open to relocation.' Agent understands: this is a candidate qualifying conversation, not a job inquiry. Agent asks: current salary expectation (to understand market positioning), visa sponsorship needed? (job-critical in UAE), availability (notice period? competing offers?), preferred company size/industry beyond fintech. Agent creates candidate profile in Zoho, runs a search against open jobs, finds 2 matches, offers to introduce. The whole flow takes 6 minutes of AI time, 1 minute of human time (recruiter review + approval to proceed). Previously, this took 20 minutes of recruiter time (phone call, note-taking, searching) and the candidate often went to a competitor who responded faster. The firm handled 3x more candidates/month, higher quality (better-qualified candidates from faster response), and their recruiters spent their time on relationship-building and closing, not intake."
                             }
                         ].map((caseStudy, i) => (
