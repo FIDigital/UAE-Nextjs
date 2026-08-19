@@ -465,6 +465,21 @@ export default function ContactClient() {
           </div>
         </section>
 
+        {/* ── CONTACT FORM ────────────────────────────────────────── */}
+        <section id="contact-form" className="cc-section" style={{ background: "var(--bg)" }}>
+          <div className="container" style={{ maxWidth: "1000px" }}>
+            <div className="reveal-item" style={{ textAlign: "center", marginBottom: "3rem" }}>
+              <div className="section-label">READY TO START?</div>
+              <h2 className="section-title">How Do I Book a Free AI Readiness Audit for My Company?</h2>
+              <p className="section-desc" style={{ margin: "0 auto" }}>AED 0 · 45-minute session · 1-week report turnaround</p>
+            </div>
+
+            <div className="card rv" style={{ padding: "clamp(1.5rem, 4vw, 3rem)" }}>
+              <ZohoFormEmbed />
+            </div>
+          </div>
+        </section>
+
         {/* ── THREE ENGAGEMENT OPTIONS ──────────────────────────────────── */}
         <section className="cc-section" style={{ background: "var(--bg-secondary)" }}>
           <div className="container">
@@ -850,21 +865,6 @@ export default function ContactClient() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── CONTACT FORM ────────────────────────────────────────── */}
-        <section id="contact-form" className="cc-section" style={{ background: "var(--bg)" }}>
-          <div className="container" style={{ maxWidth: "1000px" }}>
-            <div className="reveal-item" style={{ textAlign: "center", marginBottom: "3rem" }}>
-              <div className="section-label">READY TO START?</div>
-              <h2 className="section-title">How Do I Book a Free AI Readiness Audit for My Company?</h2>
-              <p className="section-desc" style={{ margin: "0 auto" }}>AED 0 · 45-minute session · 1-week report turnaround</p>
-            </div>
-            
-            <div className="card rv" style={{ padding: "clamp(1.5rem, 4vw, 3rem)" }}>
-              <ZohoFormEmbed />
             </div>
           </div>
         </section>
