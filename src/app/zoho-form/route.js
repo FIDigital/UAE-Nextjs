@@ -197,6 +197,7 @@ export async function GET(request) {
       action="https://crm.zoho.com/crm/WebToLeadForm"
       name="WebToLeads3209734000060050024"
       method="POST"
+      target="zohoSubmitFrame"
       onsubmit="javascript:document.charset='UTF-8'; return checkMandatory3209734000060050024()"
       accept-charset="UTF-8">
 
@@ -436,6 +437,20 @@ export async function GET(request) {
           if (!validateEmail3209734000060050024()) return false;
           document.getElementById('formsubmit').setAttribute('disabled', true);
           window.addEventListener('focus', historyBack3209734000060050024);
+
+          // Show styled thank-you message in place of the form
+          setTimeout(function() {
+            document.getElementById('crmWebToEntityForm').innerHTML =
+              '<div style="text-align:center;padding:clamp(40px,8vw,80px) 20px;">' +
+                '<div style="width:64px;height:64px;border-radius:50%;background:rgba(16,185,129,0.1);display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;">' +
+                  '<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>' +
+                '</div>' +
+                '<h1 style="font-size:clamp(1.4rem,4vw,1.75rem);font-weight:800;margin-bottom:0.75rem;color:var(--text);">Thank you \\u2014 your inquiry has been received.</h1>' +
+                '<p style="font-size:1rem;color:var(--text-muted);">A member of our team will respond within 4 business hours. If it\\u2019s urgent, email us at <a href="mailto:support@fidigital.ae" style="color:var(--primary);font-weight:600;text-decoration:none;">support@fidigital.ae</a>.</p>' +
+              '</div>';
+            var h = document.documentElement.scrollHeight || document.body.scrollHeight;
+            window.parent.postMessage({ type: 'iframeHeight', height: h }, '*');
+          }, 300);
         }
 
         function tooltipShow3209734000060050024(el) {
@@ -477,6 +492,7 @@ export async function GET(request) {
     <!-- Do not remove this code. -->
     <iframe name="captchaFrame" style="display:none;"></iframe>
   </div>
+  <iframe name="zohoSubmitFrame" style="display:none;"></iframe>
 
   <!-- Theme Detection + Auto-height reporting -->
   <script>
