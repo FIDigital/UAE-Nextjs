@@ -1,44 +1,56 @@
 # FI Digital UAE
-> AI Agent Architects & Zoho Ecosystem Experts for UAE Enterprises
 
-FI Digital is a Dubai-headquartered technology company that builds
-AI-powered business automation using Zoho, n8n, Claude, Gemini,
-and LangChain. We serve mid-market and enterprise businesses across
-the UAE with bilingual (Arabic + English) solutions.
+> AI Agent Architects & Zoho Ecosystem Experts for UAE Enterprises. Dubai-headquartered, Australian-founded. We build AI-powered business automation using Zoho, n8n, Claude, Gemini, and LangChain for mid-market and enterprise businesses across the UAE with bilingual (Arabic + English) solutions.
 
-Licensed in Dubai since 2023. Offices in Dubai, Sydney, and India.
+## Digital Workers & AI Agents
 
-## Core Services
-- [AI-Powered WhatsApp Sales Agents](https://fidigital.ae/digital-workers/whatsapp-sales-agents): Bilingual WhatsApp AI agents that qualify leads, answer queries, and process voice notes in Arabic and English. 4.2-second average response time.
-- [Real Estate Lead Qualification](https://fidigital.ae/digital-workers/real-estate-agents): AI agents that qualify property inquiries on WhatsApp, score leads by budget/timeline/visa status, and sync to Zoho CRM.
-- [Finance & Procurement Automation](https://fidigital.ae/digital-workers/finance-procurement-agents): AI agents that automate AP/AR, VAT filing, bank reconciliation, and procurement workflows integrated with Zoho Books.
-- [Customer Service AI Agents](https://fidigital.ae/digital-workers/customer-service-agents): Multilingual support automation across WhatsApp, email, and chat integrated with Zoho Desk.
-- [HR & Onboarding Automation](https://fidigital.ae/digital-workers/hr-onboarding-agents): End-to-end employee onboarding, leave management, and HR query handling via Zoho People.
-- [Zoho Agentic AI Implementation](https://fidigital.ae/platform/zoho-agentic-ai): Enterprise Zoho implementation with AI agent layer using Zia, n8n, Claude, and Gemini.
-- [n8n Workflow Orchestration](https://fidigital.ae/platform/n8n-orchestration): Self-hosted enterprise workflow automation connecting 400+ applications.
-- [Custom AI Agent Development](https://fidigital.ae/platform/custom-ai-development): LangChain and Python-based custom AI agents with RAG, memory, and tool use.
+- [WhatsApp Sales Agents](/digital-workers/whatsapp-sales-agents) - Bilingual WhatsApp AI agents that qualify leads and process voice notes in Arabic and English
+- [Real Estate Agents](/digital-workers/real-estate-agents) - AI agents that qualify property inquiries, score leads, and sync to Zoho CRM
+- [Finance & Procurement Agents](/digital-workers/finance-procurement-agents) - Automated AP/AR, VAT filing, bank reconciliation integrated with Zoho Books
+- [Customer Service Agents](/digital-workers/customer-service-agents) - Multilingual support automation across WhatsApp, email, and chat via Zoho Desk
+- [HR & Onboarding Agents](/digital-workers/hr-onboarding-agents) - End-to-end employee onboarding, leave management, and HR query handling
 
-## Industries Served
-- Real Estate & PropTech
-- Retail & E-Commerce
-- Professional Services (Consulting, Legal, Accounting)
-- Healthcare & Wellness
-- F&B & Hospitality
-- Logistics & Supply Chain
+## Platform & Technology
 
-## Pricing
-- Discovery Sprint: AED 15,000 - 25,000 (2-week diagnostic)
-- Project-Based: AED 50,000 - 500,000+ (6-16 week implementation)
-- Ongoing Partnership: AED 15,000 - 75,000/month (optimization & support)
+- [Zoho Agentic AI](/platform/zoho-agentic-ai) - Enterprise Zoho implementation with AI agent layer using Zia, n8n, Claude, and Gemini
+- [n8n Workflow Orchestration](/platform/n8n-orchestration) - Self-hosted enterprise workflow automation connecting 400+ applications
+- [Custom AI Development](/platform/custom-ai-development) - LangChain and Python-based custom AI agents with RAG, memory, and tool use
+- [Data Analytics](/platform/data-analytics) - Real-time dashboards and predictive business intelligence
+- [Multilingual LLM](/platform/multilingual-llm) - Arabic-English AI language processing
 
-## Contact
-- Website: https://fidigital.ae/contact
-- WhatsApp: +971 [number]
+## Zoho Services
+
+- [Sales & CRM](/sales) - Zoho CRM implementation, lead scoring, and sales automation
+- [Service & Support](/service) - Zoho Desk omnichannel support, AI-powered ticket triage
+- [Marketing Automation](/marketing-automation) - Multi-channel journeys, segmentation, and attribution
+- [AI Solutions](/ai) - End-to-end AI strategy and implementation
+
+## Product Studio
+
+- [Product Studio](/product-studio) - Full-cycle product development
+- [AI MVP](/product-studio/ai-mvp) - Rapid AI-first minimum viable products
+- [Custom SaaS](/product-studio/custom-saas) - Scalable multi-tenant SaaS architectures
+- [Legacy Modernization](/product-studio/legacy-modernization) - Cloud-native migration of enterprise monoliths
+- [Scaling & Maintenance](/product-studio/scaling-maintenance) - Infrastructure scaling and proactive optimization
+
+## Industries
+
+- [F&B & Hospitality](/industries/fnb-hospitality) - Kitchen automation, loyalty AI, reservation bots
+- [Healthcare](/industries/healthcare) - Patient scheduling, medical OCR, bilingual triage
+- [Logistics & Supply Chain](/industries/logistics) - Route optimization, delivery tracking AI
+- [Real Estate & PropTech](/industries/real-estate) - Lead scoring, virtual tour booking
+- [Retail & E-Commerce](/industries/retail-ecommerce) - Stock prediction, abandoned cart recovery
+- [Professional Services](/industries/professional-services) - Legal, Accounting, Consulting
+
+## Company
+
+- [About Us](/about)
+- [Methodology](/methodology)
+- [Solutions](/solutions)
+- [Case Studies](/case-studies)
+- [Resources](/resources)
+- [Zoho Partner Dubai](/zoho-partner)
+- [Contact & Pricing](/contact)
+- Website: https://fidigital.ae
 - Email: info@fidigital.ae
 - Office: Business Bay, Dubai, UAE
-
-## Key Pages
-- [About Us](https://fidigital.ae/about)
-- [Case Studies](https://fidigital.ae/case-studies)
-- [Blog & Resources](https://fidigital.ae/resources)
-- [Pricing & Engagement Models](https://fidigital.ae/contact)

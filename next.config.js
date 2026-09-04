@@ -2,6 +2,14 @@
 const nextConfig = {
     devIndicators: false,
     turbopack: {},
+    async redirects() {
+        return [
+            { source: '/contact.html', destination: '/contact', permanent: true },
+            { source: '/sales.html', destination: '/sales', permanent: true },
+            { source: '/marketing-automation.html', destination: '/marketing-automation', permanent: true },
+            { source: '/ai.html', destination: '/ai', permanent: true },
+        ];
+    },
     images: {
         unoptimized: true,
         remotePatterns: [
