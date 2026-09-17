@@ -44,7 +44,7 @@ export default function CustomerServiceAgentsClient() {
         "@type": "Service",
         "serviceType": "AI Customer Service Agent Deployment",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Bilingual AI agents for customer support automation, ticket triage, and multi-channel resolution integrated with Zoho Desk in the UAE.",
         "areaServed": {

@@ -12,7 +12,7 @@ export default function MultilingualLLMClient() {
         "@type": "Service",
         "serviceType": "Multilingual LLM Integration",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Bilingual AI and Arabic NLP solutions for UAE enterprises. Integrate Claude, Gemini, and custom LLMs for native Arabic and English business communication.",
         "areaServed": {

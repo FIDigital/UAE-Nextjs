@@ -5,13 +5,13 @@ export const metadata = {
     openGraph: {
         title: 'Zoho Service & Support Automation UAE | FI Digital',
         description: 'Elite Zoho Desk implementation and support automation for UAE enterprises.',
-        url: 'https://fidigital.ae/service',
+        url: 'https://www.fidigital.ae/service',
         siteName: 'FI Digital UAE',
         images: [{ url: '/images/solutions/service-hero.png', width: 1200, height: 630, alt: 'Zoho Service Desk' }],
         locale: 'en_AE',
         type: 'website',
     },
     alternates: {
-        canonical: 'https://fidigital.ae/service',
+        canonical: 'https://www.fidigital.ae/service',
     }
 };

@@ -213,7 +213,7 @@ export default function RealEstateClient() {
         "@type": "Service",
         "serviceType": "Real Estate AI Automation",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Bilingual AI agents for lead qualification, property matching, and automated viewing scheduling for Dubai real estate agencies.",
         "areaServed": {

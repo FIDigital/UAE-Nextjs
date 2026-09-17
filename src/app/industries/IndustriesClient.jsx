@@ -57,7 +57,7 @@ export default function IndustriesClient() {
         "@type": "Service",
         "serviceType": "Industry AI Consultatiion",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Bespoke AI and Zoho solutions for Real Estate, Retail, Finance, Healthcare, and Logistics industries in the UAE.",
         "areaServed": {

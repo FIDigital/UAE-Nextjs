@@ -145,7 +145,7 @@ export default function HealthcareClient() {
         "@type": "Service",
         "serviceType": "Healthcare AI Automation",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Bilingual AI agents for patient management, appointment scheduling, and insurance verification for UAE healthcare providers.",
         "areaServed": {

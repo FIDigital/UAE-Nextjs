@@ -186,10 +186,10 @@ export default function AboutClient() {
   const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://fidigital.ae/#organization",
+    "@id": "https://www.fidigital.ae/#organization",
     "name": "FI Digital UAE",
-    "url": "https://fidigital.ae",
-    "logo": "https://fidigital.ae/logo.png",
+    "url": "https://www.fidigital.ae",
+    "logo": "https://www.fidigital.ae/logo.png",
     "description": "FI Digital is a Dubai-based AI implementation partner specializing in Agentic AI and Zoho enterprise solutions for the UAE and Middle East.",
     "address": {
       "@type": "PostalAddress",
@@ -207,7 +207,7 @@ export default function AboutClient() {
     "@type": "Service",
     "name": "AI Strategy & Implementation Consulting",
     "provider": {
-      "@id": "https://fidigital.ae/#organization"
+      "@id": "https://www.fidigital.ae/#organization"
     },
     "description": "Bespoke AI consulting and implementation for Dubai enterprises. We bridge Australian engineering standards with Middle Eastern business needs."
   };

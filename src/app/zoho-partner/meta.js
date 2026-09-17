@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "Zoho Partner Dubai | FI Digital UAE — Authorized Zoho Consultants",
     description: "FI Digital is a trusted Zoho partner in Dubai. Expert Zoho CRM implementation, automation, and AI solutions.",
-    url: "https://fidigital.ae/zoho-partner",
+    url: "https://www.fidigital.ae/zoho-partner",
     siteName: "FI Digital UAE",
     images: [
       {
@@ -19,6 +19,6 @@ export const metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://fidigital.ae/zoho-partner",
+    canonical: "https://www.fidigital.ae/zoho-partner",
   },
 };

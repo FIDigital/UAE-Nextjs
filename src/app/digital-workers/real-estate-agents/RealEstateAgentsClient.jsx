@@ -157,7 +157,7 @@ export default function RealEstateAgentsClient() {
         "@type": "Service",
         "serviceType": "AI Real Estate Agent",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "AI-powered real estate lead qualification for Dubai luxury properties. Arabic-fluent WhatsApp agents integrated with Zoho CRM.",
         "areaServed": {

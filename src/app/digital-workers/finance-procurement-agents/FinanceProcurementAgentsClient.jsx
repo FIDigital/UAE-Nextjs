@@ -160,7 +160,7 @@ export default function FinanceProcurementAgentsClient() {
         "@type": "Service",
         "serviceType": "AI Finance & Procurement Agent",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "AI-powered finance automation for UAE businesses. Handles AP/AR, bank reconciliation, and VAT compliance with Zoho Books integration.",
         "areaServed": {

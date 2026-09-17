@@ -143,7 +143,7 @@ export default function FnbHospitalityClient() {
         "@type": "Service",
         "serviceType": "Hospitality & FnB AI Automation",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Bilingual AI agents for restaurant reservations, hotel concierge services, and procurement automation in the UAE.",
         "areaServed": {

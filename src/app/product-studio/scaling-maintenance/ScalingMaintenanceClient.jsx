@@ -65,7 +65,7 @@ export default function ScalingMaintenanceClient() {
         "@type": "Service",
         "serviceType": "Product Scaling & Maintenance",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Enterprise software scaling and maintenance in Dubai. We provide dedicated engineering hours, proactive monitoring, and performance optimization for AI-first products.",
         "areaServed": {

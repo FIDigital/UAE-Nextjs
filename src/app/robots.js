@@ -63,9 +63,6 @@ export default function robots() {
                 disallow: "/",
             },
         ],
-        sitemap: [
-            "https://fidigital.ae/sitemap.xml",
-            "https://fidigital.ae/sitemap-ar.xml",
-        ],
+        sitemap: "https://www.fidigital.ae/sitemap.xml",
     };
 }

@@ -1,7 +1,7 @@
 export const metadata = {
-  metadataBase: new URL('https://fidigital.ae'),
+  metadataBase: new URL('https://www.fidigital.ae'),
   alternates: {
-    canonical: 'https://fidigital.ae/methodology',
+    canonical: 'https://www.fidigital.ae/methodology',
   },
   title: "Methodology | 4-Phase Enterprise Path to AI - FI Digital UAE",
   description: "Our engineered approach to digital transformation: Discover, Design, Deploy, and Optimize. proven methodology for integrating Zoho and AI agents in the UAE enterprise.",
@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: "Methodology | 4-Phase Enterprise Path to AI - FI Digital UAE",
     description: "Our engineered approach to digital transformation: Discover, Design, Deploy, and Optimize. proven methodology for integrating Zoho and AI agents.",
-    url: "https://fidigital.ae/methodology",
+    url: "https://www.fidigital.ae/methodology",
     siteName: "FI Digital UAE",
     images: [
       {

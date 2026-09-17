@@ -5,13 +5,13 @@ export const metadata = {
     openGraph: {
         title: 'Zoho Sales & CRM Solutions UAE | FI Digital',
         description: 'Elite Zoho CRM implementation and sales automation for UAE enterprises.',
-        url: 'https://fidigital.ae/sales',
+        url: 'https://www.fidigital.ae/sales',
         siteName: 'FI Digital UAE',
         images: [{ url: '/images/solutions/sales-hero.png', width: 1200, height: 630, alt: 'Zoho Sales CRM' }],
         locale: 'en_AE',
         type: 'website',
     },
     alternates: {
-        canonical: 'https://fidigital.ae/sales',
+        canonical: 'https://www.fidigital.ae/sales',
     }
 };

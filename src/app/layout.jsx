@@ -1,4 +1,5 @@
 import "./globals.css";
+import Script from "next/script";
 import ThemeProvider from "@/components/ThemeProvider";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import ZohoSalesIQ from "@/components/ZohoSalesIQ";
@@ -7,7 +8,7 @@ import Footer from "@/components/Footer";
 import FloatingContactButton from "@/components/FloatingContactButton";
 
 export const metadata = {
-  metadataBase: new URL("https://fidigital.ae"),
+  metadataBase: new URL("https://www.fidigital.ae"),
   title: {
     default: "FI Digital UAE | AI Agent Architects & Zoho Experts",
     template: "%s | FI Digital UAE",
@@ -32,7 +33,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     locale: "en_AE",
-    url: "https://fidigital.ae",
+    url: "https://www.fidigital.ae",
     siteName: "FI Digital UAE",
     title: "FI Digital UAE | AI Agent Architects & Zoho Experts",
     description: "Leading Australian Zoho partner in Dubai. We architect intelligent AI agents and automated enterprise workflows.",
@@ -68,7 +69,7 @@ export const metadata = {
     apple: "/icon.png",
   },
   alternates: {
-    canonical: "https://fidigital.ae",
+    canonical: "https://www.fidigital.ae",
     types: {
       "text/plain": [
         {
@@ -86,13 +87,13 @@ export default function RootLayout({
   const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": ["Organization", "ITService"],
-    "@id": "https://fidigital.ae/#organization",
+    "@id": "https://www.fidigital.ae/#organization",
     "name": "FI Digital",
     "legalName": "FI Digital UAE",
     "alternateName": ["FI Digital Dubai", "FI Digital UAE"],
     "description": "AI Agent Architects & Zoho Ecosystem Experts. We build bilingual AI agents and enterprise Zoho implementations for UAE businesses.",
-    "url": "https://fidigital.ae",
-    "logo": "https://fidigital.ae/images/logo.png",
+    "url": "https://www.fidigital.ae",
+    "logo": "https://www.fidigital.ae/images/logo.png",
     "foundingDate": "2020",
     "foundingLocation": "Sydney, Australia",
     "slogan": "Intelligent Automation & Zoho Architecture for the UAE",
@@ -163,6 +164,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* GA4 */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-1Z6H2CFWVK" strategy="afterInteractive" />
+        <Script id="ga4-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-1Z6H2CFWVK');
+        `}</Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

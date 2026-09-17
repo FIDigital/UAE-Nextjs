@@ -8,6 +8,7 @@ const nextConfig = {
             { source: '/sales.html', destination: '/sales', permanent: true },
             { source: '/marketing-automation.html', destination: '/marketing-automation', permanent: true },
             { source: '/ai.html', destination: '/ai', permanent: true },
+            { source: '/zoho-form/thank-you', destination: '/thank-you', permanent: true },
         ];
     },
     images: {

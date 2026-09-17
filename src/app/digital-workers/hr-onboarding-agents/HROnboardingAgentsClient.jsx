@@ -78,7 +78,7 @@ export default function HROnboardingAgentsClient() {
         "@type": "Service",
         "serviceType": "AI HR Onboarding Agent Deployment",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Bilingual AI agents for HR automation, employee onboarding, and policy Q&A integrated with Zoho People in the UAE.",
         "areaServed": {

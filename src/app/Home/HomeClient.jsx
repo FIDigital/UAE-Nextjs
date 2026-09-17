@@ -1160,7 +1160,7 @@ export default function HomeClient() {
     "@type": "Service",
     "name": "Enterprise AI & Zoho Implementation",
     "provider": {
-      "@id": "https://fidigital.ae/#organization"
+      "@id": "https://www.fidigital.ae/#organization"
     },
     "description": "Enterprise-grade Agentic AI and Zoho CRM implementation services in Dubai and the UAE. Specializing in autonomous digital workers and bilingual AI orchestration.",
     "areaServed": {

@@ -5,7 +5,7 @@ export const metadata = {
   openGraph: {
     title: "FI Digital | Contact & Pricing | Zoho & AI Experts",
     description: "Transparent pricing for Zoho CRM, AI agents, automation. Implementation and managed services.",
-    url: "https://fidigital.ae/contact",
+    url: "https://www.fidigital.ae/contact",
     siteName: "FI Digital UAE",
     images: [
       {
@@ -19,6 +19,6 @@ export const metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://fidigital.ae/contact",
+    canonical: "https://www.fidigital.ae/contact",
   }
 };

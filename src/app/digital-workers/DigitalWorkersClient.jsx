@@ -234,7 +234,7 @@ export default function DigitalWorkersClient() {
         "@type": "Service",
         "serviceType": "AI Digital Worker Solutions",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Specialized AI agents for sales, real estate, finance, customer service, and HR automation in Dubai and the UAE.",
         "areaServed": {

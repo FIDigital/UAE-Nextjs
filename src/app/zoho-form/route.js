@@ -202,11 +202,11 @@ export async function GET(request) {
       accept-charset="UTF-8">
 
       <!-- Do not remove this code. -->
-      <input type="text" style="display:none;" name="xnQsjsdp" value="8249e7b9292ea4cb6d6e1db5ca2e0929391063c186a1fa1c7e9614fa768f3e8d">
+      <input type="text" style="display:none;" name="xnQsjsdp" value="8ac88d59af284e9f9c00025bbe667ed750f0b2ec3ca7419aa820c3aa608fc673">
       <input type="hidden" name="zc_gad" id="zc_gad" value="">
-      <input type="text" style="display:none;" name="xmIwtLD" value="017a975b10c1e6a1b8364fddfe51b8833d414be62a005b373a474f37e54282d3a52405bbfdd395a60c2f6335bb3d3d63">
+      <input type="text" style="display:none;" name="xmIwtLD" value="1b9537cd5b43c702c3d814da6a8c3fcadedf793851ab6728a16bfa5e9181d7a70247f8b9dc001ba2fe6aafce54b32188">
       <input type="text" style="display:none;" name="actionType" value="TGVhZHM=">
-      <input type="text" style="display:none;" name="returnURL" value="https://fidigital.ae/zoho-form/thank-you">
+      <input type="text" style="display:none;" name="returnURL" value="https://www.fidigital.ae/thank-you">
       <!-- Do not remove this code. -->
       <input type="text" style="display:none;" id="ldeskuid" name="ldeskuid">
       <input type="text" style="display:none;" id="LDTuvid" name="LDTuvid">

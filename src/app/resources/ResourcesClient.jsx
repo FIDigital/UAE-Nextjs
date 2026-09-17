@@ -232,7 +232,7 @@ export default function ResourcesClient() {
     "@type": "Service",
     "serviceType": "AI & Zoho Resource Center",
     "provider": {
-        "@id": "https://fidigital.ae/#organization"
+        "@id": "https://www.fidigital.ae/#organization"
     },
     "description": "Bilingual AI and Zoho resources for UAE enterprises, including whitepapers, webinars, and technical deep-dives on digital workers.",
     "areaServed": {

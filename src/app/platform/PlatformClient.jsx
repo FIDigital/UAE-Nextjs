@@ -261,7 +261,7 @@ export default function PlatformClient() {
         "@type": "Service",
         "name": "FI Digital Agentic AI Platform",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Unified Agentic AI architecture for UAE enterprises. Integrates Zoho CRM, n8n orchestration, and bilingual LLMs (Claude/Gemini) with localized Arabic processing.",
         "areaServed": {

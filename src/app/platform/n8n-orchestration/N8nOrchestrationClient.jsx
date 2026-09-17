@@ -12,7 +12,7 @@ export default function N8nOrchestrationClient() {
         "@type": "Service",
         "serviceType": "Enterprise Workflow Orchestration",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Enterprise-grade workflow orchestration with n8n for UAE businesses. Connect 400+ apps and build intelligent AI-driven workflows.",
         "areaServed": {

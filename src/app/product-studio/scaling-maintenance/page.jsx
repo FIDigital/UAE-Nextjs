@@ -5,7 +5,7 @@ export const metadata = {
     description: "Dedicated engineering hours, proactive monitoring, performance optimization, feature development, and infrastructure management.",
     keywords: ["product scaling Dubai", "maintenance UAE", "software support", "dedicated engineering team", "server monitoring"],
     alternates: {
-        canonical: 'https://fidigital.ae/product-studio/scaling-maintenance',
+        canonical: 'https://www.fidigital.ae/product-studio/scaling-maintenance',
     }
 };
 

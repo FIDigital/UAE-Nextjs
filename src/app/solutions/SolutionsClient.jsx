@@ -29,7 +29,7 @@ export default function SolutionsClient() {
         "@type": "Service",
         "serviceType": "Enterprise AI Solutions",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Comprehensive AI agent architectures, Zoho governance, and enterprise automation solutions for UAE businesses.",
         "areaServed": {

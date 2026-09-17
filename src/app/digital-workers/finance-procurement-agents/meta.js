@@ -11,12 +11,12 @@ export const metadata = {
     openGraph: {
         title: "AI Finance & Procurement Automation | FI Digital UAE",
         description: "Transform your financial operations with AI agents. 94% automation for AP/AR and VAT compliance.",
-        url: "https://fidigital.ae/digital-workers/finance-procurement-agents",
+        url: "https://www.fidigital.ae/digital-workers/finance-procurement-agents",
         siteName: "FI Digital UAE",
         locale: "en_AE",
         type: "website",
     },
     alternates: {
-        canonical: "https://fidigital.ae/digital-workers/finance-procurement-agents",
+        canonical: "https://www.fidigital.ae/digital-workers/finance-procurement-agents",
     }
 };

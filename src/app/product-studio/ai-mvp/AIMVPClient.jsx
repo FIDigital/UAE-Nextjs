@@ -63,7 +63,7 @@ export default function AIMVPClient() {
         "@type": "Service",
         "serviceType": "AI Product MVP Builds",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Rapid AI MVP development for the UAE market. Launch functional AI products in 6 weeks using our pre-built library of LangChain agents and n8n orchestration.",
         "areaServed": {

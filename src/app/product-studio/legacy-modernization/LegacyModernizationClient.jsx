@@ -65,7 +65,7 @@ export default function LegacyModernizationClient() {
         "@type": "Service",
         "serviceType": "Legacy System Modernization",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Enterprise legacy modernization in Dubai. We incrementally migrate legacy systems to cloud landscapes, wrap them in modern APIs, and implement AI overlays with zero downtime.",
         "areaServed": {

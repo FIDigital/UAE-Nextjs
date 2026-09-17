@@ -66,7 +66,7 @@ export default function CustomSaaSClient() {
         "@type": "Service",
         "serviceType": "Custom SaaS Development",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Cloud-native Custom SaaS development in Dubai. We build multi-tenant architectures, API-first designs, and responsive interfaces integrated with Zoho and AI ecosystems.",
         "areaServed": {

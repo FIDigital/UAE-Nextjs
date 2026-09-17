@@ -12,7 +12,7 @@ export default function DataAnalyticsClient() {
         "@type": "Service",
         "serviceType": "AI-Powered Data Analytics",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Enterprise data analytics and BI solutions for UAE businesses. Unify data sources, build intelligent dashboards, and implement AI-powered forecasting.",
         "areaServed": {

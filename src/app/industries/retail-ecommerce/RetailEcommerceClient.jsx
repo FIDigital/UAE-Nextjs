@@ -144,7 +144,7 @@ export default function RetailEcommerceClient() {
         "@type": "Service",
         "serviceType": "Retail & E-commerce AI Automation",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Bilingual AI agents for WhatsApp commerce, inventory forecasting, and automated customer re-engagement for UAE retail brands.",
         "areaServed": {

@@ -12,7 +12,6 @@ import {
   RefreshCcw, Layers, AlertTriangle
 } from "lucide-react";
 import FAQItem from "@/components/FAQItem";
-import ZohoFormEmbed from "@/components/ZohoFormEmbed";
 import Image from "next/image";
 import contactHeroImg from "@/assets/images/contact-hero.png";
 
@@ -78,6 +77,188 @@ function ShowMore({ children, collapsedHeight = 96 }) {
         <ChevronDown size={14} style={{ transform: open ? "rotate(180deg)" : "rotate(0)", transition: "transform 0.3s ease" }} />
       </button>
     </div>
+  );
+}
+
+/* ─── Zoho Contact Form (inline, no iframe) ─────────────────────────────────── */
+function ZohoContactForm() {
+  const formRef = useRef(null);
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    // Zoho analytics only — no WebFormServlet (it hijacks form submit events)
+    const s = document.createElement("script");
+    s.id = "wf_anal";
+    s.src = "https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=04f5b718738c1f72185674e52db7d522a304fdeeb945862cf140b19a296e5218e0d613b543ab3ea472f22f7794446ae0gid0753002f9e8740e4955d2c298d37f0efb77c5496a44ca936a76f951ea5796143gid6b04947b6c76f4074e551e5b75369b44394222f0dd68f91a2cf5f85c84807456gid9a3d9e4670c095375cfea374237a5c6a7691db0373853d460f8954fed5a276ea&tw=fd529544dabef60387b0f22ac017d215c1e10c0cd44f504686fed6024b149468&version=v2";
+    document.body.appendChild(s);
+    return () => { s.remove(); };
+  }, []);
+
+  function handleClick(e) {
+    e.preventDefault();
+    const form = formRef.current;
+    if (!form) return;
+
+    // Validate required fields
+    const required = [
+      ["First Name", "First Name"],
+      ["Last Name", "Last Name"],
+      ["Email", "Work Email"],
+      ["Company", "Company"],
+      ["Mobile", "Phone"],
+    ];
+    for (const [name, label] of required) {
+      const field = form[name];
+      if (field && field.value.trim().length === 0) {
+        alert(label + " cannot be empty.");
+        field.focus();
+        return;
+      }
+    }
+    // Email validation
+    const email = form.Email.value.trim();
+    const at = email.indexOf("@");
+    const dot = email.lastIndexOf(".");
+    if (at < 1 || dot < at + 2 || dot + 2 >= email.length) {
+      alert("Please enter a valid email address.");
+      form.Email.focus();
+      return;
+    }
+
+    // SalesIQ tracking
+    try {
+      if (typeof $zoho !== "undefined" && $zoho.salesiq) {
+        const ldt = form.LDTuvid;
+        if (ldt) ldt.value = $zoho.salesiq.visitor.uniqueid();
+        const fullName = (form["First Name"].value + " " + form["Last Name"].value).trim();
+        if (fullName) $zoho.salesiq.visitor.name(fullName);
+        if (form.Email.value) $zoho.salesiq.visitor.email(form.Email.value);
+      }
+    } catch (_) {}
+
+    // Submit natively — POST fires immediately to hidden iframe
+    form.submit();
+    // Delay thank-you so POST completes before form is removed from DOM
+    setTimeout(() => setSubmitted(true), 600);
+  }
+
+  const labelStyle = { fontSize: "0.8rem", fontWeight: 600, color: "var(--text-muted)", display: "block", marginBottom: 4 };
+  const inputStyle = {
+    width: "100%", padding: "0.6rem 0.85rem",
+    background: "var(--input-bg, var(--card-bg, #fff))",
+    border: "1.5px solid var(--border)", borderRadius: 8,
+    color: "var(--text)", fontFamily: "inherit", fontSize: "0.9rem", outline: "none",
+    transition: "border-color 0.2s ease",
+  };
+
+  return (
+    <>
+      {/* Button hover/active styles */}
+      <style>{`
+        .zoho-submit-btn { transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease; }
+        .zoho-submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(2,121,255,0.4); filter: brightness(1.08); }
+        .zoho-submit-btn:active { transform: translateY(0); box-shadow: 0 2px 8px rgba(2,121,255,0.3); filter: brightness(0.95); }
+        .zoho-input:focus { border-color: var(--primary) !important; box-shadow: 0 0 0 3px rgba(2,121,255,0.1); }
+      `}</style>
+
+      {/* Hidden iframe must always be in DOM for form target */}
+      <iframe name="zohoSubmitFrame" style={{ display: "none" }} />
+
+      {submitted ? (
+        <div style={{ textAlign: "center", padding: "clamp(32px,6vw,56px) 16px" }}>
+          <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(16,185,129,0.1)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 1.25rem" }}>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <h2 style={{ fontSize: "1.35rem", fontWeight: 800, marginBottom: "0.5rem" }}>Thank you — we&apos;ll be in touch.</h2>
+          <p style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>A team member will respond within 4 business hours.</p>
+        </div>
+      ) : (
+        <form
+          id="webform3209734000060050024"
+          action="https://crm.zoho.com/crm/WebToLeadForm"
+          name="WebToLeads3209734000060050024"
+          method="POST"
+          target="zohoSubmitFrame"
+          acceptCharset="UTF-8"
+          ref={formRef}
+        >
+          {/* Zoho hidden fields — do not remove */}
+          <input type="text" style={{ display: "none" }} name="xnQsjsdp" defaultValue="8ac88d59af284e9f9c00025bbe667ed750f0b2ec3ca7419aa820c3aa608fc673" />
+          <input type="hidden" name="zc_gad" id="zc_gad" defaultValue="" />
+          <input type="text" style={{ display: "none" }} name="xmIwtLD" defaultValue="1b9537cd5b43c702c3d814da6a8c3fcadedf793851ab6728a16bfa5e9181d7a70247f8b9dc001ba2fe6aafce54b32188" />
+          <input type="text" style={{ display: "none" }} name="actionType" defaultValue="TGVhZHM=" />
+          <input type="text" style={{ display: "none" }} name="returnURL" defaultValue="null" />
+          <input type="text" style={{ display: "none" }} id="ldeskuid" name="ldeskuid" />
+          <input type="text" style={{ display: "none" }} id="LDTuvid" name="LDTuvid" />
+
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.85rem" }}>
+            <div>
+              <label htmlFor="First_Name" style={labelStyle}>First Name <span style={{ color: "#ef4444" }}>*</span></label>
+              <input type="text" id="First_Name" name="First Name" placeholder="Ahmed" maxLength={40} className="zoho-input" style={inputStyle} />
+            </div>
+            <div>
+              <label htmlFor="Last_Name" style={labelStyle}>Last Name <span style={{ color: "#ef4444" }}>*</span></label>
+              <input type="text" id="Last_Name" name="Last Name" placeholder="Al Mansouri" maxLength={80} className="zoho-input" style={inputStyle} />
+            </div>
+            <div style={{ gridColumn: "span 2" }}>
+              <label htmlFor="Email" style={labelStyle}>Work Email <span style={{ color: "#ef4444" }}>*</span></label>
+              <input type="email" id="Email" name="Email" placeholder="ahmed@company.com" maxLength={100} className="zoho-input" style={inputStyle} />
+            </div>
+            <div>
+              <label htmlFor="Company" style={labelStyle}>Company <span style={{ color: "#ef4444" }}>*</span></label>
+              <input type="text" id="Company" name="Company" placeholder="Your Company" maxLength={200} className="zoho-input" style={inputStyle} />
+            </div>
+            <div>
+              <label htmlFor="Mobile" style={labelStyle}>Phone <span style={{ color: "#ef4444" }}>*</span></label>
+              <input type="text" id="Mobile" name="Mobile" placeholder="+971 50 000 0000" maxLength={30} className="zoho-input" style={inputStyle} />
+            </div>
+            <div style={{ gridColumn: "span 2" }}>
+              <label htmlFor="LEADCF130" style={labelStyle}>What do you want to automate?</label>
+              <textarea id="LEADCF130" name="LEADCF130" placeholder="e.g. Lead follow-ups, invoice processing, customer support..." rows={3} className="zoho-input" style={{ ...inputStyle, resize: "vertical" }} />
+            </div>
+          </div>
+
+          {/* Hidden fields */}
+          <div style={{ display: "none" }}>
+            <input type="text" id="LEADCF129" name="LEADCF129" maxLength={450} defaultValue="https://www.fidigital.ae/contact" />
+            <select id="LEADCF48" name="LEADCF48" defaultValue="FI Digital MEA">
+              <option value="-None-">-None-</option>
+              <option value="Fristine Infotech">Fristine Infotech</option>
+              <option value="FI Digital">FI Digital</option>
+              <option value="DSV Corp">DSV Corp</option>
+              <option value="FI Digital MEA">FI Digital MEA</option>
+              <option value="FI Digital UK">FI Digital UK</option>
+              <option value="FI Digital US">FI Digital US</option>
+              <option value="FI Digital NZ">FI Digital NZ</option>
+              <option value="DSV Consulting">DSV Consulting</option>
+            </select>
+            <select id="Lead_Status" name="Lead Status" defaultValue="New Lead">
+              <option value="-None-">-None-</option>
+              <option value="Not Contacted">Not Contacted</option>
+              <option value="Attempted to Contact">Attempted to Contact</option>
+              <option value="Contact In Future">Contact In Future</option>
+              <option value="Contacted">Contacted</option>
+              <option value="Qualified">Qualified</option>
+              <option value="Junk Lead">Junk Lead</option>
+              <option value="Lost Lead">Lost Lead</option>
+              <option value="Unqualified">Unqualified</option>
+              <option value="New Lead">New Lead</option>
+            </select>
+            <input type="hidden" name="aG9uZXlwb3Q" defaultValue="" />
+          </div>
+
+          <button type="button" id="formsubmit" onClick={handleClick} className="zoho-submit-btn" style={{
+            width: "100%", marginTop: "1rem", padding: "0.75rem 1.5rem",
+            borderRadius: 100, fontWeight: 700, fontSize: "0.95rem",
+            cursor: "pointer", border: "none", color: "#fff",
+            background: "linear-gradient(135deg, #0279FF 0%, #00A3F3 100%)",
+            boxShadow: "0 4px 14px rgba(2,121,255,0.35)",
+          }}>
+            Request Free Audit
+          </button>
+        </form>
+      )}
+    </>
   );
 }
 
@@ -236,7 +417,7 @@ export default function ContactClient() {
     "@type": "Service",
     "serviceType": "Zoho AI & ERP Consultation",
     "provider": {
-        "@id": "https://fidigital.ae/#organization"
+        "@id": "https://www.fidigital.ae/#organization"
     },
     "description": "Professional consultation and pricing for Zoho AI agents, ERP implementation, and digital worker deployment in Dubai and UAE.",
     "areaServed": {
@@ -467,16 +648,41 @@ export default function ContactClient() {
 
         {/* ── CONTACT FORM ────────────────────────────────────────── */}
         <section id="contact-form" className="cc-section" style={{ background: "var(--bg)" }}>
-          <div className="container" style={{ maxWidth: "1000px" }}>
-            <div className="reveal-item" style={{ textAlign: "center", marginBottom: "3rem" }}>
-              <div className="section-label">READY TO START?</div>
-              <h2 className="section-title">How Do I Book a Free AI Readiness Audit for My Company?</h2>
-              <p className="section-desc" style={{ margin: "0 auto" }}>AED 0 · 45-minute session · 1-week report turnaround</p>
+          <div className="container" style={{ maxWidth: "1100px" }}>
+            <div className="reveal-item" style={{
+              display: "grid", gridTemplateColumns: "1fr 1fr", gap: "clamp(2rem, 5vw, 4rem)", alignItems: "center",
+            }}>
+              {/* Left — CTA copy */}
+              <div>
+                <div className="section-label">READY TO START?</div>
+                <h2 className="section-title" style={{ textAlign: "left" }}>Book Your Free AI Readiness Audit</h2>
+                <p className="section-desc" style={{ textAlign: "left", margin: 0 }}>AED 0 · 45-minute session · 1-week report turnaround</p>
+                <div style={{ marginTop: "1.5rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                  {[
+                    { icon: <CheckCircle2 size={18} />, text: "No commitment — purely diagnostic" },
+                    { icon: <Clock size={18} />, text: "45-min session, 15-20 page report" },
+                    { icon: <Zap size={18} />, text: "Identify top 3 automation opportunities" },
+                  ].map((item, i) => (
+                    <div key={i} style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>
+                      <span style={{ color: "var(--primary)", flexShrink: 0 }}>{item.icon}</span>
+                      {item.text}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right — Form */}
+              <div className="card" style={{ padding: "clamp(1.25rem, 3vw, 2rem)" }}>
+                <ZohoContactForm />
+              </div>
             </div>
 
-            <div className="card rv" style={{ padding: "clamp(1.5rem, 4vw, 3rem)" }}>
-              <ZohoFormEmbed />
-            </div>
+            {/* Mobile: stack vertically */}
+            <style>{`
+              @media (max-width: 768px) {
+                #contact-form .reveal-item { grid-template-columns: 1fr !important; }
+              }
+            `}</style>
           </div>
         </section>
 

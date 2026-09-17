@@ -157,7 +157,7 @@ export default function WhatsAppSalesAgentsClient() {
         "@type": "Service",
         "serviceType": "WhatsApp AI Sales Agent",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Bilingual WhatsApp AI agents that qualify leads, answer queries, and process voice notes in Arabic and English for UAE enterprises.",
         "areaServed": {

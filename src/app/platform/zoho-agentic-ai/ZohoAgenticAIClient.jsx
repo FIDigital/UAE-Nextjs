@@ -230,7 +230,7 @@ export default function ZohoAgenticAIClient() {
         "@type": "Service",
         "serviceType": "Zoho AI Integration",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Enterprise-grade Zoho AI integration. Elevating Zoho CRM, Books, and People with Claude and Gemini for autonomous business operations.",
         "areaServed": {

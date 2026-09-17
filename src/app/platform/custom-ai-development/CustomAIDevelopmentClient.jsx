@@ -12,7 +12,7 @@ export default function CustomAIDevelopmentClient() {
         "@type": "Service",
         "serviceType": "Custom AI Agent Development",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Tailored AI agent development using LangChain and Python for UAE businesses. Build autonomous agents with RAG, long-term memory, and multi-step reasoning.",
         "areaServed": {

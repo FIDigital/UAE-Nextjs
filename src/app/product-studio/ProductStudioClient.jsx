@@ -76,7 +76,7 @@ export default function ProductStudioClient() {
         "@type": "Service",
         "serviceType": "AI-First Product Development",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Custom SaaS development, AI product engineering, and enterprise MVPs for the UAE market. We build scalable, modern tech stacks with Australia-India engineering and Dubai strategy.",
         "areaServed": {

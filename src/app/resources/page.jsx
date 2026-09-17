@@ -5,7 +5,7 @@ export const metadata = {
   description:
     "Bilingual blog, whitepapers, webinars, and partner ecosystem for UAE enterprises exploring AI agent transformation.",
   alternates: {
-    canonical: "https://fidigital.ae/resources",
+    canonical: "https://www.fidigital.ae/resources",
   },
 };
 

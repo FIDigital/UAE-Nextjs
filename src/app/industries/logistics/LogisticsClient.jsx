@@ -144,7 +144,7 @@ export default function LogisticsClient() {
         "@type": "Service",
         "serviceType": "Logistics & Supply Chain AI Automation",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Bilingual AI agents for route optimization, warehouse automation, and customs documentation for UAE logistics providers.",
         "areaServed": {

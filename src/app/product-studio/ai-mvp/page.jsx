@@ -5,7 +5,7 @@ export const metadata = {
     description: "Using our pre-built AI component library (LangChain agents, n8n orchestration, Zoho data layer), we assemble functional MVPs faster than building from scratch.",
     keywords: ["AI product mvp builds Dubai", "custom development UAE", "AI engineering", "LangChain Dubai", "AI automation"],
     alternates: {
-        canonical: 'https://fidigital.ae/product-studio/ai-mvp',
+        canonical: 'https://www.fidigital.ae/product-studio/ai-mvp',
     }
 };
 

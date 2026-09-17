@@ -143,7 +143,7 @@ export default function ProfessionalServicesClient() {
         "@type": "Service",
         "serviceType": "Professional Services AI Automation",
         "provider": {
-            "@id": "https://fidigital.ae/#organization"
+            "@id": "https://www.fidigital.ae/#organization"
         },
         "description": "Bilingual AI agents for proposal drafting, automated billing, and knowledge retrieval for UAE consultancies and law firms.",
         "areaServed": {

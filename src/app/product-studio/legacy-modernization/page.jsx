@@ -5,7 +5,7 @@ export const metadata = {
     description: "We wrap existing systems in modern interfaces, connect them to AI through n8n, and migrate components to cloud incrementally.",
     keywords: ["legacy system modernization Dubai", "custom development UAE", "cloud migration", "API wrapping", "AI legacy integration"],
     alternates: {
-        canonical: 'https://fidigital.ae/product-studio/legacy-modernization',
+        canonical: 'https://www.fidigital.ae/product-studio/legacy-modernization',
     }
 };
 
