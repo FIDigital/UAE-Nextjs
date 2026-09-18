@@ -94,6 +94,27 @@ function ZohoContactForm() {
     return () => { s.remove(); };
   }, []);
 
+  // Ad click-tracking: read gclid/UTM from URL, persist in sessionStorage, fill hidden fields
+  useEffect(() => {
+    var KEYS = ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign'];
+    var store = {};
+    try { store = JSON.parse(sessionStorage.getItem('fi_ad') || '{}'); } catch (e) {}
+    var q = new URLSearchParams(window.location.search);
+    KEYS.forEach(function (k) { if (q.get(k)) store[k] = q.get(k); });
+    if (!store.landing) store.landing = window.location.href.split('?')[0];
+    if (!store.first_seen) store.first_seen = new Date().toISOString();
+    try { sessionStorage.setItem('fi_ad', JSON.stringify(store)); } catch (e) {}
+    function put(id, v) { var el = document.getElementById(id); if (el && v) el.value = v; }
+    put('fi_gclid', store.gclid);
+    put('fi_gbraid', store.gbraid);
+    put('fi_wbraid', store.wbraid);
+    put('fi_source', store.utm_source);
+    put('fi_medium', store.utm_medium);
+    put('fi_campaign', store.utm_campaign);
+    put('fi_landing', store.landing);
+    put('fi_first_seen', store.first_seen);
+  }, []);
+
   function handleClick(e) {
     e.preventDefault();
     const form = formRef.current;
@@ -184,7 +205,14 @@ function ZohoContactForm() {
         >
           {/* Zoho hidden fields — do not remove */}
           <input type="text" style={{ display: "none" }} name="xnQsjsdp" defaultValue="8ac88d59af284e9f9c00025bbe667ed750f0b2ec3ca7419aa820c3aa608fc673" />
-          <input type="hidden" name="zc_gad" id="zc_gad" defaultValue="" />
+          <input type="hidden" name="zc_gad" id="fi_gclid" defaultValue="" />
+          <input type="hidden" name="LEADCF_xx" id="fi_gbraid" defaultValue="" />
+          <input type="hidden" name="LEADCF_xx" id="fi_wbraid" defaultValue="" />
+          <input type="hidden" name="LEADCF_xx" id="fi_source" defaultValue="" />
+          <input type="hidden" name="LEADCF_xx" id="fi_medium" defaultValue="" />
+          <input type="hidden" name="LEADCF_xx" id="fi_campaign" defaultValue="" />
+          <input type="hidden" name="LEADCF_xx" id="fi_landing" defaultValue="" />
+          <input type="hidden" name="LEADCF_xx" id="fi_first_seen" defaultValue="" />
           <input type="text" style={{ display: "none" }} name="xmIwtLD" defaultValue="1b9537cd5b43c702c3d814da6a8c3fcadedf793851ab6728a16bfa5e9181d7a70247f8b9dc001ba2fe6aafce54b32188" />
           <input type="text" style={{ display: "none" }} name="actionType" defaultValue="TGVhZHM=" />
           <input type="text" style={{ display: "none" }} name="returnURL" defaultValue="null" />
