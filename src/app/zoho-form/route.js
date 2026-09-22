@@ -202,9 +202,9 @@ export async function GET(request) {
       accept-charset="UTF-8">
 
       <!-- Do not remove this code. -->
-      <input type="text" style="display:none;" name="xnQsjsdp" value="8ac88d59af284e9f9c00025bbe667ed750f0b2ec3ca7419aa820c3aa608fc673">
+      <input type="text" style="display:none;" name="xnQsjsdp" value="954217f83fdc88d4428a23f48da58e10947cac736d616d2ab60f13ad528493bc">
       <input type="hidden" name="zc_gad" id="zc_gad" value="">
-      <input type="text" style="display:none;" name="xmIwtLD" value="1b9537cd5b43c702c3d814da6a8c3fcadedf793851ab6728a16bfa5e9181d7a70247f8b9dc001ba2fe6aafce54b32188">
+      <input type="text" style="display:none;" name="xmIwtLD" value="6131ad2e339a25faae5833409ab023454e767d8451e27be409a47d8fb13b2d6831854c9c32254318db0dfc092e443e3c">
       <input type="text" style="display:none;" name="actionType" value="TGVhZHM=">
       <input type="text" style="display:none;" name="returnURL" value="https://www.fidigital.ae/thank-you">
       <!-- Do not remove this code. -->

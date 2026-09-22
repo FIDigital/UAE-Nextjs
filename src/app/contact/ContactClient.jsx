@@ -89,14 +89,14 @@ function ZohoContactForm() {
     // Zoho analytics only — no WebFormServlet (it hijacks form submit events)
     const s = document.createElement("script");
     s.id = "wf_anal";
-    s.src = "https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=04f5b718738c1f72185674e52db7d522a304fdeeb945862cf140b19a296e5218e0d613b543ab3ea472f22f7794446ae0gid0753002f9e8740e4955d2c298d37f0efb77c5496a44ca936a76f951ea5796143gid6b04947b6c76f4074e551e5b75369b44394222f0dd68f91a2cf5f85c84807456gid9a3d9e4670c095375cfea374237a5c6a7691db0373853d460f8954fed5a276ea&tw=fd529544dabef60387b0f22ac017d215c1e10c0cd44f504686fed6024b149468&version=v2";
+    s.src = "https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=1126c16a4a048da986ac03f83e5a754e424e7283f0fb4624c20fca466e73bc12d8fdddadcd97e01fb6ff67d20bd78c1dgid40a18d4403c83e0e065cbeea074c7542188400c189d2cc42bfb32d93bb91cda9gid1b684d9481471772a4c9bbb787f8d65cbd5085654311a14f3e023f33a8c93e78gidaf16b80f883df6d2a66f90789486be418b45836f8046ab1b44e4f4eb0da8637e&tw=17cf19e69f4195ee3180a16fe2613fe8337108b5856e51b663c3f87a410ed6ab&version=v2";
     document.body.appendChild(s);
     return () => { s.remove(); };
   }, []);
 
   // Ad click-tracking: read gclid/UTM from URL, persist in sessionStorage, fill hidden fields
   useEffect(() => {
-    var KEYS = ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign'];
+    var KEYS = ['gclid','gbraid','wbraid','fbclid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
     var store = {};
     try { store = JSON.parse(sessionStorage.getItem('fi_ad') || '{}'); } catch (e) {}
     var q = new URLSearchParams(window.location.search);
@@ -106,11 +106,15 @@ function ZohoContactForm() {
     try { sessionStorage.setItem('fi_ad', JSON.stringify(store)); } catch (e) {}
     function put(id, v) { var el = document.getElementById(id); if (el && v) el.value = v; }
     put('fi_gclid', store.gclid);
+    put('fi_gclid_cf', store.gclid);
     put('fi_gbraid', store.gbraid);
     put('fi_wbraid', store.wbraid);
+    put('fi_fbclid', store.fbclid);
     put('fi_source', store.utm_source);
     put('fi_medium', store.utm_medium);
     put('fi_campaign', store.utm_campaign);
+    put('fi_content', store.utm_content);
+    put('fi_term', store.utm_term);
     put('fi_landing', store.landing);
     put('fi_first_seen', store.first_seen);
   }, []);
@@ -204,16 +208,20 @@ function ZohoContactForm() {
           ref={formRef}
         >
           {/* Zoho hidden fields — do not remove */}
-          <input type="text" style={{ display: "none" }} name="xnQsjsdp" defaultValue="8ac88d59af284e9f9c00025bbe667ed750f0b2ec3ca7419aa820c3aa608fc673" />
+          <input type="text" style={{ display: "none" }} name="xnQsjsdp" defaultValue="954217f83fdc88d4428a23f48da58e10947cac736d616d2ab60f13ad528493bc" />
           <input type="hidden" name="zc_gad" id="fi_gclid" defaultValue="" />
+          <input type="hidden" name="LEADCF159" id="fi_gclid_cf" defaultValue="" />
+          <input type="hidden" name="LEADCF154" id="fi_fbclid" defaultValue="" />
+          <input type="hidden" name="LEADCF155" id="fi_source" defaultValue="" />
+          <input type="hidden" name="LEADCF157" id="fi_medium" defaultValue="" />
+          <input type="hidden" name="LEADCF156" id="fi_campaign" defaultValue="" />
+          <input type="hidden" name="LEADCF158" id="fi_content" defaultValue="" />
+          <input type="hidden" name="LEADCF153" id="fi_term" defaultValue="" />
           <input type="hidden" name="LEADCF_xx" id="fi_gbraid" defaultValue="" />
           <input type="hidden" name="LEADCF_xx" id="fi_wbraid" defaultValue="" />
-          <input type="hidden" name="LEADCF_xx" id="fi_source" defaultValue="" />
-          <input type="hidden" name="LEADCF_xx" id="fi_medium" defaultValue="" />
-          <input type="hidden" name="LEADCF_xx" id="fi_campaign" defaultValue="" />
           <input type="hidden" name="LEADCF_xx" id="fi_landing" defaultValue="" />
           <input type="hidden" name="LEADCF_xx" id="fi_first_seen" defaultValue="" />
-          <input type="text" style={{ display: "none" }} name="xmIwtLD" defaultValue="1b9537cd5b43c702c3d814da6a8c3fcadedf793851ab6728a16bfa5e9181d7a70247f8b9dc001ba2fe6aafce54b32188" />
+          <input type="text" style={{ display: "none" }} name="xmIwtLD" defaultValue="6131ad2e339a25faae5833409ab023454e767d8451e27be409a47d8fb13b2d6831854c9c32254318db0dfc092e443e3c" />
           <input type="text" style={{ display: "none" }} name="actionType" defaultValue="TGVhZHM=" />
           <input type="text" style={{ display: "none" }} name="returnURL" defaultValue="null" />
           <input type="text" style={{ display: "none" }} id="ldeskuid" name="ldeskuid" />
