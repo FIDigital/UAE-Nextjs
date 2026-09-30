@@ -89,7 +89,7 @@ function ZohoContactForm() {
     // Zoho analytics only — no WebFormServlet (it hijacks form submit events)
     const s = document.createElement("script");
     s.id = "wf_anal";
-    s.src = "https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=1126c16a4a048da986ac03f83e5a754e424e7283f0fb4624c20fca466e73bc12d8fdddadcd97e01fb6ff67d20bd78c1dgid40a18d4403c83e0e065cbeea074c7542188400c189d2cc42bfb32d93bb91cda9gid1b684d9481471772a4c9bbb787f8d65cbd5085654311a14f3e023f33a8c93e78gidaf16b80f883df6d2a66f90789486be418b45836f8046ab1b44e4f4eb0da8637e&tw=17cf19e69f4195ee3180a16fe2613fe8337108b5856e51b663c3f87a410ed6ab&version=v2";
+    s.src = "https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=92a33bb771d2479e036c71f2721a5335a0f98127afa48b4feefe944184bdcded72775938288b64c36c6b7cd1b475a212gid42e72f676303887d03f533b4b41291919fffd979fc351a567483fcb80705399bgid4e0a253589b981678b2726f8a2fc5e0066dbb8e1dc27c8fb578bb665b6ccc1c3gidf06d39adce95a12fa4ef51cd6fc3467f344109a2ea26c11ace26bb299692f186&tw=4dada920d571126a8a4175091c1e075d2814e3ef407672fead4cd55049f72461&version=v2";
     document.body.appendChild(s);
     return () => { s.remove(); };
   }, []);
@@ -130,7 +130,6 @@ function ZohoContactForm() {
       ["Last Name", "Last Name"],
       ["Email", "Work Email"],
       ["Company", "Company"],
-      ["Mobile", "Phone"],
     ];
     for (const [name, label] of required) {
       const field = form[name];
@@ -208,7 +207,7 @@ function ZohoContactForm() {
           ref={formRef}
         >
           {/* Zoho hidden fields — do not remove */}
-          <input type="text" style={{ display: "none" }} name="xnQsjsdp" defaultValue="954217f83fdc88d4428a23f48da58e10947cac736d616d2ab60f13ad528493bc" />
+          <input type="text" style={{ display: "none" }} name="xnQsjsdp" defaultValue="994f9ee434c49477078a09888e4d7fafbf48f951396627bba3ed15ccc50af99a" />
           <input type="hidden" name="zc_gad" id="fi_gclid" defaultValue="" />
           <input type="hidden" name="LEADCF159" id="fi_gclid_cf" defaultValue="" />
           <input type="hidden" name="LEADCF154" id="fi_fbclid" defaultValue="" />
@@ -221,7 +220,7 @@ function ZohoContactForm() {
           <input type="hidden" name="LEADCF_xx" id="fi_wbraid" defaultValue="" />
           <input type="hidden" name="LEADCF_xx" id="fi_landing" defaultValue="" />
           <input type="hidden" name="LEADCF_xx" id="fi_first_seen" defaultValue="" />
-          <input type="text" style={{ display: "none" }} name="xmIwtLD" defaultValue="6131ad2e339a25faae5833409ab023454e767d8451e27be409a47d8fb13b2d6831854c9c32254318db0dfc092e443e3c" />
+          <input type="text" style={{ display: "none" }} name="xmIwtLD" defaultValue="f3ddb8a3a83d1bfdf3aa0f108d5f8b25e1d9817d3845d57aa5f18439b76297c8f84ed3d96de782a316ef54336f1f57f8" />
           <input type="text" style={{ display: "none" }} name="actionType" defaultValue="TGVhZHM=" />
           <input type="text" style={{ display: "none" }} name="returnURL" defaultValue="null" />
           <input type="text" style={{ display: "none" }} id="ldeskuid" name="ldeskuid" />
@@ -245,7 +244,7 @@ function ZohoContactForm() {
               <input type="text" id="Company" name="Company" placeholder="Your Company" maxLength={200} className="zoho-input" style={inputStyle} />
             </div>
             <div>
-              <label htmlFor="Mobile" style={labelStyle}>Phone <span style={{ color: "#ef4444" }}>*</span></label>
+              <label htmlFor="Mobile" style={labelStyle}>Phone</label>
               <input type="text" id="Mobile" name="Mobile" placeholder="+971 50 000 0000" maxLength={30} className="zoho-input" style={inputStyle} />
             </div>
             <div style={{ gridColumn: "span 2" }}>

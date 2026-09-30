@@ -116,35 +116,6 @@ export async function GET(request) {
     }
     .zcwf_col_fld textarea { min-height: 120px; resize: vertical; }
 
-    /* ── Captcha ─────────────────────────────────────────── */
-    .captcha-wrapper { display: flex; flex-direction: column; gap: 0.6rem; }
-    .captcha-img-row {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-    }
-    #imgid3209734000060050024 {
-      border-radius: 8px;
-      height: 46px;
-      width: auto;
-      max-width: 100%;
-      border: 1.5px solid var(--input-border);
-      display: block;
-      background: #fff;
-      flex-shrink: 0;
-    }
-    [data-theme="dark"] #imgid3209734000060050024 { filter: invert(0.85) brightness(1.1); }
-    .reload-link {
-      color: var(--input-focus);
-      font-size: 0.8rem;
-      font-weight: 600;
-      cursor: pointer;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-    .reload-link:hover { text-decoration: underline; }
-
     /* ── Hidden fields ───────────────────────────────────── */
     .wfrm_fld_dpNn { display: none !important; }
 
@@ -202,9 +173,9 @@ export async function GET(request) {
       accept-charset="UTF-8">
 
       <!-- Do not remove this code. -->
-      <input type="text" style="display:none;" name="xnQsjsdp" value="954217f83fdc88d4428a23f48da58e10947cac736d616d2ab60f13ad528493bc">
+      <input type="text" style="display:none;" name="xnQsjsdp" value="994f9ee434c49477078a09888e4d7fafbf48f951396627bba3ed15ccc50af99a">
       <input type="hidden" name="zc_gad" id="zc_gad" value="">
-      <input type="text" style="display:none;" name="xmIwtLD" value="6131ad2e339a25faae5833409ab023454e767d8451e27be409a47d8fb13b2d6831854c9c32254318db0dfc092e443e3c">
+      <input type="text" style="display:none;" name="xmIwtLD" value="f3ddb8a3a83d1bfdf3aa0f108d5f8b25e1d9817d3845d57aa5f18439b76297c8f84ed3d96de782a316ef54336f1f57f8">
       <input type="text" style="display:none;" name="actionType" value="TGVhZHM=">
       <input type="text" style="display:none;" name="returnURL" value="https://www.fidigital.ae/thank-you">
       <!-- Do not remove this code. -->
@@ -250,11 +221,11 @@ export async function GET(request) {
         <!-- Mobile -->
         <div class="zcwf_row">
           <div class="zcwf_col_lab">
-            <label for="Mobile">Mobile <span class="required">*</span></label>
+            <label for="Mobile">Mobile</label>
           </div>
           <div class="zcwf_col_fld">
             <input type="text" id="Mobile" name="Mobile" placeholder="e.g. +971 50 000 0000"
-              aria-required="true" maxlength="30">
+              maxlength="30">
           </div>
         </div>
 
@@ -295,25 +266,6 @@ export async function GET(request) {
           </div>
           <div class="zcwf_col_fld">
             <textarea id="LEADCF130" name="LEADCF130" placeholder="Describe your challenges\u2026"></textarea>
-          </div>
-        </div>
-
-        <!-- Captcha -->
-        <div class="zcwf_row full-width">
-          <div class="zcwf_col_lab">
-            <label for="captchaField3209734000060050024">Enter the Captcha <span class="required">*</span></label>
-          </div>
-          <div class="zcwf_col_fld">
-            <div class="captcha-wrapper">
-              <div class="captcha-img-row">
-                <img id="imgid3209734000060050024"
-                  src="https://crm.zoho.com/crm/CaptchaServlet?formId=017a975b10c1e6a1b8364fddfe51b8833d414be62a005b373a474f37e54282d3a52405bbfdd395a60c2f6335bb3d3d63&grpid=8249e7b9292ea4cb6d6e1db5ca2e0929391063c186a1fa1c7e9614fa768f3e8d"
-                  alt="Captcha image">
-                <a class="reload-link" onclick="reloadImg3209734000060050024();">&#8635; Reload Captcha</a>
-              </div>
-              <input type="text" id="captchaField3209734000060050024" name="enterdigest"
-                placeholder="Type the characters above" maxlength="10">
-            </div>
           </div>
         </div>
 
@@ -375,20 +327,10 @@ export async function GET(request) {
           optionElem.querySelectorAll('option')[optionElem.selectedIndex].ariaSelected = 'true';
         }
 
-        function reloadImg3209734000060050024() {
-          var captcha = document.getElementById('imgid3209734000060050024');
-          if (captcha.src.indexOf('&d') !== -1) {
-            captcha.src = captcha.src.substring(0, captcha.src.indexOf('&d')) + '&d' + new Date().getTime();
-          } else {
-            captcha.src = captcha.src + '&d' + new Date().getTime();
-          }
-        }
-
         function historyBack3209734000060050024() {
           document.querySelector('.crmWebToEntityForm .formsubmit') &&
             document.querySelector('.crmWebToEntityForm .formsubmit').removeAttribute('disabled');
           document.getElementById('formsubmit').removeAttribute('disabled');
-          reloadImg3209734000060050024();
           window.removeEventListener('focus', historyBack3209734000060050024);
         }
 
@@ -411,8 +353,8 @@ export async function GET(request) {
         }
 
         function checkMandatory3209734000060050024() {
-          var mndFileds = ['Company', 'First Name', 'Last Name', 'Email', 'Mobile', 'enterdigest'];
-          var fldLangVal = ['Company', 'First Name', 'Last Name', 'Email', 'Mobile', 'Captcha'];
+          var mndFileds = ['Company', 'First Name', 'Last Name', 'Email'];
+          var fldLangVal = ['Company', 'First Name', 'Last Name', 'Email'];
           var form = document.forms['WebToLeads3209734000060050024'];
           for (var i = 0; i < mndFileds.length; i++) {
             var fieldObj = form[mndFileds[i]];
@@ -485,12 +427,11 @@ export async function GET(request) {
       </script>
 
       <!-- Do not remove this --- Analytics Tracking code starts -->
-      <script id="wf_anal" src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=d87ce36af499fc5cb321872c9ba07314fdd199f0bf967dacc8f23b67c54a83c5b1c3049c3ffa4c36064486fe774fe7bdgid9f8eec8fb29a3bb59e706faea6c6e6df4078d1c3d36ab510b838ad5577e9378fgid149f9bed51b02d5cabf72411fe168815440309114eb29399f1f94aeb11af2601gid2f89ebb2fe48583cb5cae4548dc19ebef22bda0acdd8ad51aadcc4471b96fe0c&tw=cbefc9c72802f99474a9a5f3043519dd6ee56fb5b777d06a59aa1d43c9e0b7a2"></script>
+      <script id="wf_anal" src="https://crm.zohopublic.com/crm/WebFormAnalyticsServeServlet?rid=92a33bb771d2479e036c71f2721a5335a0f98127afa48b4feefe944184bdcded72775938288b64c36c6b7cd1b475a212gid42e72f676303887d03f533b4b41291919fffd979fc351a567483fcb80705399bgid4e0a253589b981678b2726f8a2fc5e0066dbb8e1dc27c8fb578bb665b6ccc1c3gidf06d39adce95a12fa4ef51cd6fc3467f344109a2ea26c11ace26bb299692f186&tw=4dada920d571126a8a4175091c1e075d2814e3ef407672fead4cd55049f72461"></script>
       <!-- Do not remove this --- Analytics Tracking code ends. -->
 
     </form>
     <!-- Do not remove this code. -->
-    <iframe name="captchaFrame" style="display:none;"></iframe>
   </div>
   <iframe name="zohoSubmitFrame" style="display:none;"></iframe>
 
