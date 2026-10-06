@@ -83,7 +83,6 @@ function ShowMore({ children, collapsedHeight = 96 }) {
 /* ─── Zoho Contact Form (inline, no iframe) ─────────────────────────────────── */
 function ZohoContactForm() {
   const formRef = useRef(null);
-  const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
     // Zoho analytics only — no WebFormServlet (it hijacks form submit events)
@@ -96,27 +95,21 @@ function ZohoContactForm() {
 
   // Ad click-tracking: read gclid/UTM from URL, persist in sessionStorage, fill hidden fields
   useEffect(() => {
-    var KEYS = ['gclid','gbraid','wbraid','fbclid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+    var KEYS = ['gclid','fbclid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
     var store = {};
     try { store = JSON.parse(sessionStorage.getItem('fi_ad') || '{}'); } catch (e) {}
     var q = new URLSearchParams(window.location.search);
     KEYS.forEach(function (k) { if (q.get(k)) store[k] = q.get(k); });
-    if (!store.landing) store.landing = window.location.href.split('?')[0];
-    if (!store.first_seen) store.first_seen = new Date().toISOString();
     try { sessionStorage.setItem('fi_ad', JSON.stringify(store)); } catch (e) {}
     function put(id, v) { var el = document.getElementById(id); if (el && v) el.value = v; }
     put('fi_gclid', store.gclid);
     put('fi_gclid_cf', store.gclid);
-    put('fi_gbraid', store.gbraid);
-    put('fi_wbraid', store.wbraid);
     put('fi_fbclid', store.fbclid);
     put('fi_source', store.utm_source);
     put('fi_medium', store.utm_medium);
     put('fi_campaign', store.utm_campaign);
     put('fi_content', store.utm_content);
     put('fi_term', store.utm_term);
-    put('fi_landing', store.landing);
-    put('fi_first_seen', store.first_seen);
   }, []);
 
   function handleClick(e) {
@@ -160,10 +153,9 @@ function ZohoContactForm() {
       }
     } catch (_) {}
 
-    // Submit natively — POST fires immediately to hidden iframe
+    // Submit natively — Zoho redirects the page to returnURL (/thank-you)
+    e.currentTarget.disabled = true;
     form.submit();
-    // Delay thank-you so POST completes before form is removed from DOM
-    setTimeout(() => setSubmitted(true), 600);
   }
 
   const labelStyle = { fontSize: "0.8rem", fontWeight: 600, color: "var(--text-muted)", display: "block", marginBottom: 4 };
@@ -185,24 +177,11 @@ function ZohoContactForm() {
         .zoho-input:focus { border-color: var(--primary) !important; box-shadow: 0 0 0 3px rgba(2,121,255,0.1); }
       `}</style>
 
-      {/* Hidden iframe must always be in DOM for form target */}
-      <iframe name="zohoSubmitFrame" style={{ display: "none" }} />
-
-      {submitted ? (
-        <div style={{ textAlign: "center", padding: "clamp(32px,6vw,56px) 16px" }}>
-          <div style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(16,185,129,0.1)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 1.25rem" }}>
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          </div>
-          <h2 style={{ fontSize: "1.35rem", fontWeight: 800, marginBottom: "0.5rem" }}>Thank you — we&apos;ll be in touch.</h2>
-          <p style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>A team member will respond within 4 business hours.</p>
-        </div>
-      ) : (
         <form
           id="webform3209734000060050024"
           action="https://crm.zoho.com/crm/WebToLeadForm"
           name="WebToLeads3209734000060050024"
           method="POST"
-          target="zohoSubmitFrame"
           acceptCharset="UTF-8"
           ref={formRef}
         >
@@ -216,13 +195,9 @@ function ZohoContactForm() {
           <input type="hidden" name="LEADCF156" id="fi_campaign" defaultValue="" />
           <input type="hidden" name="LEADCF158" id="fi_content" defaultValue="" />
           <input type="hidden" name="LEADCF153" id="fi_term" defaultValue="" />
-          <input type="hidden" name="LEADCF_xx" id="fi_gbraid" defaultValue="" />
-          <input type="hidden" name="LEADCF_xx" id="fi_wbraid" defaultValue="" />
-          <input type="hidden" name="LEADCF_xx" id="fi_landing" defaultValue="" />
-          <input type="hidden" name="LEADCF_xx" id="fi_first_seen" defaultValue="" />
           <input type="text" style={{ display: "none" }} name="xmIwtLD" defaultValue="f3ddb8a3a83d1bfdf3aa0f108d5f8b25e1d9817d3845d57aa5f18439b76297c8f84ed3d96de782a316ef54336f1f57f8" />
           <input type="text" style={{ display: "none" }} name="actionType" defaultValue="TGVhZHM=" />
-          <input type="text" style={{ display: "none" }} name="returnURL" defaultValue="null" />
+          <input type="text" style={{ display: "none" }} name="returnURL" defaultValue="https://www.fidigital.ae/thank-you" />
           <input type="text" style={{ display: "none" }} id="ldeskuid" name="ldeskuid" />
           <input type="text" style={{ display: "none" }} id="LDTuvid" name="LDTuvid" />
 
@@ -292,7 +267,6 @@ function ZohoContactForm() {
             Request Free Audit
           </button>
         </form>
-      )}
     </>
   );
 }
